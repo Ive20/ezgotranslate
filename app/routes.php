@@ -13,6 +13,6 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return 'hello';
 });
-Route::get('user', 'HomeController@showWelcome');
+Route::get('user', 'UserController@getLogin');
