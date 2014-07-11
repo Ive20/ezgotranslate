@@ -1,5 +1,6 @@
 <?php
 
+
 class UserController extends BaseController {
 
 	/*
@@ -15,9 +16,21 @@ class UserController extends BaseController {
 	|
 	*/
 
-	public function getLogin()
+	public function Login()
 	{
-		return 'hello';
+		 $name=Input::get('username');	 
+		 $password=Input::get('password');
+		 $authre=Auth::attempt(array('user_name' => $name, 'password' => $password));
+		if($authre)
+		{
+			$re=array ('errcode'=>'0');
+			return $re;
+		}
+		else 
+		{
+			$re=array ('errcode'=>'1');
+			return $re;
+		}
 	}
 
 }

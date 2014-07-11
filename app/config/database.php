@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'ezgotrabslate',
+			'database'  => 'ezgotranslate',
 			'username'  => 'root',
 			'password'  => 'sacada123',
 			'charset'   => 'utf8',
