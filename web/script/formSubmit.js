@@ -1,11 +1,11 @@
 ﻿/*仅测试提交
 */
 
-/*处理返回值
-*/
+
 window.onload = function () {
     var submit = document.getElementById("signin");
-
+    /*处理返回值
+    */
     function process(code) {
 
     }
