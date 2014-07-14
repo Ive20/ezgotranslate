@@ -32,5 +32,20 @@ class UserController extends BaseController {
 			return $re;
 		}
 	}
+	public function register()
+	{
+		$user = new User;
+		$user->user_name = Input::get('username');
+		$user->user_email = Input::get('email');
+		$user->password = Hash::make(Input::get('password'));
+		$user->save();
+		return array('errcode'=>'0');
+	}
+	public function logout()
+	{
+		Auth::logout();
+		return array('errcode'=>'0');
+		
+	}
 
 }
