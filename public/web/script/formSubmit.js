@@ -1,12 +1,24 @@
 ﻿/*仅测试提交
 */
-
-
 window.onload = function () {
     var submit = document.getElementById("signin");
-    /*处理返回值
+    /*在网页中显示是否登陆成功
     */
-    function process(code) {
+    function showCode(code) {
+        if (code == 1) {
+            /*登陆失败*/
+
+        } else if (code == 0) {
+            /*登陆成功*/
+
+        } else {
+            /*看看解析是否正确*/
+            alert("Parse error");
+        }
+    }
+    /*在网页中显示服务器繁忙
+    */
+    function showSrvBusy() {
 
     }
 
@@ -32,20 +44,24 @@ window.onload = function () {
         httpRequest.onreadystatechange = function () {
             if (httpRequest.readyState === 4) {
                 if (httpRequest.status === 200) {
-                    var code = httpRequest.responseText;
-                    //Test
-                    //alert(code);
+                    var codeInJSON = httpRequest.responseText;
+                    var code = JSON.parse(codeInJSON);
+                    showCode(code.errcode);
                 } else {
-                    //return Error
+                    alert("Require invalid");
                 }
             } else {
                 //return Busy
+                //showSrvBusy();
             }
         }
-        httpRequest.open("OPEN", "user/login", true);
-        var data = "username:" + account + "&" + "password:" + password;
+        httpRequest.open("POST", "user/login", true);
+        /*enctype is text/plain*/
+        httpRequest.setRequestHeader("Content-Type", "text\/plain");
+        var data = "username:" + account + "\n" + "password:" + password;
+        /*enctype is application/x-www-form-urlencoded or text/plain(default)*/
+        //var data = "username:" + account + "&" + "password:" + password;
         httpRequest.send(data);
-        //process(code);
         return false;
     }
 }
