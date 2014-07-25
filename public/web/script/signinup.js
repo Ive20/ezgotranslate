@@ -41,7 +41,7 @@
                }
         },
         "json");
-        alert(acc + "\n" + pas);
+        //alert(acc + "\n" + pas);
     })
 
     /*register*/
@@ -69,6 +69,6 @@
             },
             "json")
         //Test
-        alert(acc + "\n" + pas + "\n" + email);
+        //alert(acc + "\n" + pas + "\n" + email);
     });
 });
