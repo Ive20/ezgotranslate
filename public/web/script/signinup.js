@@ -38,6 +38,7 @@
                     $("#signin").after("<span>登陆失败</span>");
               } else if (errcode === 0) {
                   //跳转到会员界面
+                  alert("Success");
                }
         },
         "json");
@@ -63,8 +64,9 @@
                 var errcode = data.errcode;
                 if (errcode === 1) {
                     $("#signup").after("<span>注册失败</span>");
-                } else if (errcode === 1) {
+                } else if (errcode === 0) {
                     //跳转到会员界面
+                    alert("Success");
                 }
             },
             "json")
