@@ -7,10 +7,11 @@ window.onload = function () {
     function showCode(code) {
         if (code == 1) {
             /*登陆失败*/
+            alert("Fail");
 
         } else if (code == 0) {
             /*登陆成功*/
-
+            alert("Success");
         } else {
             /*看看解析是否正确*/
             alert("Parse error");
@@ -55,12 +56,10 @@ window.onload = function () {
                 //showSrvBusy();
             }
         }
-        httpRequest.open("POST", "user/login", true);
-        /*enctype is text/plain*/
-        httpRequest.setRequestHeader("Content-Type", "text\/plain");
-        var data = "username:" + account + "\n" + "password:" + password;
-        /*enctype is application/x-www-form-urlencoded or text/plain(default)*/
-        //var data = "username:" + account + "&" + "password:" + password;
+        httpRequest.open("POST", "/user/login", true);
+        var data = FormData();
+        data.append("username:", account);
+        data.append("password", password);
         httpRequest.send(data);
         return false;
     }
