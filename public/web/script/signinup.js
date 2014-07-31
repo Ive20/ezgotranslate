@@ -20,6 +20,7 @@
     
 
     /*login*/
+    /*
     $("#signin").click(function () {
         //function checkForm(){}
         //var login = $("div#signin-windows input");
@@ -44,8 +45,9 @@
         "json");
         //alert(acc + "\n" + pas);
     })
-
+    */
     /*register*/
+    /*
     $("#signup").click(function () {
         //checkForm(){}
         //var register = $("div#signup-windows input");
@@ -73,4 +75,5 @@
         //Test
         //alert(acc + "\n" + pas + "\n" + email);
     });
+    */
 });

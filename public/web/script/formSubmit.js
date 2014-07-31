@@ -33,7 +33,6 @@ window.onload = function () {
             catch (e) { };
         }
     }
-
     submit.onclick = function () {
         var signin = document.getElementById("signin-windows");
         var info = signin.getElementsByTagName("input");
@@ -56,7 +55,9 @@ window.onload = function () {
                 //showSrvBusy();
             }
         }
-        httpRequest.open("POST", "/user/login", true);
+
+        var testWhetherValid = httpRequest.open("POST", "/user/login", true);
+        if (!testWhetherValid) alert("Error!");
         var data = FormData();
         data.append("username:", account);
         data.append("password", password);
