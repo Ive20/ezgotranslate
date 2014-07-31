@@ -18,3 +18,4 @@ Route::get('/', function()
 Route::post('user/login', 'UserController@Login');
 Route::post('user/register','UserController@register');
 Route::post('user/logout','UserController@logout');
+Route::controller('info','InfoController');
