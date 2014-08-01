@@ -25,7 +25,6 @@
         var login = $(".container_in #signin-windows input");
         var acc = login[0].value;
         var pas = login[1].value;
-
         var jqxhr = $.post("/user/login",
             {
                 username: acc,
@@ -33,13 +32,11 @@
             },
             function (data, status) {
                 alert("Status: " + status + "\nData: " + data);
-                alert(typeof(data));
                 var errcode = data.errcode;
                 alert(errcode);
-                alert(typeof(errcode));
-                if (errcode === 1) {
+                if (errcode == 1) {
                     $("#signin").after("<span>登陆失败</span>");
-                } else if (errcode === 0) {
+                } else if (errcode == 0) {
                     //跳转到会员界面
                     alert("Success");
                 }
@@ -67,9 +64,9 @@
                 alert("Status: " + status + "\nData: " + data);
                 var errcode = data.errcode;
                 alert(errcode);
-                if (errcode === 1) {
+                if (errcode == 1) {
                     $("#signup").after("<span>注册失败</span>");
-                } else if (errcode === 0) {
+                } else if (errcode == 0) {
                     //跳转到会员界面
                     alert("Success");
                 }
