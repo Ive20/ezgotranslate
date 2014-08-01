@@ -32,8 +32,9 @@
                 password: pas
             },
             function (data, status) {
-                alert("Status: " + status);
+                alert("Status: " + status + "\nData: " + data);
                 var errcode = data.errcode;
+                alert(errcode);
                 if (errcode === 1) {
                     $("#signin").after("<span>登陆失败</span>");
                 } else if (errcode === 0) {
@@ -61,8 +62,9 @@
                 email: email
             },
             function (data, status) {
-                alert("Status: " + status);
+                alert("Status: " + status + "\nData: " + data);
                 var errcode = data.errcode;
+                alert(errcode);
                 if (errcode === 1) {
                     $("#signup").after("<span>注册失败</span>");
                 } else if (errcode === 0) {
