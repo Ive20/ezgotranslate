@@ -33,8 +33,10 @@
             },
             function (data, status) {
                 alert("Status: " + status + "\nData: " + data);
+                alert(typeof(data));
                 var errcode = data.errcode;
                 alert(errcode);
+                alert(typeof(errcode));
                 if (errcode === 1) {
                     $("#signin").after("<span>登陆失败</span>");
                 } else if (errcode === 0) {
