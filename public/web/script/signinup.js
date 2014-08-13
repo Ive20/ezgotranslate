@@ -57,11 +57,18 @@
                 } else if (errcode == 0) {
                     /* Jump to private page */
                     $(".container_in").attr("style", "display: none;");
-                    alert("Success");
+                    //alert("Success");
+                    var sign = $("#sign");
+                    sign.empty();
+                    sign.append("<p>" + acc + "<\p>");
                 }
             },
         "json");
-        jqxhr.fail(function () { alert("Request fail!"); });
+        jqxhr.fail(function () {
+            //alert("Request fail!");
+            $("#signin").after("<span id = \"remove\">登陆失败</span>");
+            signInForm.remind = false;
+        });
         //alert(acc + "\n" + pas);
     })
 
@@ -85,19 +92,26 @@
                 email: email
             },
             function (data, status) {
-                alert("Status: " + status + "\nData: " + data);
+                //alert("Status: " + status + "\nData: " + data);
                 var errcode = data.errcode;
-                alert(errcode);
+                //alert(errcode);
                 if (errcode == 1) {
                     $("#signup").after("<span id = \"remove\">注册失败</span>");
                     signUpForm.remind = false;
                 } else if (errcode == 0) {
                     /* Jump to private page */
                     $(".container_up").attr("style", "display: none");
-                    alert("Success");
+                    //alert("Success");
+                    var sign = $("#sign");
+                    sign.empty();
+                    sign.append("<p>" + acc + "<\p>");
                 }
             },
             "json");
-        jqxhr.fail(function () { alert("Request fail!") });
-    });
+        jqxhr.fail(function () {
+            //alert("Request fail!")
+            $("#signup").after("<span id = \"remove\">该用户名已注册</span>");
+            signUpForm.remind = false;
+        });
+    })
 })
