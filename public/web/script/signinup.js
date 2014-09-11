@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿$(document).ready(function(){
     $(".container_in .switch").click(function () {
         $(".container_in").attr("style", "display:none;");
         $(".container_up").attr("style", "display:block;");
@@ -17,60 +17,101 @@
     $(".si").click(function () {
         $(".container_in").attr("style", "display:block;");
     });
-    
-
-    /*login*/
+    /* Create formStatus Object to record the info. filled
+     * IF info. wrong value = false
+     * ELSE value = true
+     */
+    /* $begin formStatus */
+    function formStatus() {
+        this.acc = true;
+        this.pass = true;
+        this.email = true;
+        this.remind = true;
+    }
+    /* $end formStatus */
+    var signInForm = new formStatus();
+    var signUpForm = new formStatus();
+    /* Login */
     $("#signin").click(function () {
-        //function checkForm(){}
-        //var login = $("div#signin-windows input");
         var login = $(".container_in #signin-windows input");
+        /* Clear error remind info. */
+        if (!signInForm.remind) {
+            $(".container_in #remove").remove();
+            signInForm.remind = true;
+        }
+        //function checkForm(){}
         var acc = login[0].value;
         var pas = login[1].value;
-
-        $.post("/user/login",
+        var jqxhr = $.post("/user/login",
             {
                 username: acc,
                 password: pas
             },
-            function(data){
+            function (data, status) {
+                //alert("Status: " + status + "\nData: " + data);
                 var errcode = data.errcode;
-               if (errcode === 1) {
-                    $("#signin").after("<span>登陆失败</span>");
-              } else if (errcode === 0) {
-                  //跳转到会员界面
-                  alert("Success");
-               }
-        },
+                //alert(errcode);
+                if (errcode == 1) {
+                    $("#signin").after("<span id = \"remove\">登陆失败</span>");
+                    signInForm.remind = false;
+                } else if (errcode == 0) {
+                    /* Jump to private page */
+                    $(".container_in").attr("style", "display: none;");
+                    //alert("Success");
+                    var sign = $("#sign");
+                    sign.empty();
+                    sign.append("<p>" + acc + "<\p>");
+                }
+            },
         "json");
+        jqxhr.fail(function () {
+            //alert("Request fail!");
+            $("#signin").after("<span id = \"remove\">登陆失败</span>");
+            signInForm.remind = false;
+        });
         //alert(acc + "\n" + pas);
     })
 
-    /*register*/
+    /* Register */
     $("#signup").click(function () {
-        //checkForm(){}
-        //var register = $("div#signup-windows input");
         var register = $(".container_up #signin-windows input");
+        /* Clear error remind info. */
+        if (!signUpForm.remind) {
+            $(".container_up #remove").remove();
+            signUpForm.remind = true;
+        }
+        //checkForm(){}
         var acc = register[0].value;
         var email = register[1].value;
         var pas = register[3].value;
 
-        $.post("/user/register",
+        var jqxhr = $.post("/user/register",
             {
                 username: acc,
                 password: pas,
                 email: email
             },
-            function (data) {
+            function (data, status) {
+                //alert("Status: " + status + "\nData: " + data);
                 var errcode = data.errcode;
-                if (errcode === 1) {
-                    $("#signup").after("<span>注册失败</span>");
-                } else if (errcode === 0) {
-                    //跳转到会员界面
-                    alert("Success");
+                //alert(errcode);
+                if (errcode == 1) {
+                    $("#signup").after("<span id = \"remove\">注册失败</span>");
+                    signUpForm.remind = false;
+                } else if (errcode == 0) {
+                    /* Jump to private page */
+                    $(".container_up").attr("style", "display: none");
+                    //alert("Success");
+                    var sign = $("#sign");
+                    sign.empty();
+                    sign.append("<p>" + acc + "<\p>");
                 }
             },
-            "json")
-        //Test
-        //alert(acc + "\n" + pas + "\n" + email);
-    });
-});
+            "json");
+        jqxhr.fail(function () {
+            //alert("Request fail!")
+            $("#signup").after("<span id = \"remove\">该用户名已注册</span>");
+            signUpForm.remind = false;
+        });
+    })
+})
