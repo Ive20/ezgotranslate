@@ -21,10 +21,10 @@ errcode
         "errcode":"0"
     }
     
-###regiser
+###register
 注册接口
 
-请求地址：/user/regiser
+请求地址：/user/register
 请求参数
 
     username:用户名
