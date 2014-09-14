@@ -3,7 +3,6 @@
      * IF info. wrong value = false
      * ELSE value = true
      */
-
     /* Login */
     $("#signin").click(function () {
         var login = $(".container_in #signin-windows input");
@@ -71,7 +70,7 @@
                     $("#signup_remind").empty().html("注册失败");
                 } else if (errcode == 0) {
                     /* Jump to private page */
-                    window.location.href = "web/after sigin.html";
+                    window.location.href = "web/after signin.html";
                 }
             },
             "json");
@@ -89,7 +88,7 @@
                 if (errcode == 1) {
                     alert("登出失败");
                 } else {
-                    window.location.href = "index.html";
+                    window.location.href = "../index.html";
                 }
             },
             "json");
