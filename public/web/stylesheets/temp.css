@@ -1,4 +1,11 @@
-﻿content #dynamic {
+﻿.content {
+    display: block;
+    width: 950px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.content #dynamic {
     position:relative;
     width:640px;
     height:650px;
@@ -8,12 +15,12 @@
     float:left;
 }
 
-content #rank {
+.content #rank {
     position:relative;
     display:block;
     width:270px;
     height:400px;
-    margin:40px 0 40px 20px;
+    margin:40px 0 40px 0;
     border:1px solid #858585;
     border-radius:10px;
     float:right;

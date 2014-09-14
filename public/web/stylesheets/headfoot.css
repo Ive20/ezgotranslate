@@ -1,101 +1,174 @@
 body {
-    margin:0;
+    margin: 0;
 }
 
 header {
-    position:relative;
-    width:100%;
-    min-width:1000px;
-    height:45px;
-    border:0 0 1px 0 solid #6babe9;
-    background-color:#6babe9;
-    box-shadow:0 2px 2px #a2c7ea;
-    margin:0;
+    position: relative;
+    width: 100%;
+    min-width: 1000px;
+    height: 45px;
+    border: 0 0 1px 0 solid #6babe9;
+    background-color: #6babe9;
+    box-shadow: 0 2px 2px #a2c7ea;
+    margin: 0;
 }
 
 header #navigition {
-    position:relative;
-    width:960px;
-    height:45px;
-    margin:0 auto;
+    position: relative;
+    width: 960px;
+    height: 45px;
+    margin: 0 auto;
 }
 
 header #logo {
-    position:absolute;
-    left:0;
-    display:block;
-    width:auto;
-    font-size:40px;
-    font-family:Helvetica, Arial;
-    line-height:45px;
-    color:#ffffff; 
+    position: absolute;
+    left: 0;
+    display: block;
+    width: auto;
+    font-size: 40px;
+    font-family: Helvetica, Arial;
+    line-height: 45px;
+    color: #ffffff; 
+}
+
+#personal, #personal a {
+    position: relative;
+    float: right;
+    width: 120px;
+    height: 45px;
+}
+
+#personal .headphoto {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    left: 10px;
+    top: 9px;
+    background-color: #bebebe;
+    font-size: 12px;
+    float: left;
+
+    line-height: 27px;
+    text-align: center;
+}
+
+#personal .username, .p_nav span {
+    position: relative;
+    margin: 0;
+    top: 14.5px;
+    float: right;
+    width: 73px;
+    height: 16px;
+    color: #ffffff;
+
+    font-size: 14px;
+    line-height: 14px;
+}
+
+#personal:hover {
+    background-color: #3f87eb;
+}
+
+#personal #p_head:hover ul {
+    
+}
+
+#personal ul {
+    display: none;
+    position: absolute;
+    top: 45px;
+    margin: 0;
+    padding: 0;
+    width: 120px;
+    height: auto;
+    
+    list-style: none;
+    z-index: 10;
+}
+
+#personal ul li {
+    border-top: 1px solid #3f8fff;
+    width: 100%;
+    height: 44px;
+    color: #ffffff;
+    background-color: #3f87eb;
+}
+
+#personal ul .p_nav_last {
+    height: 43px;
+    border-bottom: 1px solid #bebebe;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#personal ul li a:hover {
+    background-color: #6babe9;
+    height: 45px;
+}
+
+#personal ul .p_nav_last a:hover {
+    background-color: #6babe9;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 #navigition #sign {
-    position:relative;
-    float:right;
-    width:auto;
-    margin:22px 0 7px;
+    position: relative;
+    float: right;
+    width: auto;
+    margin: 22px 0 7px;
 }
 
 #sign .signinup {
-    display:block;
-    height:16px;
-    font-size:14px;
-    line-height:16px;
-    text-align:center;
-    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color:#f3f3f3;
-    float:left;
-    text-decoration:none;
+    display: block;
+    height: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #f3f3f3;
+    float: left;
+    text-decoration: none;
 }
 
 #sign .signinup:hover {
-    color:#ffffff;
+    color: #ffffff;
 }
 
 #sign .line {
-    display:block;
-    margin:0 13px;
-    width:2px;
-    height:16px;
-    float:left;
-    background-color:#bebebe;
+    display: block;
+    margin: 0 13px;
+    width: 2px;
+    height: 16px;
+    float: left;
+    background-color: #bebebe;
 }
 
-content {
-    position:relative;
-    display:block;
-    margin:0 auto;
-    width:960px;
-    height:735px;
-}
 
 footer {
-    position:relative;
-    bottom:0;
-    display:block;
-    width:960px;
-    margin:0 auto;
+    position: relative;
+    bottom: 0;
+    width: 960px;
+    margin: 0 auto;
 }
 
 footer .line {
-    position:absolute;
-    top:0;
-    margin:0 0 60px;
-    width:100%;
-    height:1px;
-    background-color:#bababa;
+    position: absolute;
+    top: 0;
+    margin: 0 0 60px;
+    width: 100%;
+    height: 1px;
+    background-color: #bababa;
 }
 
 footer #copyright {
-    position:relative;
-    display:block;
-    top:25px;
-    left:15px;
-    width:auto;
-    height:16px;
-    font-size:14px;
-    font-family:'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, 'Hiragino Sans GB', sans-serif;
-    color:#858585;
+    position: relative;
+    display: block;
+    top: 25px;
+    left: 15px;
+    width: auto;
+    height: 16px;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, 'Hiragino Sans GB', sans-serif;
+    color: #858585;
 }
