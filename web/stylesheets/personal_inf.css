@@ -72,13 +72,24 @@
     color:#ffffff;
 }
 
-#change_hp {
+#setting .change_block .icon {
+    display: block;
+    float: left;
+    width: 9px;
+    height: 9px;
+    background-color: #a1a1a1;
+    border: 1px solid #a1a1a1;
+    border-radius: 5px;
+    margin: 10px 10px 10px 30px;
+}
+
+.change_block {
     width:100%;
-    height:480px;
+    height: auto;
     border-bottom:1px solid #d4d4d4;
 }
 
-#change_hp h2 {
+.change_hp h2 {
     width:100%;
     height:30px;
     line-height:30px;
@@ -93,93 +104,137 @@
     background-color:rgba(235, 235, 235, 0.4);
 }
 
-#change_hp .icon {
-    display:block;
-    float:left;
-    width:9px;
-    height:9px;
-    background-color:#a1a1a1;
-    border:1px solid #a1a1a1;
-    border-radius:5px;
-    margin:10px 10px 10px 30px;
+.change_hp #hp_history {
+    display: block;
+    width: 229px;
+    height: 449px;
+    border-right: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    float: left;
 }
 
-#hp_left {
-    display:block;
-    width:229px;
-    height:449px;
-    border-right:1px solid #d4d4d4;
-    float:left;
+.change_hp #hp_right {
+    position: relative;
+    display: block;
+    width: 550px;
+    height: 449px;
+    border-bottom: 1px solid #d4d4d4;
+    float: left;
 }
 
-#hp_right {
-    position:relative;
-    display:block;
-    width:550px;
-    height:449px;
-    float:left;
+.change_hp #hp_right .unname {
+    position: relative;
+    width: 50%;
+    height: 360px;
+    float: left;
 }
 
-#hp_right .unname {
-    position:relative;
-    width:50%;
-    height:360px;
-    float:left;
+.change_hp .unname img {
+    width: 180px;
+    height: 180px;
 }
 
-.unname img {
-    width:180px;
-    height:180px;
-    
+.change_hp .unname span {
+    width: 180px;
+    display: block;
+    margin: 10px 0 0 65px;
+    font-size: 16px;
+    text-align: center;
 }
 
-.unname span {
-    width:180px;
-    display:block;
-    margin:10px 0 0 65px;
-    font-size:16px;
-    text-align:center;
+.change_hp .unname button {
+    position: relative;
+    left: 60px;
+    margin: 5px 0 0 0;
+    height: 32px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #3f87eb;
+    background-color: #3f87eb;
+    box-shadow: none;
 }
 
-.unname button {
-    position:relative;
-    left:60px;
-    margin:5px 0 0 0;
-    height:32px;
-    width:100px;
-    font-size:16px;
-    border-radius:5px;
-    border:1px solid #3f87eb;
-    background-color:#3f87eb;
-    box-shadow:none;
+.change_hp button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.change_hp button:hover {
+    background-color: #2f75d5;
+    border: 1px solid #2f75d5;
+}
+
+.change_hp .unname .current {
+    margin: 60px 20px 0 65px;
+}
+
+.change_hp .unname .changed {
+    margin: 60px 65px 0 20px;
+    background-color: rgba(212, 212, 212, 0.70);
+}
+
+.change_hp .submit {
+    width: 138px;
+    height: 40px;
+    border: 1px solid #3f87eb;
+    background-color: #3f87eb;
+    border-radius: 5px;
+    font-size: 22px;
+    margin: 25px 315px 85px;
 }
 
 
-button a {
-    text-decoration:none;
-    color:#ffffff;
+/*change information*/
+.change_inf ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-#setting button:hover {
-    background-color:#2f75d5;
-    border:1px solid #2f75d5;
+.change_hp {
+    display: none;
 }
 
-.unname .current {
-    margin:60px 20px 0 65px;
+.change_inf .inf_form {
+    padding: 10px 20px;
+    width: auto;
+    height: auto;
 }
 
-.unname .changed {
-    margin:60px 65px 0 20px;
-    background-color:rgba(212, 212, 212, 0.70);
+.change_inf .inf_form h2 {
+    font-size: 15px;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #d4d4d4;
 }
 
-#setting .submit {
-    width:138px;
-    height:40px;
-    border:1px solid #3f87eb;
-    background-color:#3f87eb;
-    border-radius:5px;
-    font-size:22px;
-    margin:25px 315px 85px;
+.change_inf .inf_form .inf_block {
+    width: 100%;
+    height: auto;
+    /*padding: 30px 0;*/
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.change_inf .inf_form .line {
+    width: 100%;
+    height: 20px;
+    padding: 25px 0;
+}
+
+.change_inf .inf_form .line .inf_left {
+    width: 110px;
+    height: 20px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+}
+
+.change_inf .inf_form .line .inf_right {
+    height: 20px;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 20px;
+    float: left;
 }

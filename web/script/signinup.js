@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    alert("haha");
     //signin or sign up
     $(".container_in .switch").click(function () {
         $(".container_in").attr("style", "display:none;");
