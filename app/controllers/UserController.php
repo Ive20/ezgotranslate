@@ -1,6 +1,5 @@
 <?php
 
-
 class UserController extends BaseController {
 
 	/*
@@ -16,7 +15,7 @@ class UserController extends BaseController {
 	|
 	*/
 
-	public function Login()
+	public function postLogin()
 	{
 		 $name=Input::get('username');	 
 		 $password=Input::get('password');
@@ -32,7 +31,7 @@ class UserController extends BaseController {
 			return $re;
 		}
 	}
-	public function register()
+	public function postRegister()
 	{
 		$user = new User;
 		$user->user_name = Input::get('username');
@@ -41,11 +40,27 @@ class UserController extends BaseController {
 		$user->save();
 		return array('errcode'=>'0');
 	}
-	public function logout()
+	public function postLogout()
 	{
 		Auth::logout();
 		return array('errcode'=>'0');
 		
+	}
+	public function postHasuser()
+	{
+		$user = new User;
+		$username = Input::get('username');
+		$results = DB::select('select * from users where user_name = ?', array($username));
+		if(count($results)>=1)
+		{
+			return array('errcode'=>1);
+			 
+		}
+		else
+			
+		{
+			return array('errcode'=>0);
+		}
 	}
 
 }

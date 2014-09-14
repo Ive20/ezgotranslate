@@ -15,13 +15,24 @@ class InfoController extends BaseController {
 	|
 	*/
 
-	public function getInfo()
+	public function postGetinfo()
 	{
-		return View::make('hello');
+		return Infos::all();
 	}
 	public function getIndex()
 	{
 		return 'hello';
+	}
+	public function postInsertinfo()
+	{
+		$info=new Infos;
+		$info->info_id=uniqid(time(),true);
+		$info->info_content= Input::get('content');
+		$info->info_language=Input::get('language');
+		$info->save();
+		return array(
+				"errcode"=>0
+		);
 	}
 
 }

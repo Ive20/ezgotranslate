@@ -15,7 +15,5 @@ Route::get('/', function()
 {
 	return 'hello';
 });
-Route::post('user/login', 'UserController@Login');
-Route::post('user/register','UserController@register');
-Route::post('user/logout','UserController@logout');
+Route::controller('user', 'UserController');
 Route::controller('info','InfoController');

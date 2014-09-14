@@ -21,10 +21,10 @@ errcode
         "errcode":"0"
     }
     
-###regiser
+###register
 注册接口
 
-请求地址：/user/regiser
+请求地址：/user/register
 请求参数
 
     username:用户名
@@ -55,6 +55,59 @@ errcode
 
     {
         "errcode":"0"
+    }
+###hasuser
+测试该用户名是否被注册  
+请求地址:/user/hasuser
+请求参数：
+
+username：用户名
+
+返回值
+
+    {
+        errcode:0（0为未注册,1为以注册）
+    }  
+##翻译模块
+###getinfo
+获取翻译接口
+(为了开发方便目前会返回所有的信息)
+
+请求地址:/info/geiinfo
+请求参数:
+
+    无
+
+返回值
+
+    [
+        {
+        info_id: "14104441145411ab52054d23.99321960"
+        info_content: "hello"
+        info_language: "en"
+        updated_at: null
+        created_at: null
+        }
+        {
+        info_id: "141044610615411b31aab1fd"
+        info_content: "hi"
+        info_language: "en"
+        updated_at: "2014-09-11 14:35:06"
+        created_at: "2014-09-11 14:35:06"
+        }
+    ]
+###insertinfo
+插入翻译信息接口
+
+请求地址:/info/insertinfo
+请求参数:
+
+    无
+    
+返回值:
+
+    {
+        errcode: 0
     }
     
     
