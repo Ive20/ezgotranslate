@@ -32,8 +32,8 @@
         <span class="username">Boby</span>  
       </div>
       <ul>
-        <li><a class="homepage" href="javascript:;"><span>主页</span></a></li>
-        <li><a class="user" href="javascript:;"><span>账号</span></a></li>
+        <li><a class="homepage" href="homepage.html"><span>主页</span></a></li>
+        <li><a class="user" href="personal_inf.html"><span>账号</span></a></li>
         <li><a class="translate" href="javascript:;"><span>翻译</span></a></li>
         <li><a class="manage" href="javascript:;"><span>管理</span></a></li>
       </ul>
@@ -86,13 +86,37 @@
             </div>
           </li>
           <li class="inf_block">
-            <div class="line">
+            <div class="line" style="height: 80px;">
               <div class="inf_left">个人简介：</div>
-              <div class="inf_right"><input type="radio" name="sex" value="man" />男<input type="radio" name="sex" value="woman" />女</div>
+              <div class="inf_right"><textarea class="briefIntroduction"></textarea></div>
             </div>
-            <div class="line">
+            <div class="line" style="height: 80px;">
               <div class="inf_left">翻译偏好：</div>
-              <div class="inf_right"><input type="text" class="location" /></div>
+              <div class="inf_right"><textarea type="text" class="prefer"></textarea></div>
+            </div>
+          </li>
+          <button class="submit"><a href="javascript:;">确认修改</a></button>
+        </ul>
+      </div>
+      <div class="safety change_block">
+        <ul class="inf_form">
+          <h2>安全设置</h2>
+          <li class="inf_block">
+            <div class="line">
+              <div class="inf_left">我的邮箱：</div>
+              <div class="inf_right"><span class="emailAddress">******@***</span>(每个邮箱只能注册一个号,不能修改)</div>
+            </div>
+          </li>
+          <li class="inf_block">
+            <div class="line">
+              <div class="inf_left">密码：</div>
+              <div class="inf_right">********<a href="javascript:;" style="color: blue;">修改密码</a></div>
+            </div>
+          </li>
+          <li class="inf_block">
+            <div class="line" style="height: 80px;">
+              <div class="inf_left">密保问题：</div>
+              <div class="inf_right"><a href="javascript:;" style="color: blue;">设置密保问题</a></div>
             </div>
           </li>
         </ul>
