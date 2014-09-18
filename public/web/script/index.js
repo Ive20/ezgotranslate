@@ -15,7 +15,7 @@ function includeJs(path) {
 }
 
 /* Simulate success login via cookie */
-includeJs("script/function.js");
+includeJs("web/script/function.js");
 if (SubCookieUtil.getAll("login") == null) {
     var login = {
         username: "reimondo",
