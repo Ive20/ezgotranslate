@@ -9,7 +9,7 @@ if (SubCookieUtil.getAll("login") == null) {
         username: "reimondo",
         state: "false"
     }
-    subCookieUtil.setAll("login", login);
+    SubCookieUtil.setAll("login", login);
 } 
 
 $(document).ready(function () {
@@ -110,7 +110,7 @@ $(document).ready(function () {
                 if (errcode == 1) {
                     alert("登出失败");
                 } else {
-                    subCookieUtil.set("login", state, "false");
+                    SubCookieUtil.set("login", state, "false");
                     window.location.href = "../index.html";
                 }
             },

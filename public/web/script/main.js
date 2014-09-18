@@ -6,7 +6,7 @@
 \*/
 
 /* verify login */
-var getLoginCookie = subCookieUtil.get("login", "state");
+var getLoginCookie = SubCookieUtil.get("login", "state");
 if (getLoginCookie == null || getLoginCookie == "false") {
     console.log("main.js Line 10. Illegal login.");
     window.location.href = "../index.html";
