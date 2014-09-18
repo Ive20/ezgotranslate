@@ -1,4 +1,30 @@
-﻿$(document).ready(function () {
+﻿/*\
+|*| This JS file is mainly to provide login|register|logout
+|*| functions.
+\*/
+
+/*
+ * includeJs() - include other Js doc
+ */
+function includeJs(path) {
+    var sobj = document.createElement('script');
+    sobj.type = "text/javascript";
+    sobj.src = path;
+    var headobj = document.getElementsByTagName('head')[0];
+    headobj.appendChild(sobj);
+}
+
+/* Simulate success login via cookie */
+includeJs("script/function.js");
+if (SubCookieUtil.getAll("login") == null) {
+    var login = {
+        username: "reimondo",
+        state: "false"
+    }
+    subCookieUtil.setAll("login", login);
+} 
+
+$(document).ready(function () {
     /* Create formStatus Object to record the info. filled
      * IF info. wrong value = false
      * ELSE value = true
@@ -21,6 +47,10 @@
                 if (errcode == 1) {
                     $("#signin_remind").empty().html("登陆失败");
                 } else if (errcode == 0) {
+                    /* Get user info and save to session */
+                    //Just for test.
+                    SubCookieUtil.set("login", "state", "true");
+
                     /* Jump to private page */
                     window.location.href = "web/after signin.html";
                 }
@@ -44,16 +74,20 @@
         var pas = register[3].value;
         var confirmPas = register[4].value;    //need confirm
         
-         /* Check whether hasuser */
+        /* Check whether hasuser */
         var checkUsername = $.post("/user/hasuser",
             {
                 username: acc
             },
             function(data, status) {
                 var errcode = data.errcode;
+                /*
+                 * IF hasuser return false to stop excute $.post("user/register")
+                 */
                 if(errcode == 1) {
                     $("#signup_remind").empty().html("用户名已注册");
                     console.log("hasuser");
+                    return false;
                 }
             },
             "json");
@@ -88,6 +122,7 @@
                 if (errcode == 1) {
                     alert("登出失败");
                 } else {
+                    subCookieUtil.set("login", state, "false");
                     window.location.href = "../index.html";
                 }
             },
