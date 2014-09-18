@@ -3,19 +3,7 @@
 |*| functions.
 \*/
 
-/*
- * includeJs() - include other Js doc
- */
-function includeJs(path) {
-    var sobj = document.createElement('script');
-    sobj.type = "text/javascript";
-    sobj.src = path;
-    var headobj = document.getElementsByTagName('head')[0];
-    headobj.appendChild(sobj);
-}
-
 /* Simulate success login via cookie */
-includeJs("web/script/function.js");
 if (SubCookieUtil.getAll("login") == null) {
     var login = {
         username: "reimondo",
