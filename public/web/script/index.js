@@ -9,7 +9,7 @@ if (SubCookieUtil.getAll("login") == null) {
         username: "reimondo",
         state: "false"
     }
-    SubCookieUtil.setAll("login", login, null, "http://lxh.xiaomutech.com/");
+    SubCookieUtil.setAll("login", login, null, "/");
 } 
 
 $(document).ready(function () {
@@ -110,7 +110,7 @@ $(document).ready(function () {
                 if (errcode == 1) {
                     alert("登出失败");
                 } else {
-                    SubCookieUtil.set("login", "state", "false");
+                    SubCookieUtil.set("login", "state", "false", "http://lxh.xiaomutech.xom/");
                     window.location.href = "../index.html";
                 }
             },
