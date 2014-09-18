@@ -110,7 +110,7 @@ $(document).ready(function () {
                 if (errcode == 1) {
                     alert("登出失败");
                 } else {
-                    SubCookieUtil.set("login", state, "false");
+                    SubCookieUtil.set("login", "state", "false");
                     window.location.href = "../index.html";
                 }
             },
