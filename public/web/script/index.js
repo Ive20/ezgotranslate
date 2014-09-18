@@ -110,11 +110,13 @@ $(document).ready(function () {
                 if (errcode == 1) {
                     alert("登出失败");
                 } else {
+                    /*
                     try{
                         SubCookieUtil.set("login", "state", "false", "../");
                     } catch (e) {
                         subCookieUtil.set("login", "state", "false", "/");
                     }
+                    */
                     window.location.href = "../index.html";
                 }
             },
