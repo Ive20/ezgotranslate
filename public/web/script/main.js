@@ -28,5 +28,4 @@ var getinfo = $.post("/info/getinfo",
 getinfo.fail(function () {
     console.log("Line 124. Getinfo error.");
 })
-
 /* $end after_signin.html dynamic content create */

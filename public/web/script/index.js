@@ -9,7 +9,7 @@ if (SubCookieUtil.getAll("login") == null) {
         username: "reimondo",
         state: "false"
     }
-    SubCookieUtil.setAll("login", login);
+    SubCookieUtil.setAll("login", login, null, "http://lxh.xiaomutech.com/");
 } 
 
 $(document).ready(function () {
