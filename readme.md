@@ -100,14 +100,47 @@ username：用户名
 插入翻译信息接口
 
 请求地址:/info/insertinfo
-请求参数:
 
-    无
-    
+    可选参数：
+        content:翻译信息
+        lanuage:翻译语言
+
 返回值:
 
     {
         errcode: 0
     }
+###updateinfo
+   修改翻译信息
+请求地址：/info/updateinfo
+请求参数:
+    
+    必选参数：
+        infoid:信息id
+    可选参数：
+        content:翻译信息
+        lanuage:翻译语言
+
+返回值:
+
+    {
+        errcode: 0
+    }
+
+###delteinfo
+删除翻译信息
+请求地址：/info/deleteinfo
+请求参数:
+    
+    必选参数：
+        infoid:信息id
+    可选参数
+
+返回值:
+
+    {
+        errcode: 0
+    }
+
     
     
