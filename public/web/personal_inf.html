@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="stylesheets/headfoot.css" />
+  <link rel="stylesheet" href="stylesheets/setting_nav.css" />
+  <link rel="stylesheet" href="stylesheets/personal_inf.css" />
+  <script type="text/javascript" src="script/jquery.js"></script>
+  <script type="text/javascript" src="script/personal.js"></script>
+  <script type="text/javascript" src="script/function.js"></script>
+  <script type="text/javascript" src="script/index.js"></script>
+</head>
+<body>
+  <header>
+    <div id="navigition">
+      <span id="logo">Tryneeds</span>
+      <div id="personal">
+        <a id="p_head" href="javascript:;">
+          <img class="headphoto" src="picture/boby.jpg" />
+          <div class="username">Boby</div>
+        </a>
+        <ul>
+          <li class="p_nav"><a href="javascript:;"><span>会员中心</span></a></li>
+          <li class="p_nav"><a href="javascript:;"><span>个人资料</span></a></li>
+          <li class="p_nav p_nav_last"><a href="javascript:;"><span>退出登录</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <content>
+    <nav id="nav">
+      <div id="inf">
+        <img class="headphoto" src="picture/boby.jpg"/>
+        <span class="username">Boby</span>  
+      </div>
+      <ul>
+        <li><a class="homepage" href="homepage.html"><span>主页</span></a></li>
+        <li><a class="user" href="personal_inf.html"><span>账号</span></a></li>
+        <li><a class="translate" href="javascript:;"><span>翻译</span></a></li>
+        <li><a class="manage" href="javascript:;"><span>管理</span></a></li>
+      </ul>
+    </nav>
+    <div id="setting">
+      <h1><span class="icon"></span>&nbsp;&nbsp;个人资料</h1>
+      <nav id="setting_nav">
+        <ul>
+          <li><a class="first_head" href="javascript:;">头像设置</a></li>
+          <li><a class="second_personal" href="javascript:;">个人设置</a></li>
+          <li><a class="last_safe" href="javascript:;">安全相关</a></li>
+        </ul>
+      </nav>
+      <div class="change_hp change_block">
+        <h2><span class="icon"></span>修改个人头像</h2>
+        <div id="hp_history"></div>
+        <div id="hp_right">
+          <div class="unname">
+            <img class="current" src="picture/boby.jpg" />
+            <span>当前图片</span>
+          </div>
+          <div class="unname">
+            <img class="changed" />
+            <button><a href="javascript:;">图片上传</a></button>
+          </div>
+        </div>
+        <button class="submit"><a href="javascript:;">更&nbsp;&nbsp;&nbsp;新</a></button>
+      </div>
+      <div class="change_inf change_block">
+        <ul class="inf_form">
+          <h2>个人资料设置</h2>
+          <li class="inf_block">
+            <div class="line">
+              <div class="inf_left">昵称：</div>
+              <div class="inf_right"><input type="text" class="nickname" /></div>
+            </div>
+            <div class="line">
+              <div class="inf_left">用户名：</div>
+              <div class="inf_right">boby</div>
+            </div>
+          </li>
+          <li class="inf_block">
+            <div class="line">
+              <div class="inf_left">性别：</div>
+              <div class="inf_right"><input type="radio" name="sex" value="man" />男<input type="radio" name="sex" value="woman" />女</div>
+            </div>
+            <div class="line">
+              <div class="inf_left">所在地区：</div>
+              <div class="inf_right"><input type="text" class="location" /></div>
+            </div>
+          </li>
+          <li class="inf_block">
+            <div class="line" style="height: 80px;">
+              <div class="inf_left">个人简介：</div>
+              <div class="inf_right"><textarea class="briefIntroduction"></textarea></div>
+            </div>
+            <div class="line" style="height: 80px;">
+              <div class="inf_left">翻译偏好：</div>
+              <div class="inf_right"><textarea type="text" class="prefer"></textarea></div>
+            </div>
+          </li>
+          <button class="submit"><a href="javascript:;">确认修改</a></button>
+        </ul>
+      </div>
+      <div class="safety change_block">
+        <ul class="inf_form">
+          <h2>安全设置</h2>
+          <li class="inf_block">
+            <div class="line">
+              <div class="inf_left">我的邮箱：</div>
+              <div class="inf_right"><span class="emailAddress">******@***</span>(每个邮箱只能注册一个号,不能修改)</div>
+            </div>
+          </li>
+          <li class="inf_block">
+            <div class="line">
+              <div class="inf_left">密码：</div>
+              <div class="inf_right">********<a href="javascript:;" style="color: blue;">修改密码</a></div>
+            </div>
+          </li>
+          <li class="inf_block">
+            <div class="line" style="height: 80px;">
+              <div class="inf_left">密保问题：</div>
+              <div class="inf_right"><a href="javascript:;" style="color: blue;">设置密保问题</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </content>
+
+  <footer>
+    <span class="line"></span>
+    <span id="copyright">&copy; 2014 Ezgo-China</span>
+  </footer>
+</body>
+</html>

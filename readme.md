@@ -73,7 +73,7 @@ username：用户名
 获取翻译接口
 (为了开发方便目前会返回所有的信息)
 
-请求地址:/info/geiinfo
+请求地址:/info/getinfo
 请求参数:
 
     无
