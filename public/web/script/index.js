@@ -63,6 +63,7 @@ $(document).ready(function () {
         var confirmPas = register[4].value;    //need confirm
         
         /* Check whether hasuser */
+        var hasuser = false;
         var checkUsername = $.post("/user/hasuser",
             {
                 username: acc
@@ -75,11 +76,15 @@ $(document).ready(function () {
                 if(errcode == 1) {
                     $("#signup_remind").empty().html("用户名已注册");
                     console.log("hasuser");
+                    hasuser = true;
                     return false;
                 }
             },
             "json");
-
+        checkUsername.fail(function () {
+            console.log("Line 67. Ajax problem.");
+        })
+        if (hasuser) return false;
         var jqxhr = $.post("/user/register",
             {
                 username: acc,
