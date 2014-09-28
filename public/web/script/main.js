@@ -26,6 +26,6 @@ var getinfo = $.post("/info/getinfo",
     , "json");
 
 getinfo.fail(function () {
-    console.log("Line 124. Getinfo error.");
+    console.log("main.js Line 16. Getinfo error.");
 })
 /* $end after_signin.html dynamic content create */
