@@ -5,11 +5,11 @@
 
 /* Simulate success login via cookie */
 if (SubCookieUtil.getAll("login") == null) {
-    var login = {
+    var user = {
         username: "reimondo",
         state: "false"
     }
-    SubCookieUtil.setAll("login", login, null, "/");
+    SubCookieUtil.setAll("login", user, null, "/");
 } 
 
 $(document).ready(function () {
