@@ -49,7 +49,7 @@
 .translating_container .second_block .search_container {
     height: 35px;
     width: 530px;
-    border: 2px solid #161616;
+    border: 2px solid #434343;
     margin: 8.5px 10px;
     border-radius: 5px;
     float: left;
@@ -106,6 +106,58 @@ textarea:focus {
     border-right: 1px solid #d4d4d4;
     float: left;
     overflow-y: auto;
+}
+
+.info_block .info_line {
+    position: relative;
+    width: 100%;
+    /*min-height: 45px;*/
+    display: block;
+    overflow: visible;
+}
+
+.info_block .info_line div {
+    
+    float: left;
+    font: normal 16px 'Microsoft Yahei';
+}
+
+.info_block .info_line .line_numbers {
+    /*position: relative;
+    top: 0;
+    left: 0;*/
+    float: left;
+    text-align: center;
+    width: 27px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.info_block .info_line .line_translate {
+    text-align: left;
+    width: 280px;
+    height: auto;
+    margin: 13px 15px 0 5px;
+    float: left;
+}
+
+.info_block .info_line .translated {
+    text-align: left;
+    width: 200px;
+    height: auto;
+    margin: 13px 0;
+    float: left;
+}
+
+.info_block .info_line .if_translated,
+.info_block .info_line .if_verify {
+    /*564 - 27 - 300 - 200 = 37*/
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #89bbec;
+    margin: 18px 3px 18px 5px;
+    float: left;
 }
 
 .translating_container .translate_block .operate_block {
