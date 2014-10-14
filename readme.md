@@ -68,7 +68,7 @@ username：用户名
     {
         errcode:0（0为未注册,1为以注册）
     }  
-##翻译模块
+##信息模块
 ###getinfo
 获取翻译接口
 (为了开发方便目前会返回所有的信息)
@@ -141,6 +141,74 @@ username：用户名
     {
         errcode: 0
     }
+##翻译模块
+###gettranslate
+获取翻译接口
+(为了开发方便目前会返回所有的信息)
 
+请求地址:/translate/gettranslate
+请求参数:
+
+    无
+
+返回值
+
+    [
+        {
+        translate_id: "1413287394543d0de2f14222.06357417"
+        info_id: "141068563354155ac1a9da31.91101597"
+        translate_language: "cns"
+        translate_result: "嗨"
+        updated_at: "2014-10-14 11:49:54"
+        created_at: "2014-10-14 11:49:54"
+        deleted_at: null
+        }
+    ]
+###inserttranslate
+插入翻译信息接口
+
+请求地址:/translate/inserttranslate
+
+    可选参数：
+        result:翻译结果
+        lanuage:翻译语言
+        infoid:需要翻译得信息id
+
+返回值:
+
+    {
+        errcode: 0
+    }
+###updatetranslate
+   修改翻译信息
+请求地址：/translate/updatetranslate
+请求参数:
+    
+    必选参数：
+        translateid:翻译id
+    可选参数：
+        result:翻译结果
+        lanuage:翻译语言
+
+返回值:
+
+    {
+        errcode: 0
+    }
+
+###deltetranslate
+删除翻译信息
+请求地址：/translate/deltetranslate
+请求参数:
+    
+    必选参数：
+        translateid:翻译id
+    可选参数
+
+返回值:
+
+    {
+        errcode: 0
+    }
     
     

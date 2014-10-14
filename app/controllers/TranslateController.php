@@ -1,6 +1,6 @@
 <?php
 
-class InfoController extends BaseController {
+class TranslateController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -15,33 +15,34 @@ class InfoController extends BaseController {
 	|
 	*/
 
-	public function postGetinfo()
+	public function postGettranslate()
 	{
-		return Info::all();
+		return Translate::all();
 	}
 	public function getIndex()
 	{
 		return 'hello';
 	}
-	public function postInsertinfo()
+	public function postInserttranslate()
 	{
-		$info=new Info;
-		$info->info_id=uniqid(time(),true);
-		$info->info_content= Input::get('content');
-		$info->info_language=Input::get('language');
+		$info=new Translate;
+		$info->translate_id=uniqid(time(),true);
+		$info->translate_result= Input::get('result');
+		$info->translate_language=Input::get('language');
+		$info->info_id=Input::get('infoid');
 		$info->save();
 		return array(
 				"errcode"=>0
 		);
 	}
-	public function postUpdateinfo()
+	public function postUpdatetranslate()
 	{
-		if(Input::has('infoid'))
+		if(Input::has('translateid'))
 		{
-		$infoid=Input::get('infoid');
+		$translateid=Input::get('translateid');
 		}
-		$info=Info::find($infoid);
-		if($info==null)
+		$translate=Translate::find($translateid);
+		if($translate==null)
 		{
 			return array(
 				"errcode"=>1,
@@ -50,32 +51,32 @@ class InfoController extends BaseController {
 		}
 		if(Input::has('content'))
 		{
-		$info->info_content= Input::get('content');
+		$translate->translate_result= Input::get('result');
 		}
 		if(Input::has('language'))
 		{
-			$info->info_content= Input::get('language');
+			$translate->translate_language= Input::get('language');
 		}
-		$info->save();
+		$translate->save();
 		return array(
 			"errcode"=>0
 		);
 	}
-	public function postDeleteinfo()
+	public function postDeletetranslate()
 	{
-		if(Input::has('infoid'))
+		if(Input::has('translateid'))
 		{
-			$infoid=Input::get('infoid');
+			$translateid=Input::get('translateid');
 		}
-		$info=Info::find($infoid);
-		if($info==null)
+		$translate=Translate::find($translateid);
+		if($translate==null)
 		{
 			return array(
 				"errcode"=>1,
 				"errmsg"=>"delete fail"
 			);
 		}
-		$info->delete();
+		$translate->delete();
 		return array(
 				"errcode"=>0
 		);

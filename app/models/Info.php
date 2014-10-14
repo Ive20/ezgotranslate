@@ -1,5 +1,5 @@
 <?php
-class Infos extends Eloquent 
+class Info extends Eloquent 
 {
 	use SoftDeletingTrait;
 	protected $primaryKey = 'info_id';
