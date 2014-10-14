@@ -9,8 +9,8 @@
 请求地址：/user/login
 请求参数
 
-    username:用户名
-    password：密码
+    username:用户名  a
+    password：密码 123456
     
 返回值 
 errcode 
@@ -18,7 +18,12 @@ errcode
 1 为登录失败
 
     {
-        "errcode":"0"
+        errcode: "0"
+        email: "a@ezgotranslate.com"
+        translate: "中文"
+        sex: "男"
+        location: "重庆"
+        nickname: "啊"
     }
     
 ###register
@@ -30,6 +35,11 @@ errcode
     username:用户名
     password：密码
     email:邮箱
+    sex:性别
+    location:地区
+    nickname：昵称
+    translate:翻译偏好
+    about：关于我
     
 返回值 
 errcode 

@@ -22,7 +22,14 @@ class UserController extends BaseController {
 		 $authre=Auth::attempt(array('user_name' => $name, 'password' => $password));
 		if($authre)
 		{
-			$re=array ('errcode'=>'0');
+			$re=array (
+					'errcode'=>'0',
+					'email'=>Auth::user()->user_email,
+					'translate'=>Auth::user()->user_translate,
+					'sex'=>Auth::user()->user_sex,
+					'location'=>Auth::user()->user_location,
+					'nickname'=>Auth::user()->user_nickname,
+			);
 			return $re;
 		}
 		else 
@@ -37,6 +44,26 @@ class UserController extends BaseController {
 		$user->user_name = Input::get('username');
 		$user->user_email = Input::get('email');
 		$user->password = Hash::make(Input::get('password'));
+		if(Input::has('sex'))
+		{
+			$user->user_sex=Input::get('sex');
+		}
+		if(Input::has('about'))
+		{
+			$user->user_about=Input::get('about');
+		}
+		if(Input::has('translate'))
+		{
+			$user->user_translate=Input::get('translate');
+		}
+		if(Input::has('location'))
+		{
+			$user->user_location=Input::get('location');
+		}
+		if(Input::has('nickname'))
+		{
+			$user->user_nickname=Input::get('nickname');
+		}
 		$user->save();
 		return array('errcode'=>'0');
 	}
