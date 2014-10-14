@@ -1,4 +1,12 @@
 ﻿$(document).ready(function () {
+    //alert("hehe");
+    var test = document.getElementById("test1");
+    //alert(test);
+    var line_height = document.getElementById("test").offsetHeight;
+    //alert(line_height);
+    line_height += 13;
+    $("#test1").css("height", line_height);
+    //alert(test.offsetHeight);
     // presonal menu
     $("#personal").hover(function () {
         $("#personal ul").stop().slideDown();

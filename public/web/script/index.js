@@ -5,11 +5,11 @@
 
 /* Simulate success login via cookie */
 if (SubCookieUtil.getAll("login") == null) {
-    var login = {
+    var user = {
         username: "reimondo",
         state: "false"
     }
-    SubCookieUtil.setAll("login", login, null, "/");
+    SubCookieUtil.setAll("login", user, null, "/");
 } 
 
 $(document).ready(function () {
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
         jqxhr.fail(function () {
             $("#signin_remind").empty().html("登陆失败");
-            console.log("Line 46. Ajax problem.");
+            console.log("index.js Line 46. Ajax problem.");
         });
     })
 
@@ -76,30 +76,34 @@ $(document).ready(function () {
                     $("#signup_remind").empty().html("用户名已注册");
                     console.log("hasuser");
                     return false;
-                }
-            },
-            "json");
-
-        var jqxhr = $.post("/user/register",
-            {
-                username: acc,
-                password: pas,
-                email: email
-            },
-            function (data, status) {
-                var errcode = data.errcode;
-                if (errcode == 1) {
-                    $("#signup_remind").empty().html("注册失败");
                 } else if (errcode == 0) {
-                    /* Jump to private page */
-                    window.location.href = "web/after signin.html";
+                    var jqxhr = $.post("/user/register",
+                    {
+                        username: acc,
+                        password: pas,
+                        email: email
+                    },
+                    function (data, status) {
+                        var errcode = data.errcode;
+                        if (errcode == 1) {
+                            $("#signup_remind").empty().html("注册失败");
+                        } else if (errcode == 0) {
+                            /* Jump to private page */
+                            window.location.href = "web/after signin.html";
+                        }
+                    },
+                    "json");
+
+                    jqxhr.fail(function () {
+                        $("#signup_remind").empty().html("注册失败");
+                        console.log("index.js Line 80. Ajax problem.");
+                    });
                 }
             },
             "json");
-        jqxhr.fail(function () {
-            $("#signup_remind").empty().html("注册失败");
-            console.log("Line 88. Ajax problem.");
-        });
+        checkUsername.fail(function () {
+            console.log("index.js Line 66. Ajax problem.");
+        })
     })
 
     /* Logout */
@@ -110,20 +114,13 @@ $(document).ready(function () {
                 if (errcode == 1) {
                     alert("登出失败");
                 } else {
-                    /*
-                    try{
-                        SubCookieUtil.set("login", "state", "false", "../");
-                    } catch (e) {
-                        subCookieUtil.set("login", "state", "false", "/");
-                    }
-                    */
                     window.location.href = "../index.html";
                 }
             },
             "json");
         
        jqxhr.fail(function () {
-           console.log("Line 97. Logout failed");
+           console.log("index.js Line 110. Logout failed");
        })
     })
 
