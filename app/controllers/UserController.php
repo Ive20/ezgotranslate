@@ -29,6 +29,7 @@ class UserController extends BaseController {
 					'sex'=>Auth::user()->user_sex,
 					'location'=>Auth::user()->user_location,
 					'nickname'=>Auth::user()->user_nickname,
+					'about'=>Auth::user()->user_about,
 			);
 			return $re;
 		}
