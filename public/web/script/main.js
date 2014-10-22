@@ -33,7 +33,7 @@ $(document).ready(function () {
     var getinfo = $.post("/info/getinfo",
         function (data, status) {
             var index = undefined;
-            for (index in info) {
+            for (index in data) {
                 var theObject = info[index];
                 //more funtion code write here
                 console.log(theObject.info_content);
