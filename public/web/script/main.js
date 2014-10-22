@@ -34,7 +34,7 @@ $(document).ready(function () {
         function (data, status) {
             var index = undefined;
             for (index in data) {
-                var theObject = info[index];
+                var theObject = data[index];
                 //more funtion code write here
                 console.log(theObject.info_content);
             }
