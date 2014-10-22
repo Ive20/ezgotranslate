@@ -1,8 +1,7 @@
 ﻿/*\
-|*| This is file is mainly for exchanging translate   
-|*| infomation - get info from server and insert into the 
-|*| after_signin.html, content label - send info which user
-|*| create to server.
+|*| This file is mainly for update user's related information
+|*|     - username|email|etc.
+|*|     - personal translating history
 \*/
 
 $(document).ready(function () {
@@ -29,20 +28,4 @@ $(document).ready(function () {
         $(".inf_form .inf_right .emailAddress").html(email);
     }
 
-    /* $begin after_signin.html dynamic content create */
-    var getinfo = $.post("/info/getinfo",
-        function (data, status) {
-            var index = undefined;
-            for (index in data) {
-                var theObject = data[index];
-                //more funtion code write here
-                console.log(theObject.info_content);
-            }
-        }
-        , "json");
-
-    getinfo.fail(function () {
-        console.log("main.js - Getinfo error.");
-    })
-    /* $end after_signin.html dynamic content create */
 })
