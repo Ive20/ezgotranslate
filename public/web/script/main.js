@@ -18,7 +18,7 @@ $(document).ready(function () {
      */
     var username = undefined;
     if (username = SubCookieUtil.get("login", "username")) {
-        $("#personal .classname").html(username);
+        $("#personal .username").html(username);
     }
 
     /*
@@ -26,13 +26,12 @@ $(document).ready(function () {
      */
     var email = undefined;
     if (email = SubCookieUtil.get("login", "email")) {
-        $(".info_form .inf_right .emailAddress").html(email);
+        $(".inf_form .inf_right .emailAddress").html(email);
     }
 
     /* $begin after_signin.html dynamic content create */
     var getinfo = $.post("/info/getinfo",
         function (data, status) {
-            var info = JSON.parse(data);
             var index = undefined;
             for (index in info) {
                 var theObject = info[index];
