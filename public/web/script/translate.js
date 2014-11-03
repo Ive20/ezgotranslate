@@ -43,14 +43,15 @@ function getTranslated() {
  */
 function hasTranslated(infoID) {
     // Must refresh brefore find translated
-    getTranslated();
+    // #BUG Here, there must be many request
+    //getTranslated();
 
     var translatedSession = sessionStorage.getItem("translated");
     var translated = JSON.parse(translatedSession);
 
     var index = undefined;
     for (index in translated) {
-        var thrObject = translated[index];
+        var theObject = translated[index];
         if (theObject.info_id === infoID)
             return theObject;
     }
@@ -103,13 +104,16 @@ function createInfoLine(objectToDisplay, msgCount) {
 }
 
 function showNotrans(infoID) {
+    var theTarget = $(".untranslateCharacter .detail");
+    theTarget.empty();
+
     var theObject = hasTranslated(infoID);
     if (!theObject) {
         var data = JSON.parse(sessionStorage.getItem("transInfo"));
         var index = undefined;
         for (index in data) {
             var theObject = data[index];
-            if (theOject.info_id === infoID) {
+            if (theObject.info_id === infoID) {
                 var theTarget = $(".untranslateCharacter .detail");
                 theTarget.html(theObject.info_content);
             }
@@ -122,13 +126,14 @@ $(document).ready(function () {
     $(".info_block").empty();
 
     getInfo();
-    var data = JSON.parse(pasessionStorage.getItem("transInfo"));
+    getTranslated();
+    var data = JSON.parse(sessionStorage.getItem("transInfo"));
     var index = undefined;
     for (index in data) {
         var theObject = data[index];
         var index2num = parseInt(index);
         createInfoLine(theObject, index2num + 1);
-        console.log(theOject.info_content);
+        console.log(theObject.info_content);
     }
 
     /* About operate */
