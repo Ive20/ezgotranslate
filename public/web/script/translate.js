@@ -122,7 +122,7 @@ $(document).ready(function () {
     $(".info_block").empty();
 
     getInfo();
-    var data = JSON.parse(pasessionStorage.getItem("transInfo"));
+    var data = JSON.parse(sessionStorage.getItem("transInfo"));
     var index = undefined;
     for (index in data) {
         var theObject = data[index];
