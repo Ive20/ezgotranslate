@@ -109,7 +109,7 @@ function showNotrans(infoID) {
         var index = undefined;
         for (index in data) {
             var theObject = data[index];
-            if (theOject.info_id === infoID) {
+            if (theObject.info_id === infoID) {
                 var theTarget = $(".untranslateCharacter .detail");
                 theTarget.html(theObject.info_content);
             }
