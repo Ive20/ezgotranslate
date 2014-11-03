@@ -50,7 +50,7 @@ function hasTranslated(infoID) {
 
     var index = undefined;
     for (index in translated) {
-        var thrObject = translated[index];
+        var theObject = translated[index];
         if (theObject.info_id === infoID)
             return theObject;
     }
