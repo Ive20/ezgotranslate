@@ -13,6 +13,29 @@ function includeJs(path) {
     headobj.appendChild(sobj);
 }
 
+/*
+ * Load js in body
+ */
+function loadScript(url){
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = url;
+    document.body.appendChild(script);
+}
+
+
+/*
+ * Load css in head
+ */
+function loadStyles(url) {
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = url;
+    var head = document.getElementsByTagName("head")[0];
+    head.appendChild(link);
+}
+
 /* subCookieUtil object
  * - document.cookie=data=name=xxx&phone=123456
  */
@@ -116,3 +139,6 @@ var SubCookieUtil = {
     }
 };
 
+/*
+ * SubSessionUtil object
+ */
