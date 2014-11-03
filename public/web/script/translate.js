@@ -128,7 +128,7 @@ $(document).ready(function () {
         var theObject = data[index];
         var index2num = parseInt(index);
         createInfoLine(theObject, index2num + 1);
-        console.log(theOject.info_content);
+        console.log(theObject.info_content);
     }
 
     /* About operate */
