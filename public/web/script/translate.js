@@ -43,7 +43,8 @@ function getTranslated() {
  */
 function hasTranslated(infoID) {
     // Must refresh brefore find translated
-    getTranslated();
+    // #BUG Here, there must be many request
+    //getTranslated();
 
     var translatedSession = sessionStorage.getItem("translated");
     var translated = JSON.parse(translatedSession);
@@ -122,6 +123,7 @@ $(document).ready(function () {
     $(".info_block").empty();
 
     getInfo();
+    getTranslated();
     var data = JSON.parse(sessionStorage.getItem("transInfo"));
     var index = undefined;
     for (index in data) {
