@@ -104,6 +104,9 @@ function createInfoLine(objectToDisplay, msgCount) {
 }
 
 function showNotrans(infoID) {
+    var theTarget = $(".untranslateCharacter .detail");
+    theTarget.empty();
+
     var theObject = hasTranslated(infoID);
     if (!theObject) {
         var data = JSON.parse(sessionStorage.getItem("transInfo"));
