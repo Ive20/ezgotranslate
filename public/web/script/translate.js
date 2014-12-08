@@ -49,7 +49,7 @@ $(document).ready(function(){
     type: 'POST'
   })
   .done(function(infos) {
-    infos = JSON.stringify(infos);
+    infos = JSON.parse(infos);
 
     var info = undefined;
     for (info in infos) {
@@ -69,7 +69,7 @@ $(document).ready(function(){
           type: 'POST',
         })
         .done(function(contents) {
-          contents = JSON.stringify(contents);
+          contents = JSON.parse(contents);
 
           var result = "No trans";
           var content = undefined;
@@ -115,7 +115,7 @@ $(document).ready(function(){
   var remark = $(".operate_block .addExplain textarea");
   var index = undefined;
   for (index in infoLines) {
-    var theInfoLine = infosLines[index];
+    var theInfoLine = infoLines[index];
     theInfoLine.click(function(){
       // Delete history
       detail.empty();
@@ -131,7 +131,7 @@ $(document).ready(function(){
         type: 'POST',
       })
       .done(function(contents) {
-        contents = JSON.stringify(contents);
+        contents = JSON.parse(contents);
 
         var content = undefined;
         var count = 0;
