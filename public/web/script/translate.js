@@ -41,7 +41,7 @@ function createInfoLine(objectToDisplay) {
 
 $(document).ready(function(){
   // Delete demo
-  //$(".info_block").empty();
+  $(".info_block").empty();
 
   // Display
   $.ajax({
@@ -87,7 +87,7 @@ $(document).ready(function(){
               }
             }
           }
-          var theTargetID = "#" + infoID + ".translated";
+          var theTargetID = "#" + infoIDs + ".translated";
           var theTranslated = $(theTargetID);
 
           theTranslated.html(result);
