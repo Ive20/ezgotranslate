@@ -49,7 +49,7 @@ $(document).ready(function(){
     type: 'POST',
   })
   .done(function(infos) {
-    infos = JSON.parse(infos);
+    //infos = JSON.parse(infos);
 
     var info = undefined;
     for (info = 0; info < infos.length; ++info) {
@@ -69,7 +69,7 @@ $(document).ready(function(){
           type: 'POST',
         })
         .done(function(contents) {
-          contents = JSON.parse(contents);
+          //contents = JSON.parse(contents);
 
           var result = "No trans";
           var content = undefined;
@@ -131,7 +131,7 @@ $(document).ready(function(){
         type: 'POST',
       })
       .done(function(contents) {
-        contents = JSON.parse(contents);
+        //contents = JSON.parse(contents);
 
         var content = undefined;
         var count = 0;
