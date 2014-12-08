@@ -52,7 +52,7 @@ $(document).ready(function(){
     infos = JSON.parse(infos);
 
     var info = undefined;
-    for (info = 0; info < infos.size(); ++info) {
+    for (info = 0; info < infos.length; ++info) {
       var theInfo = infos[info];
       ////////////////////
       //DEBUG
@@ -73,7 +73,7 @@ $(document).ready(function(){
 
           var result = "No trans";
           var content = undefined;
-          for (content = 0; content < contents.size(); ++content) {
+          for (content = 0; content < contents.length; ++content) {
             var theContent = contents[content];
             //////////////////////
             //DEBUG
@@ -114,7 +114,7 @@ $(document).ready(function(){
   var operating = $(".operate_block .operating textarea");
   var remark = $(".operate_block .addExplain textarea");
   var index = undefined;
-  for (index = 0; index < infoLines.size(); ++index) {
+  for (index = 0; index < infoLines.length; ++index) {
     var theInfoLine = infoLines[index];
     theInfoLine.click(function(){
       // Delete history
@@ -135,7 +135,7 @@ $(document).ready(function(){
 
         var content = undefined;
         var count = 0;
-        for (content = 0; contect < contents.size(); ++content) {
+        for (content = 0; contect < contents.length; ++content) {
           var theContent = contents[content];
           ////////////////////////
           //DEBUG
