@@ -46,13 +46,13 @@ $(document).ready(function(){
   // Display
   $.ajax({
     url: '/info/getinfo',
-    type: 'POST'
+    type: 'POST',
   })
   .done(function(infos) {
     infos = JSON.parse(infos);
 
     var info = undefined;
-    for (info in infos) {
+    for (info = 0; info < infos.size(); ++info) {
       var theInfo = infos[info];
       ////////////////////
       //DEBUG
@@ -73,7 +73,7 @@ $(document).ready(function(){
 
           var result = "No trans";
           var content = undefined;
-          for (content in contents) {
+          for (content = 0; content < contents.size(); ++content) {
             var theContent = contents[content];
             //////////////////////
             //DEBUG
@@ -114,7 +114,7 @@ $(document).ready(function(){
   var operating = $(".operate_block .operating textarea");
   var remark = $(".operate_block .addExplain textarea");
   var index = undefined;
-  for (index in infoLines) {
+  for (index = 0; index < infoLines.size(); ++index) {
     var theInfoLine = infoLines[index];
     theInfoLine.click(function(){
       // Delete history
@@ -135,7 +135,7 @@ $(document).ready(function(){
 
         var content = undefined;
         var count = 0;
-        for (content in contents) {
+        for (content = 0; contect < contents.size(); ++content) {
           var theContent = contents[content];
           ////////////////////////
           //DEBUG
