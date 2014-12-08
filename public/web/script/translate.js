@@ -1,6 +1,6 @@
-﻿/*\
-|*| This is file is mainly for exchanging translate   
-|*| infomation - get info from server and insert into the 
+/*\
+|*| This is file is mainly for exchanging translate
+|*| infomation - get info from server and insert into the
 |*| after_signin.html, content label - send info which user
 |*| create to server.
 \*/
@@ -10,72 +10,12 @@
  *  1, gettranslate {info_id} return related_translated_info
  */
 
-/* Get translate info and save to sessionStorage */
-function getInfo() {
-    var getinfo = $.post("/info/getinfo",
-        function (data, status) {
-            sessionStorage.setItem("transInfo", JSON.stringify(data));
-        }
-        , "json");
-
-    getinfo.fail(function () {
-        console.log("translate.js - Getinfo error.");
-    });
-}
-
-/* Get translated info and save to sessionStorage */
-function getTranslated() {
-    var getTranslated = $.post("/translate/gettranslate",
-    function (data, status) {
-        /* Emulated get the specific translated */
-        sessionStorage.setItem("translated", JSON.stringify(data));
-    }
-    , "json");
-
-    getTranslated.fail(function () {
-        console.log("translate.js - Get translated info error.")
-    });
-}
-
-/*
- * If ID's info has translated THEN return ID's Object ELSE return false
- * COMMENT: Am not sure whether this has bug
- */
-function hasTranslated(infoID) {
-    // Must refresh brefore find translated
-    // #BUG Here, there must be many request
-    //getTranslated();
-
-    var translatedSession = sessionStorage.getItem("translated");
-    var translated = JSON.parse(translatedSession);
-
-    var index = undefined;
-    for (index in translated) {
-        var theObject = translated[index];
-        if (theObject.info_id === infoID)
-            return theObject;
-    }
-
-    return false;
-}
-
-function displayTranlatedInfo(infoID) {
-        var theTargetID = "#" + infoID + " .translated";
-        var theTranslated = $(theTargetID);
-
-        var theObject = hasTranslated(infoID);
-        if (theObject) {
-            theTranslated.html(theObject.translate_result);
-        }
-}
-
-function createInfoLine(objectToDisplay, msgCount) {
+function createInfoLine(objectToDisplay) {
     var infoID = objectToDisplay.info_id;
     var infoContent = objectToDisplay.info_content;
     var infoLanguage = objectToDisplay.info_language;
     var updatedAt = objectToDisplay.updated_at;
     var createdAt = objectToDisplay.created_at;
-
     /* Get the tag <div class="info_block"> to insert new info line */
     var theInfoBlock = $(".info_block");
 
@@ -85,64 +25,174 @@ function createInfoLine(objectToDisplay, msgCount) {
     var infoIDForjQuerySelector = infoID.replace(/\./g, '\\.');
     var theInfoLineToWrite = $("#" + infoIDForjQuerySelector);
 
-    var lineNumbers = '<div class="line_numbers">' + msgCount + '</div>';
-    theInfoLineToWrite.append(lineNumbers);
-
     var lineTranslated = '<div class="line_translate">' + infoContent + '</div>';
     theInfoLineToWrite.append(lineTranslated);
 
     var translated = '<div class="translated"></div>';
     theInfoLineToWrite.append(translated);
-    displayTranlatedInfo(infoID);
-    
+
     var ifTranslated = '<div class="if_translated"></div>';
     theInfoLineToWrite.append(ifTranslated);
 
     var ifVerify = '<div class="if_verify"></div>';
     theInfoLineToWrite.append(ifVerify);
-    
+
 }
 
-function showNotrans(infoID) {
-    var theTarget = $(".untranslateCharacter .detail");
-    theTarget.empty();
+$(document).ready(function(){
+  // Delete demo
+  //$(".info_block").empty();
 
-    var theObject = hasTranslated(infoID);
-    if (!theObject) {
-        var data = JSON.parse(sessionStorage.getItem("transInfo"));
-        var index = undefined;
-        for (index in data) {
-            var theObject = data[index];
-            if (theObject.info_id === infoID) {
-                var theTarget = $(".untranslateCharacter .detail");
-                theTarget.html(theObject.info_content);
+  // Display
+  $.ajax({
+    url: '/info/getinfo',
+    type: 'POST'
+  })
+  .done(function(infos) {
+    infos = JSON.stringify(infos);
+
+    var info = undefined;
+    for (info in infos) {
+      var theInfo = infos[info];
+      ////////////////////
+      //DEBUG
+      if (typeof theInfo != "object") {
+        console.log(theInfo);
+      }
+      ////////////////////
+      else {
+        createInfoLine(theInfo);
+        // Get tranlated content
+        var infoIDs = theInfo.info_id;
+        $.ajax({
+          url: '/translate/gettranslate',
+          type: 'POST',
+        })
+        .done(function(contents) {
+          contents = JSON.stringify(contents);
+
+          var result = "No trans";
+          var content = undefined;
+          for (content in contents) {
+            var theContent = contents[content];
+            //////////////////////
+            //DEBUG
+            if (typeof theContent != "object") {
+              console.log(theContent);
             }
+            //////////////////////
+            else {
+              if (infoIDs === theContent.info_id) {
+                result = theContent.translated_result;
+              }
+            }
+          }
+          var theTargetID = "#" + infoID + ".translated";
+          var theTranslated = $(theTargetID);
+
+          theTranslated.html(result);
+        })
+        .fail(function() {
+          console.log("translate.js - Gettranslate error.");
+        })
+        .always(function() {
+          console.log("translate.js - Gettranslate complete.");
+        });
+      }
+    }
+  })
+  .fail(function() {
+    console.log("translate.js - Getinfo error.");
+  })
+  .always(function() {
+    console.log("translate.js - Getinfo complete.");
+  });
+
+  // Add Click_Event_Listener to each info block
+  var infoLines = $(".info_line");
+  var detail = $(".operate_block .untranslateCharacter .detail");
+  var operating = $(".operate_block .operating textarea");
+  var remark = $(".operate_block .addExplain textarea");
+  var index = undefined;
+  for (index in infoLines) {
+    var theInfoLine = infosLines[index];
+    theInfoLine.click(function(){
+      // Delete history
+      detail.empty();
+      operating.empty();
+      remark.empty();
+      // Update operate block
+      // - Update untranslate content block
+      var infoID = theInfoLine.id;
+      var theTargetID = "#" + infoID + ".line_translate";
+      var toTranslateContent = $(theTargetID).text();
+      $.ajax({
+        url: '/translate/gettranslate',
+        type: 'POST',
+      })
+      .done(function(contents) {
+        contents = JSON.stringify(contents);
+
+        var content = undefined;
+        var count = 0;
+        for (content in contents) {
+          var theContent = contents[content];
+          ////////////////////////
+          //DEBUG
+          if (typeof theContent != "object") {
+            console.log(theContent);
+          }
+          ///////////////////////
+          else {
+            if (infoID === theContent.info_id) {
+              ++count;
+              toTranslateContent += "[" + count + " record]";
+            }
+          }
         }
-    }
-}
+        detail.html(toTranslateContent);
+      })
+      .fail(function() {
+        console.log("tarnslate.js - Gettranslate(update) error");
+      })
+      .always(function() {
+        console.log("translate.js - Gettranslate(update) complete");
+      })
 
-$(document).ready(function () {
-    // Delete test infomation
-    $(".info_block").empty();
+      // - Submit tranlate content
+      var saveButton = $(".operate_block .operating .save");
+      saveButton.click(function(){
+        var submitContent = operating.text();
+        if (submitContent === "") {
+          // IF empty, return false
+          alert ("NULL. INPUT FIRST.");
+        } else {
+          $.ajax({
+            url: '',
+            type: 'POST',
+            dataType: 'JSON',
+            data: {
+              infoid: infoID,
+              result: submitContent,
+              lanuage: "cns"
+            },
+          })
+          .done(function(data) {
+            console.log("Insert tranlate status: " + data);
+          })
+          .fail(function() {
+            console.log("translate.js - Inserttranslate error.");
+          })
+          .always(function() {
+            console.log("translate.js - Inserttranslate complete.");
+          });
+        }
+      })
 
-    getInfo();
-    getTranslated();
-    var data = JSON.parse(sessionStorage.getItem("transInfo"));
-    var index = undefined;
-    for (index in data) {
-        var theObject = data[index];
-        var index2num = parseInt(index);
-        createInfoLine(theObject, index2num + 1);
-        console.log(theObject.info_content);
-    }
+      // - Submit Insert remark
+      // No interface.
 
-    /* About operate */
-    var transLists = $(".info_line");
-    var index = undefined;
-    for (index in transLists) {
-        var theTarget = transLists[index];
-        var theId = theTarget.id;
-        theTarget.onclick = showNotrans(theId);
-    }
+    })
+  }
 })
 
