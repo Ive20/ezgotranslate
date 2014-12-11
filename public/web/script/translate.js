@@ -130,7 +130,7 @@ $(document).ready(function() {
             //////////////////////
             else {
               if (infoIDs === theContent.info_id) {
-                result = theContent.translated_result;
+                result = theContent.translate_result;
               }
             }
           }
