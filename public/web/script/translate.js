@@ -20,7 +20,7 @@ function createInfoLine(objectToDisplay){
     var theInfoBlock = $(".info_block");
 
     var infoLine = '<div id="' + infoID +
-                   '" class="info_line onclick = \"addOperateEvent()\""></div>';
+                   '" class="info_line" onclick=\"addOperateEvent()\"></div>';
     theInfoBlock.append(infoLine);
 
     var infoIDForjQuerySelector = infoID.replace(/\./g, '\\.');
