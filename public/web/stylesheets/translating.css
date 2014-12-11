@@ -111,9 +111,17 @@ textarea:focus {
 .info_block .info_line {
     position: relative;
     width: 100%;
+    height: auto;
     /*min-height: 45px;*/
     display: block;
     overflow: visible;
+    float: left;
+    cursor: pointer;
+}
+
+.info_block .info_line:hover {
+    background-color: rgba(156, 207, 250, 0.39);
+    transition-duration: 1000ms;
 }
 
 .info_block .info_line div {
@@ -126,11 +134,11 @@ textarea:focus {
     /*position: relative;
     top: 0;
     left: 0;*/
-    float: left;
     text-align: center;
     width: 27px;
     height: 45px;
     line-height: 45px;
+    display: inline-block;
 }
 
 .info_block .info_line .line_translate {
@@ -138,7 +146,7 @@ textarea:focus {
     width: 280px;
     height: auto;
     margin: 13px 15px 0 5px;
-    float: left;
+    display: inline-block;
 }
 
 .info_block .info_line .translated {
@@ -146,7 +154,7 @@ textarea:focus {
     width: 200px;
     height: auto;
     margin: 13px 0;
-    float: left;
+    display: inline-block;
 }
 
 .info_block .info_line .if_translated,
@@ -157,7 +165,7 @@ textarea:focus {
     border-radius: 50%;
     background-color: #89bbec;
     margin: 18px 3px 18px 5px;
-    float: left;
+    display: inline-block;
 }
 
 .translating_container .translate_block .operate_block {

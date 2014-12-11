@@ -41,7 +41,7 @@ function createInfoLine(objectToDisplay) {
 
 $(document).ready(function(){
   // Delete demo
-  $(".info_block").empty();
+ // $(".info_block").empty();
 
   // Display
   $.ajax({
