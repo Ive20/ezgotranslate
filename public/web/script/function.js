@@ -23,6 +23,19 @@ function loadScript(url){
     document.body.appendChild(script);
 }
 
+/*
+ * Load js snippet
+ * - for DEBUG in Chrome console
+ */
+function loadScriptS(jsSnippets) {
+    //var jsCode = "window.onload = function(){"
+    //        + jsSnippets + "}";
+    var jsCode = jsSnippets;
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.innerHTML = jsCode;
+    document.body.appendChild(script);
+}
 
 /*
  * Load css in head

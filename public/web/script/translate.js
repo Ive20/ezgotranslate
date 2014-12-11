@@ -10,7 +10,7 @@
  *  1, gettranslate {info_id} return related_translated_info
  */
 
-function createInfoLine(objectToDisplay) {
+function createInfoLine(objectToDisplay){
     var infoID = objectToDisplay.info_id;
     var infoContent = objectToDisplay.info_content;
     var infoLanguage = objectToDisplay.info_language;
@@ -19,7 +19,8 @@ function createInfoLine(objectToDisplay) {
     /* Get the tag <div class="info_block"> to insert new info line */
     var theInfoBlock = $(".info_block");
 
-    var infoLine = '<div id="' + infoID + '" class="info_line"></div>';
+    var infoLine = '<div id="' + infoID +
+                   '" class="info_line onclick = \"addOperateEvent()\""></div>';
     theInfoBlock.append(infoLine);
 
     var infoIDForjQuerySelector = infoID.replace(/\./g, '\\.');
@@ -39,9 +40,64 @@ function createInfoLine(objectToDisplay) {
 
 }
 
+function addOperateEvent(){
+  var detail = $(".operate_block .untranslateCharacter .detail");
+  var operating = $(".operate_block .operating textarea");
+  var remark = $(".operate_block .addExplain textarea");
+  //var index = undefined;
+  //for (index = 0; index < infoLines.length; ++index) {
+    //var theInfoLine = infoLines[index];
+    //theInfoLine.click(function(){
+      console.log(this);
+      // Delete history
+      detail.empty();
+      operating.empty();
+      remark.empty();
+      // Update operate block
+      // - Update untranslate content block
+      var infoID = theInfoLine.id;
+      var theTargetID = "#" + infoID + ".line_translate";
+      var toTranslateContent = $(theTargetID).text();
+      $.ajax({
+        url: '/translate/gettranslate',
+        type: 'POST',
+      })
+      .done(function(contents) {
+        //contents = JSON.parse(contents);
+
+        var content = undefined;
+        var count = 0;
+        for (content = 0; contect < contents.length; ++content) {
+          var theContent = contents[content];
+          ////////////////////////
+          //DEBUG
+          if (typeof theContent != "object") {
+            console.log(theContent);
+          }
+          ///////////////////////
+          else {
+            if (infoID === theContent.info_id) {
+              ++count;
+              toTranslateContent += "[" + count + " record]";
+            }
+          }
+        }
+        detail.html(toTranslateContent);
+      })
+      .fail(function() {
+        console.log("tarnslate.js - Gettranslate(update) error");
+      })
+      .always(function() {
+        console.log("translate.js - Gettranslate(update) complete");
+      })
+
+    //})
+  //}
+}
+
 $(document).ready(function(){
   // Delete demo
- // $(".info_block").empty();
+  $(".info_block").empty();
 
   // Display
   $.ajax({
@@ -108,57 +164,6 @@ $(document).ready(function(){
     console.log("translate.js - Getinfo complete.");
   });
 
-  // Add Click_Event_Listener to each info block
-  var infoLines = $(".info_line");
-  var detail = $(".operate_block .untranslateCharacter .detail");
-  var operating = $(".operate_block .operating textarea");
-  var remark = $(".operate_block .addExplain textarea");
-  var index = undefined;
-  for (index = 0; index < infoLines.length; ++index) {
-    var theInfoLine = infoLines[index];
-    theInfoLine.click(function(){
-      // Delete history
-      detail.empty();
-      operating.empty();
-      remark.empty();
-      // Update operate block
-      // - Update untranslate content block
-      var infoID = theInfoLine.id;
-      var theTargetID = "#" + infoID + ".line_translate";
-      var toTranslateContent = $(theTargetID).text();
-      $.ajax({
-        url: '/translate/gettranslate',
-        type: 'POST',
-      })
-      .done(function(contents) {
-        //contents = JSON.parse(contents);
-
-        var content = undefined;
-        var count = 0;
-        for (content = 0; contect < contents.length; ++content) {
-          var theContent = contents[content];
-          ////////////////////////
-          //DEBUG
-          if (typeof theContent != "object") {
-            console.log(theContent);
-          }
-          ///////////////////////
-          else {
-            if (infoID === theContent.info_id) {
-              ++count;
-              toTranslateContent += "[" + count + " record]";
-            }
-          }
-        }
-        detail.html(toTranslateContent);
-      })
-      .fail(function() {
-        console.log("tarnslate.js - Gettranslate(update) error");
-      })
-      .always(function() {
-        console.log("translate.js - Gettranslate(update) complete");
-      })
-
       // - Submit tranlate content
       var saveButton = $(".operate_block .operating .save");
       saveButton.click(function(){
@@ -191,8 +196,5 @@ $(document).ready(function(){
 
       // - Submit Insert remark
       // No interface.
-
-    })
-  }
 })
 
