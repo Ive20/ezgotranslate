@@ -59,7 +59,7 @@ function addOperateEvent(target){
   .done(function(contents) {
     var content = undefined;
     var count = 0;
-    for (content = 0; contect < contents.length; ++content) {
+    for (content = 0; content < contents.length; ++content) {
       var theContent = contents[content];
       ////////////////////////
       //DEBUG
