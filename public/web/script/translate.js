@@ -10,13 +10,14 @@
  *  1, gettranslate {info_id} return related_translated_info
  */
 
-function createInfoLine(objectToDisplay){
+// Create a block for one sentence with its ID
+function createInfoLine(objectToDisplay) {
     var infoID = objectToDisplay.info_id;
     var infoContent = objectToDisplay.info_content;
     var infoLanguage = objectToDisplay.info_language;
     var updatedAt = objectToDisplay.updated_at;
     var createdAt = objectToDisplay.created_at;
-    /* Get the tag <div class="info_block"> to insert new info line */
+    // Get the tag <div class="info_block"> to insert new info line
     var theInfoBlock = $(".info_block");
 
     var infoLine = '<div id="' + infoID +
@@ -40,17 +41,21 @@ function createInfoLine(objectToDisplay){
 
 }
 
-function addOperateEvent(target){
+// Add event listener for each sentence
+function addOperateEvent(target) {
+  // Get
   var detail = $(".operate_block .untranslateCharacter .detail");
   var operating = $(".operate_block .operating textarea");
   var remark = $(".operate_block .addExplain textarea");
+  // Clear history first
   detail.empty();
   operating.empty();
   remark.empty();
   // Update operate block
   // - Update untranslate content block
   var infoID = target.id;
-  var theTargetID = "#" + infoID + ".line_translate";
+  var theTargetID = "#" + infoID.replace(/\./g, '\\.')
+                        + " .line_translate";
   var toTranslateContent = $(theTargetID).text();
   $.ajax({
     url: '/translate/gettranslate',
@@ -70,10 +75,10 @@ function addOperateEvent(target){
       else {
         if (infoID === theContent.info_id) {
           ++count;
-          toTranslateContent += "[" + count + " record]";
         }
       }
     }
+    toTranslateContent += "[" + count + " record existed]";
     detail.html(toTranslateContent);
   })
   .fail(function() {
@@ -84,7 +89,8 @@ function addOperateEvent(target){
   })
 }
 
-$(document).ready(function(){
+// START HERE
+$(document).ready(function() {
   // Delete demo
   $(".info_block").empty();
 
@@ -128,7 +134,8 @@ $(document).ready(function(){
               }
             }
           }
-          var theTargetID = "#" + infoIDs + ".translated";
+          var theTargetID = "#" + infoIDs.replace(/\./g, '\\.')
+                                + " .translated";
           var theTranslated = $(theTargetID);
 
           theTranslated.html(result);
