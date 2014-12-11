@@ -1,10 +1,10 @@
-﻿/*\
-|*| This JS file is mainly to save some useful functions
-\*/
+﻿//
+// This JS file is mainly to save some useful functions
+//
 
-/*
- * includeJs() - include other Js doc
- */
+//
+// includeJs() - include other Js doc
+//
 function includeJs(path) {
     var sobj = document.createElement('script');
     sobj.type = "text/javascript";
@@ -13,9 +13,9 @@ function includeJs(path) {
     headobj.appendChild(sobj);
 }
 
-/*
- * Load js in body
- */
+//
+// Load js in body
+//
 function loadScript(url){
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -23,10 +23,10 @@ function loadScript(url){
     document.body.appendChild(script);
 }
 
-/*
- * Load js snippet
- * - for DEBUG in Chrome console
- */
+//
+// Load js snippet
+// - for DEBUG in Chrome console
+//
 function loadScriptS(jsSnippets) {
     //var jsCode = "window.onload = function(){"
     //        + jsSnippets + "}";
@@ -37,9 +37,9 @@ function loadScriptS(jsSnippets) {
     document.body.appendChild(script);
 }
 
-/*
- * Load css in head
- */
+//
+// Load css in head
+//
 function loadStyles(url) {
     var link = document.createElement("link");
     link.rel = "stylesheet";
@@ -49,9 +49,9 @@ function loadStyles(url) {
     head.appendChild(link);
 }
 
-/* subCookieUtil object
- * - document.cookie=data=name=xxx&phone=123456
- */
+// subCookieUtil object
+// - document.cookie=data=name=xxx&phone=123456
+//
 var SubCookieUtil = {
     get: function (name, subName) {
         var subCookies = this.getAll(name);
@@ -151,7 +151,3 @@ var SubCookieUtil = {
         this.setAll(name, null, new Date(0), path, domain, secure);
     }
 };
-
-/*
- * SubSessionUtil object
- */

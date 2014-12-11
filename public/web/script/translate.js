@@ -1,14 +1,8 @@
-/*\
-|*| This is file is mainly for exchanging translate
-|*| infomation - get info from server and insert into the
-|*| after_signin.html, content label - send info which user
-|*| create to server.
-\*/
 
-/*
- * About interface design
- *  1, gettranslate {info_id} return related_translated_info
- */
+//
+// About interface design
+//  1, gettranslate {info_id} return related_translated_info
+//
 
 // Create a block for one sentence with its ID
 function createInfoLine(objectToDisplay) {
