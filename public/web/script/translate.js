@@ -81,9 +81,43 @@ function addOperateEvent(target) {
   .always(function() {
     console.log("translate.js - Gettranslate(update) complete");
   })
+
+  // First, this info_line was clicked
+  // Then, hook the buttonSave event to this object
+  var buttonSave = $(".operate_block .operating .save");
+  // Remove all event,
+  // actually, just click event
+  buttonSave.off();
+  buttonSave.click(function() {
+    var submitContent = operating.text();
+    if (submitContent === "") {
+      // IF empty, return false
+      alert ("NULL. INPUT FIRST.");
+    } else {
+      $.ajax({
+        url: '/translate/inserttranslate',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {
+          infoid: infoID,
+          result: submitContent,
+          lanuage: "cns"    // Default: zh_CN
+        },
+      })
+      .done(function(data) {
+        console.log("Insert tranlate status: " + data);
+      })
+      .fail(function() {
+        console.log("translate.js - Inserttranslate error.");
+      })
+      .always(function() {
+        console.log("translate.js - Inserttranslate complete.");
+      });
+    }
+  })
 }
 
-// START HERE
+// $start here
 $(document).ready(function() {
   // Delete demo
   $(".info_block").empty();
@@ -151,36 +185,14 @@ $(document).ready(function() {
   });
 
   // - Submit tranlate content
-  var saveButton = $(".operate_block .operating .save");
-  saveButton.click(function(){
-    var submitContent = operating.text();
-    if (submitContent === "") {
-      // IF empty, return false
-      alert ("NULL. INPUT FIRST.");
-    } else {
-      $.ajax({
-        url: '/translate/inserttranslate',
-        type: 'POST',
-        dataType: 'JSON',
-        data: {
-          infoid: infoID,
-          result: submitContent,
-          lanuage: "cns"
-        },
-      })
-      .done(function(data) {
-        console.log("Insert tranlate status: " + data);
-      })
-      .fail(function() {
-        console.log("translate.js - Inserttranslate error.");
-      })
-      .always(function() {
-        console.log("translate.js - Inserttranslate complete.");
-      });
-    }
+  var operating = $(".operate_block .operating textarea");
+  var buttonSave = $(".operate_block .operating .save");
+  var buttonSaveAll = $(".operate_block .operating .saveAll");
+  buttonSave.click(function() {
+    alert ("Must choose one sentence first.");
   })
 
   // - Submit Insert remark
   // No interface.
 })
-
+// $end start
