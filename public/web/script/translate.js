@@ -159,6 +159,11 @@ $(document).ready(function() {
             else {
               if (infoIDs === theContent.info_id) {
                 result = theContent.translate_result;
+                /////////////////////////////
+                ///DEBUG
+                console.log("infoID: "     + infoID + " -> "
+                            "Translated: " + result);
+                /////////////////////////////
               }
             }
           }
@@ -166,6 +171,8 @@ $(document).ready(function() {
                                 + " .translated";
           var theTranslated = $(theTargetID);
 
+          // Clear first when insert translated content
+          theTranslated.empty();
           theTranslated.html(result);
         })
         .fail(function() {
