@@ -161,7 +161,7 @@ $(document).ready(function() {
                 result = theContent.translate_result;
                 /////////////////////////////
                 ///DEBUG
-                console.log("infoID: "     + infoID + " -> "
+                console.log("infoID: "     + infoID + " -> " +
                             "Translated: " + result);
                 /////////////////////////////
               }
