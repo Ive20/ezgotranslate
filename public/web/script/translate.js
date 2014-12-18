@@ -140,12 +140,12 @@ $(document).ready(function() {
       else {
         createInfoLine(theInfo);
         // Get tranlated content
-        var infoIDs = theInfo.info_id;
         $.ajax({
           url: '/translate/gettranslate',
           type: 'POST',
         })
         .done(function(contents) {
+          var infoIDs = theInfo.info_id;
           var result = "No trans";
           var content = undefined;
           for (content = 0; content < contents.length; ++content) {
