@@ -89,7 +89,7 @@ function addOperateEvent(target) {
   // actually, just click event
   buttonSave.off();
   buttonSave.click(function() {
-    var submitContent = operating.text();
+    var submitContent = operating.val();
     if (submitContent === "") {
       // IF empty, return false
       alert ("NULL. INPUT FIRST.");
