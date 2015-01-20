@@ -5,23 +5,23 @@ $(document).ready(function () {
     //
     // This part for sign in or sign up
     //
-    $(".container_in .switch").click(function () {
-        $(".container_in").attr("style", "display:none;");
-        $(".container_up").attr("style", "display:block;");
+    $(".container-signin .switch").click(function () {
+        $(".container-signin").attr("style", "display:none;");
+        $(".container-signup").attr("style", "display:block;");
     });
-    $(".container_up .switch").click(function () {
-        $(".container_up").attr("style", "display:none;");
-        $(".container_in").attr("style", "display:block;");
+    $(".container-signup .switch").click(function () {
+        $(".container-signup").attr("style", "display:none;");
+        $(".container-signin").attr("style", "display:block;");
     });
     $(".close").click(function () {
-        $(".container_in").attr("style", "display:none;");
-        $(".container_up").attr("style", "display:none;");
+        $(".container-signin").attr("style", "display:none;");
+        $(".container-signup").attr("style", "display:none;");
     });
     $(".su").click(function () {
-        $(".container_up").attr("style", "display:block;");
+        $(".container-signup").attr("style", "display:block;");
     });
     $(".si").click(function () {
-        $(".container_in").attr("style", "display:block;");
+        $(".container-signin").attr("style", "display:block;");
     });
 
     //
@@ -39,53 +39,53 @@ $(document).ready(function () {
     //
     //  For switch personal setting
     //
-    $(".first_head").click(function () {
-        $(".change_hp").css("display", "block");
-        $(".change_inf").css("display", "none");
+    $(".first-head").click(function () {
+        $(".change-hp").css("display", "block");
+        $(".change-inf").css("display", "none");
         $(".safety").css("display", "none");
-        $(".first_head").css({
+        $(".first-head").css({
             "background-color": "#3f87eb",
             "color": "#fff"
         });
-        $(".second_personal").css({
+        $(".second-personal").css({
             "background-color": "#fff",
             "color": "#3f87eb"
         });
-        $(".last_safe").css({
+        $(".last-safe").css({
             "background-color": "#fff",
             "color": "#3f87eb"
         });
     });
-    $(".second_personal").click(function () {
-        $(".change_hp").css("display", "none");
-        $(".change_inf").css("display", "block");
+    $(".second-personal").click(function () {
+        $(".change-hp").css("display", "none");
+        $(".change-inf").css("display", "block");
         $(".safety").css("display", "none");
-        $(".second_personal").css({
+        $(".second-personal").css({
             "background-color": "#3f87eb",
             "color": "#fff"
         });
-        $(".first_head").css({
+        $(".first-head").css({
             "background-color": "#fff",
             "color": "#3f87eb"
         });
-        $(".last_safe").css({
+        $(".last-safe").css({
             "background-color": "#fff",
             "color": "#3f87eb"
         });
     });
-    $(".last_safe").click(function () {
-        $(".change_hp").css("display", "none");
-        $(".change_inf").css("display", "none");
+    $(".last-safe").click(function () {
+        $(".change-hp").css("display", "none");
+        $(".change-inf").css("display", "none");
         $(".safety").css("display", "block");
-        $(".last_safe").css({
+        $(".last-safe").css({
             "background-color": "#3f87eb",
             "color": "#fff"
         });
-        $(".second_personal").css({
+        $(".second-personal").css({
             "background-color": "#fff",
             "color": "#3f87eb"
         });
-        $(".first_head").css({
+        $(".first-head").css({
             "background-color": "#fff",
             "color": "#3f87eb"
         });
