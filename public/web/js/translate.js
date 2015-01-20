@@ -45,11 +45,13 @@ function addOperateEvent(target) {
   detail.empty();
   operating.empty();
   remark.empty();
+
   // Update operate block
   // - Update untranslate content block
   var infoID = target.id;
   var theTargetID = "#" + infoID.replace(/\./g, '\\.')
                         + " .line_translate";
+  // Why .text() work here?
   var toTranslateContent = $(theTargetID).text();
   $.ajax({
     url: '/translate/gettranslate',
@@ -114,7 +116,9 @@ function addOperateEvent(target) {
         console.log("translate.js - Inserttranslate complete.");
       });
     }
-  })
+  });
+  // Hook buttonRemark to this boject
+  // But no interface.
 }
 
 // $start here
@@ -145,6 +149,10 @@ $(document).ready(function() {
           type: 'POST',
         })
         .done(function(contents) {
+          // TODO
+          // TODO
+          // TODO
+          // To understand block function
           var infoIDs = theInfo.info_id;
           var result = "No trans";
           var content = undefined;
@@ -191,15 +199,12 @@ $(document).ready(function() {
     console.log("translate.js - Getinfo complete.");
   });
 
-  // - Submit tranlate content
+  // Forbid submit without choosing nothing
   var operating = $(".operate_block .operating textarea");
   var buttonSave = $(".operate_block .operating .save");
   var buttonSaveAll = $(".operate_block .operating .saveAll");
   buttonSave.click(function() {
     alert ("Must choose one sentence first.");
-  })
-
-  // - Submit Insert remark
-  // No interface.
-})
+  });
+});
 // $end start

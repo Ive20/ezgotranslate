@@ -1,13 +1,7 @@
-﻿## Web document 说明
-----
+﻿fWeb Develop About
+===
 
-#### 修改日志
-
-**2015.1.19**
-
-0. 统一修改了CSS文件以及HTML文件的命名，按照如下的**命名规定**。
-1.  添加了 **public.js** ，将公共页面动态效果放在这里面。
-2. 将 **personal.js** 和 **signinup.js** 合并到 **public.js** 中。
+## 修改日志
 
 **2015.1.20**
 
@@ -20,20 +14,78 @@
     </body>
 ```
 （修改详情，见附录一）
+@Boby
 
-----
+**2015.1.20**
 
-#### 命名法约定
+0. Disable main-dynamic.js, delete main.js and index.js
+1. Add **public.js** and merge **main.js** and **index.js** and **main-dynamic.js** into **public.js**
 
-**Js** 变量一律采用驼峰式命名法
+@ccreimondo
+
+**2015.1.19**
+
+0. 统一修改了CSS文件以及HTML文件的命名，按照如下的**命名规定**。
+1. 添加了 **public.js** ，将公共页面动态效果放在这里面。
+2. 将 **personal.js** 和 **signinup.js** 合并到 **public.js** 中。
+
+
+
+## Web directory structure
+
+```bash
+public/
+|
++---index.html
+|
++---web/
+    |
+    +---css/
+    |   |
+    |   +---css.css
+    |
+    +---image/
+    |   |
+    |   +---img.png
+    |
+    +---js/
+    |   |
+    |   +---js.js
+    |
+    +---after-signin.html
+    |
+    +---homepage.html
+    |
+    +---personal-inf.html
+    |
+    +---translate-object.html
+    |
+    +---translate-page.html
+    |
+    +---translating.html
+
+```
+
+
+
+## How to name document-name
+
+>I recommend **one-two-three.js**, **three-two-one.html**, **ico-file.png**
+
+`TODO` new icon name?
+
+
+## How to name variable
+
+**JS** 变量一律采用驼峰式命名法
 
 **CSS** 一律采用"-"，（这个叫什么符号来着。。）
 
-**HTML文件** 一律采用"-"
+**HTML** 一律采用"-", especially id and class
 
-----
 
-#### HTML document
+
+## HTML document
 
 **index.html** 点击进入Tryneeds主页
 
@@ -49,9 +101,9 @@
 
 **translating.hrml**  正在进行翻译的界面
 
-----
 
-#### CSS document
+
+## CSS document
 
 css 文档很杂很多的问题，这是必须要整理的。
 > 公用部分公用, 其他部分可以用一个上层结构来区分
@@ -59,23 +111,16 @@ css 文档很杂很多的问题，这是必须要整理的。
 一个是 .page-index-wrapper .content 一个是 .page-account-wrapper .content         ---[Villic Van]()
 
 
-**public.css** 公共文件
+**public.css**
 
-----
 
-#### Js ducoment
-
-> **Tips:** 这个也是需要整理的。
+## JS document
 
 **public.js** 存放公共页面动态效果
 
 **translate.js** 翻译模块
 
-**main.js** This file is mainly for update user's related information
-
-**index.js** This JS file is mainly to provide login|register|logout
-
-**function.js** This JS file is mainly to save some useful functions
+**function.js** Include many useful function, mainly to test.
 
 ----
 
