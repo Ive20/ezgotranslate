@@ -66,7 +66,7 @@ header #logo {
 }
 
 #personal:hover {
-    background-color: #3f87eb;
+    /*background-color: #3f87eb;*/
 }
 
 #personal #p_head:hover ul {

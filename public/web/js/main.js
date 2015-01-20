@@ -20,7 +20,7 @@ $(document).ready(function () {
     }
 
     //
-    // Display user email in personal_inf.html
+    // Display user email in personal-inf.html
     //
     var email = undefined;
     if (email = SubCookieUtil.get("login", "email")) {

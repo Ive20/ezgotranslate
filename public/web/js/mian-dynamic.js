@@ -1,18 +1,45 @@
-﻿$(document).ready(function () {
-    
-    //var test = document.getElementById("test1");
-    //var line_height = document.getElementById("test").offsetHeight;
-    //line_height += 13;
-    //$("#test1").css("height", line_height);
-    //$("#personal").hover(function () {
-        
-    //    $("#personal ul").stop().slideDown();
-    //}
-    //, function () {
-    //    $("#personal ul").stop().slideUp("fast");
-    //});
+﻿
 
-    // personal setting
+
+$(document).ready(function () {
+
+    //
+    // This part for sign in or sign up
+    //
+    $(".container_in .switch").click(function () {
+        $(".container_in").attr("style", "display:none;");
+        $(".container_up").attr("style", "display:block;"); 
+    });
+    $(".container_up .switch").click(function () {
+        $(".container_up").attr("style", "display:none;");
+        $(".container_in").attr("style", "display:block;");
+    });
+    $(".close").click(function () {
+        $(".container_in").attr("style", "display:none;");
+        $(".container_up").attr("style", "display:none;");
+    });
+    $(".su").click(function () {
+        $(".container_up").attr("style", "display:block;");
+    });
+    $(".si").click(function () {
+        $(".container_in").attr("style", "display:block;");  
+    });
+
+    //
+    // When hover #personal, show personal-menu
+    //
+    $("#personal").hover(function () {
+        $("#personal ul").show();
+        $("#personal").css("background-color", "#3f87eb");
+    },
+    function () {
+        $("#personal ul").hide();
+        $("#personal").css("background-color", "#6babe9");
+    });
+
+    //
+    //  For switch personal setting
+    //
     $(".first_head").click(function () {
         $(".change_hp").css("display", "block");
         $(".change_inf").css("display", "none");
@@ -20,7 +47,6 @@
         $(".first_head").css({
             "background-color": "#3f87eb",
             "color": "#fff"
-            
         });
         $(".second_personal").css({
             "background-color": "#fff",
