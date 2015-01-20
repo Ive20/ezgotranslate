@@ -9,6 +9,18 @@
 1.  添加了 **public.js** ，将公共页面动态效果放在这里面。
 2. 将 **personal.js** 和 **signinup.js** 合并到 **public.js** 中。
 
+**2015.1.20**
+
+0. 添加 **public.css**， 将所有的css塞这里面。
+1. 删除了所有的 css ，整合到了 **public.css**。
+2.  区别不同页面的样式方案：将每个`body`都添加了`id`属性，作为最大的过滤器。如：
+``` html
+    <body id="translating">
+      ......
+    </body>
+```
+（修改详情，见附录一）
+
 ----
 
 #### 命名法约定
@@ -47,21 +59,7 @@ css 文档很杂很多的问题，这是必须要整理的。
 一个是 .page-index-wrapper .content 一个是 .page-account-wrapper .content         ---[Villic Van]()
 
 
-**headfoot.css**  head和foot的样式。每个界面都有，所以独立出来。
-
-`TODO`**homepage.css** 为 homepage.html 工作
-
-`TODO`**personal-inf.css** 为personal_inf.html 工作
-
-**setting-nav.css** 个人信息主导航的样式
-
-**signinup.css** 登陆、注册窗口的样式
-
-`TODO`**temp.css**
-
-`TODO`**translate-page.css** 为 translate_object 工作
-
-`TODO`**translating.css** 为translating.html 工作
+**public.css** 公共文件
 
 ----
 
@@ -79,3 +77,48 @@ css 文档很杂很多的问题，这是必须要整理的。
 
 **function.js** This JS file is mainly to save some useful functions
 
+----
+
+### 附录一
+**（2015.1.20修改详情）**
+
+> Tips: **除了以下特别标注的，均把 ‘_’ 换成了 ‘-’ **
+
+#### header and footer
+id:
+| 修改前     | 修改后  |
+| :-------- | :--------|
+| p_head | personal-head |
+
+
+className:
+| 修改前     | 修改后  |
+| :-------- | :--------|
+| p_nav | personal-nav |
+| p\_nav_last | personal-nav-last |
+
+
+----
+
+#### index.html（登陆注册的地方改过）
+id:
+| 修改前     | 修改后  |
+| :-------- | :--------|
+
+className:
+| 修改前     | 修改后  |
+| :-------- | :--------|
+| container_in | container-signin |
+| container_up | container-signup |
+
+
+----
+
+#### translating.html
+
+className:
+| 修改前     | 修改后  |
+| :-------- | :--------|
+| addExplain | add-explain |
+| untranslateCharacter | untranslate-character |
+| numberOfsentences | number-of-sentences |

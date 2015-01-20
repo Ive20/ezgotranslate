@@ -2,16 +2,15 @@
 <html>
 <head>
   <title></title>
-  <link rel="stylesheet" href="web/css/headfoot.css" />
-  <link rel="stylesheet" href="web/css/signinup.css" />
+  <link rel="stylesheet" href="web/css/public.css" />
   <link rel="stylesheet" href="web/css/temp.css" />
   <script type="text/javascript" src="web/js/jquery.js"></script>
-  <script type="text/javascript" src="web/js/mian-dynamic.js"></script>
+  <script type="text/javascript" src="web/js/public.js"></script>
   <script type="text/javascript" src="web/js/function.js"></script>
   <script type="text/javascript" src="web/js/index.js"></script> 
 </head>
-<body>
-  <div class="container container_in" style="display:none;">
+<body id="index-page">
+  <div class="container container-signin" style="display:none;">
     <a href="javascript:;"><div class="close"></div></a>
     <div id="signin-windows">
       <div id="logo"></div>
@@ -21,7 +20,7 @@
         <span class="switch"><a href="javascript:;">注册</a></span>
       </h1>
         <div class="item">
-            <p id="signin_remind"></p>
+            <p id="signin-remind"></p>
         </div>
       <div class="item">
         <input placeholder="账号/邮箱" type="text" required />
@@ -29,11 +28,11 @@
       <div class="item">
         <input placeholder="密码" type="password" required />
       </div>
-      <span id="forgetpassword"><a href="wangjimima">忘记密码？</a></span>
+      <span id="forget-password"><a href="wangjimima">忘记密码？</a></span>
       <button id="signin">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>
     </div>
   </div>
-  <div class="container container_up" style="display:none;">
+  <div class="container container-signup" style="display:none;">
     <a href="javascript:;"><div class="close"></div></a>
     <div id="signin-windows">
       <div id="logo"></div>
@@ -43,7 +42,7 @@
         <span class="switch"><a href="javascript:;">登录</a></span>
       </h1>
       <div class="item">
-          <p id="signup_remind"></p>
+          <p id="signup-remind"></p>
       </div>
       <div class="item">
         <input placeholder="用户名" required />
@@ -70,6 +69,7 @@
       <button id="signup">立&nbsp;即&nbsp;注&nbsp;册</button>
     </div>
   </div>
+
   <header>
     <div id="navigition">
       <span id="logo">Tryneeds</span>

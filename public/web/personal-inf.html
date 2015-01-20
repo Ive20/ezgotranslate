@@ -2,34 +2,32 @@
 <html>
 <head>
   <title></title>
-  <link rel="stylesheet" href="css/headfoot.css" />
-  <link rel="stylesheet" href="css/setting-nav.css" />
-  <link rel="stylesheet" href="css/personal-inf.css" />
+  <link rel="stylesheet" href="css/public.css" />
   <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/mian-dynamic.js"></script>
+  <script type="text/javascript" src="js/public.js"></script>
   <script type="text/javascript" src="js/function.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
-<body>
+<body id="personal-inf">
   <header>
     <div id="navigition">
       <span id="logo">Tryneeds</span>
       <div id="personal">
-        <a id="p_head" href="javascript:;">
+        <a id="personal-head" href="javascript:;">
           <img class="headphoto" src="image/boby.jpg" />
-          <div class="username">Boby</div>
+          <div class="username">用户名……</div>
         </a>
         <ul>
-          <li class="p_nav"><a href="homepage.html"><span>会员中心</span></a></li>
-          <li class="p_nav"><a href="personal-inf.html"><span>个人资料</span></a></li>
-          <li class="p_nav p_nav_last"><a href="javascript:;"><span>退出登录</span></a></li>
+          <li class="personal-nav"><a href="homepage.html"><span>会员中心</span></a></li>
+          <li class="personal-nav"><a href="personal-inf.html"><span>个人资料</span></a></li>
+          <li class="personal-nav personal-nav-last"><a href="javascript:;"><span>退出登录</span></a></li>
         </ul>
       </div>
     </div>
   </header>
   <content>
-    <nav id="nav">
+    <nav id="public-personal-nav">
       <div id="inf">
         <img class="headphoto" src="image/boby.jpg" />
         <span class="username">Boby</span>  
@@ -43,17 +41,17 @@
     </nav>
     <div id="setting">
       <h1><span class="icon"></span>&nbsp;&nbsp;个人资料</h1>
-      <nav id="setting_nav">
+      <nav id="setting-nav">
         <ul>
-          <li><a class="first_head" href="javascript:;">头像设置</a></li>
-          <li><a class="second_personal" href="javascript:;">个人设置</a></li>
-          <li><a class="last_safe" href="javascript:;">安全相关</a></li>
+          <li><a class="first-head" href="javascript:;">头像设置</a></li>
+          <li><a class="second-personal" href="javascript:;">个人设置</a></li>
+          <li><a class="last-safe" href="javascript:;">安全相关</a></li>
         </ul>
       </nav>
-      <div class="change_hp change_block">
+      <div class="change-hp change-block">
         <h2><span class="icon"></span>修改个人头像</h2>
-        <div id="hp_history"></div>
-        <div id="hp_right">
+        <div id="hp-history"></div>
+        <div id="hp-right">
           <div class="unname">
             <img class="current" src="image/boby.jpg" />
             <span>当前图片</span>
@@ -65,61 +63,61 @@
         </div>
         <button class="submit"><a href="javascript:;">更&nbsp;&nbsp;&nbsp;新</a></button>
       </div>
-      <div class="change_inf change_block">
-        <ul class="inf_form">
+      <div class="change-inf change-block">
+        <ul class="inf-form">
           <h2>个人资料设置</h2>
-          <li class="inf_block">
+          <li class="inf-block">
             <div class="line">
-              <div class="inf_left">昵称：</div>
-              <div class="inf_right"><input type="text" class="nickname" /></div>
+              <div class="inf-left">昵称：</div>
+              <div class="inf-right"><input type="text" class="nickname" /></div>
             </div>
             <div class="line">
-              <div class="inf_left">用户名：</div>
-              <div class="inf_right">boby</div>
+              <div class="inf-left">用户名：</div>
+              <div class="inf-right">boby</div>
             </div>
           </li>
-          <li class="inf_block">
+          <li class="inf-block">
             <div class="line">
-              <div class="inf_left">性别：</div>
-              <div class="inf_right"><input type="radio" name="sex" value="man" />男<input type="radio" name="sex" value="woman" />女</div>
+              <div class="inf-left">性别：</div>
+              <div class="inf-right"><input type="radio" name="sex" value="man" />男<input type="radio" name="sex" value="woman" />女</div>
             </div>
             <div class="line">
-              <div class="inf_left">所在地区：</div>
-              <div class="inf_right"><input type="text" class="location" /></div>
+              <div class="inf-left">所在地区：</div>
+              <div class="inf-right"><input type="text" class="location" /></div>
             </div>
           </li>
-          <li class="inf_block">
+          <li class="inf-block">
             <div class="line" style="height: 80px;">
-              <div class="inf_left">个人简介：</div>
-              <div class="inf_right"><textarea class="briefIntroduction"></textarea></div>
+              <div class="inf-left">个人简介：</div>
+              <div class="inf-right"><textarea class="briefIntroduction"></textarea></div>
             </div>
             <div class="line" style="height: 80px;">
-              <div class="inf_left">翻译偏好：</div>
-              <div class="inf_right"><textarea type="text" class="prefer"></textarea></div>
+              <div class="inf-left">翻译偏好：</div>
+              <div class="inf-right"><textarea type="text" class="prefer"></textarea></div>
             </div>
           </li>
           <button class="submit"><a href="javascript:;">确认修改</a></button>
         </ul>
       </div>
-      <div class="safety change_block">
-        <ul class="inf_form">
+      <div class="safety change-block">
+        <ul class="inf-form">
           <h2>安全设置</h2>
-          <li class="inf_block">
+          <li class="inf-block">
             <div class="line">
-              <div class="inf_left">我的邮箱：</div>
-              <div class="inf_right"><span class="emailAddress">******@***</span>(每个邮箱只能注册一个号,不能修改)</div>
+              <div class="inf-left">我的邮箱：</div>
+              <div class="inf-right"><span class="emailAddress">******@***</span>(每个邮箱只能注册一个号,不能修改)</div>
             </div>
           </li>
-          <li class="inf_block">
+          <li class="inf-block">
             <div class="line">
-              <div class="inf_left">密码：</div>
-              <div class="inf_right">********<a href="javascript:;" style="color: blue;">修改密码</a></div>
+              <div class="inf-left">密码：</div>
+              <div class="inf-right">********<a href="javascript:;" style="color: blue;">修改密码</a></div>
             </div>
           </li>
-          <li class="inf_block">
+          <li class="inf-block">
             <div class="line" style="height: 80px;">
-              <div class="inf_left">密保问题：</div>
-              <div class="inf_right"><a href="javascript:;" style="color: blue;">设置密保问题</a></div>
+              <div class="inf-left">密保问题：</div>
+              <div class="inf-right"><a href="javascript:;" style="color: blue;">设置密保问题</a></div>
             </div>
           </li>
         </ul>

@@ -3,78 +3,77 @@
 <head>
   <meta lang="zh-cn" charset="utf-8" />
   <title></title>
-  <link rel="stylesheet" href="css/headfoot.css" />
-  <link rel="stylesheet" href="css/translating.css" />
+  <link rel="stylesheet" href="css/public.css" />
   <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/mian-dynamic.js"></script>
+  <script type="text/javascript" src="js/public.js"></script>
   <script type="text/javascript" src="js/function.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/translate.js"></script>
 </head>
-<body>
+<body id="translating">
   <header>
     <div id="navigition">
       <span id="logo">Tryneeds</span>
       <div id="personal">
-        <a id="p_head" href="javascript:;">
+        <a id="personal-head" href="javascript:;">
           <img class="headphoto" src="image/boby.jpg" />
           <div class="username">用户名……</div>
         </a>
         <ul>
-          <li class="p_nav"><a href="homepage.html"><span>会员中心</span></a></li>
-          <li class="p_nav"><a href="personal-inf.html"><span>个人资料</span></a></li>
-          <li class="p_nav p_nav_last"><a href="javascript:;"><span>退出登录</span></a></li>
+          <li class="personal-nav"><a href="homepage.html"><span>会员中心</span></a></li>
+          <li class="personal-nav"><a href="personal-inf.html"><span>个人资料</span></a></li>
+          <li class="personal-nav personal-nav-last"><a href="javascript:;"><span>退出登录</span></a></li>
         </ul>
       </div>
     </div>
   </header>
-  <div class="translating_container">
+  <div class="translating-container">
     <div class="category">
       <span></span>
-      <h1 class="main_category">Father</h1>
-      <h2 class="child_category">- Children</h2>
+      <h1 class="main-category">Father</h1>
+      <h2 class="child-category">- Children</h2>
     </div>
-    <div class="second_block">
-      <div class="search_container">
+    <div class="second-block">
+      <div class="search-container">
         <input type="text" class="searching" />
-        <input type="button" class="search_button" />
+        <input type="button" class="search-button" />
       </div>
-      <div class="airticl_inf numberOfsentences">
+      <div class="airticl-inf number-of-sentences">
         <span class="numbers">23</span>
         <span class="text">全部</span>
       </div>
-      <div class="airticl_inf untranslate">
+      <div class="airticl-inf untranslate">
         <span class="numbers">14</span>
         <span class="text">未翻译</span>
       </div>
-      <div class="airticl_inf unreview">
+      <div class="airticl-inf unreview">
         <span class="numbers">3</span>
         <span class="text">未审核</span>
       </div>
     </div>
-    <div class="translate_block">
-      <div class="info_block">
-        <div id="test1" class="info_line">
-          <div class="line_numbers">1.</div>
-          <div class="line_translate">As a freshman, I think am crazy. And I have had done many tries. To pursue so called freedom, not willing to be limited by the school, I set many big plans. Recently, I have set a goal about forming a habit which is that doing morning reading everyday in two months. And, I will buy a DELL display for myself as a bonus. Remember, a good habit beyonds price. </div>
+    <div class="translate-block">
+      <div class="info-block">
+        <div id="test1" class="info-line">
+          <div class="line-numbers">1.</div>
+          <div class="line-translate">As a freshman, I think am crazy. And I have had done many tries. To pursue so called freedom, not willing to be limited by the school, I set many big plans. Recently, I have set a goal about forming a habit which is that doing morning reading everyday in two months. And, I will buy a DELL display for myself as a bonus. Remember, a good habit beyonds price. </div>
           <div class="translated">作为一个大一新生，我认我我是疯狂的。我也做了很多尝试。为了追求所谓的自由，为了不愿被学校限制，我设置了许多大目标。最近，我定了一个在两个月里养成天天早读的好习惯。之后给自己买一个显示器作为奖励。记住，一个好的习惯比金钱重要。</div>
-          <div class="if_translated"></div>
-          <div class="if_verify"></div>
+          <div class="if-translated"></div>
+          <div class="if-verify"></div>
         </div>
-        <div id="test2" class="info_line">
-          <div class="line_numbers">2.</div>
-          <div class="line_translate">About my girlfriend, who knows what will happens in five years. However, I firmly try my best to earn her reliance. </div>
+        <div id="test2" class="info-line">
+          <div class="line-numbers">2.</div>
+          <div class="line-translate">About my girlfriend, who knows what will happens in five years. However, I firmly try my best to earn her reliance. </div>
           <div class="translated">关于我的女友，谁知道5年后会发生什么。但是，我坚信我会尽力赢得她的信赖。
 </div>
-          <div class="if_translated"></div>
-          <div class="if_verify"></div>
+          <div class="if-translated"></div>
+          <div class="if-verify"></div>
         </div>
-        <div class="info_line"></div>
-        <div class="info_line"></div>
+        <div class="info-line"></div>
+        <div class="info-line"></div>
       </div>
-      <div class="operate_block">
-        <div class="untranslateCharacter">
+      <div class="operate-block">
+        <div class="untranslate-character">
           <h3>未翻译字符</h3>
           <p class="detail"></p>
         </div>
@@ -83,7 +82,7 @@
           <input type="button" value="保存" class="save" />
           <input type="button" value="保存所有" class="saveAll" />
         </div>
-        <div class="addExplain">
+        <div class="add-explain">
           <h3>添加说明</h3>
           <textarea></textarea>
           <input type="button" value="提交" class="commit" />
