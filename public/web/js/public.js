@@ -100,7 +100,7 @@ $(document).ready(function () {
     // Check whether login
     var getLoginCookie = SubCookieUtil.get("login", "state");
     if (getLoginCookie == null || getLoginCookie == "false") {
-        console.log("main.js - Illegal login.");
+        console.log("Illegal login.");
         // window.location.href = "../index.html";
     }
 
@@ -109,7 +109,7 @@ $(document).ready(function () {
     //
     var username = undefined;
     if (username = SubCookieUtil.get("login", "username")) {
-        $("#personal .username").html(username);
+        $("#navigition #personal-head .username").html(username);
     }
 
     //
@@ -117,7 +117,7 @@ $(document).ready(function () {
     //
     var email = undefined;
     if (email = SubCookieUtil.get("login", "email")) {
-        $(".inf_form .inf_right .emailAddress").html(email);
+        $("#personal-inf #setting .safety .emailAddress").html(email);
     }
 
 
@@ -128,49 +128,54 @@ $(document).ready(function () {
     // Handle login event
     //
     $("#signin").click(function () {
-        var login = $(".container_in #signin-windows input");
+        var login = $(".container-signin #signin-windows input");
 
         //function checkForm(){}
-        var acc = login[0].value;
-        var pas = login[1].value;
+        var username = login[0].value;
+        var password = login[1].value;
 
-        var jqxhr = $.post("/user/login",
-            {
-                username: acc,
-                password: pas
+        $.ajax({
+            url: '/user/login',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                username: username,
+                password: password
             },
-            function (data, status) {
-                var errcode = data.errcode;
-                if (errcode == 1) {
-                    $("#signin_remind").empty().html("登陆失败");
-                } else if (errcode == 0) {
-                    // Get user info and save to session
-                    var user = {
-                        username : acc,
-                        email : data.email,
-                        translate : data.translate,
-                        sex : data.sex,
-                        location : data.location,
-                        nickname: data.nickname,
-                        state : "true"
-                    }
-                    SubCookieUtil.setAll("login", user, null, "/");
-                    // Jump to private page
-                    window.location.href = "web/after-signin.html";
+        })
+        .done(function(data) {
+            var errcode = data.errcode;
+            if (errcode == 1) {
+                $("#signin-remind").empty().html("登陆失败");
+            } else if (errcode == 0) {
+                // Get user info and save to session
+                var user = {
+                    username : username,
+                    email : data.email,
+                    translate : data.translate,
+                    sex : data.sex,
+                    location : data.location,
+                    nickname: data.nickname,
+                    state : "true"
                 }
-            },
-        "json");
-
-        jqxhr.fail(function () {
-            $("#signin_remind").empty().html("登陆失败");
-            console.log("index.js - Login ajax problem.");
+                SubCookieUtil.setAll("login", user, null, "/");
+                // Jump to private page
+                window.location.href = "web/after-signin.html";
+            }
+        })
+        .fail(function() {
+            $("#signin-remind").empty().html("登陆失败");
+            console.log("Login ajax problem.");
+        })
+        .always(function() {
+            console.log("Login ajax complete.");
         });
     });
 
     // Handle register event
     //
     $("#signup").click(function () {
-        var register = $(".container_up #signin-windows input");
+        var register = $(".container-signup #signin-windows input");
 
         //checkForm(){}
         var acc = register[0].value;
@@ -190,7 +195,7 @@ $(document).ready(function () {
                 // IF hasuser return false to stop excute $.post("user/register")
                 //
                 if(errcode == 1) {
-                    $("#signup_remind").empty().html("用户名已注册");
+                    $("#signup-remind").empty().html("用户名已注册");
                     console.log("hasuser");
                     return false;
                 } else if (errcode == 0) {
@@ -203,30 +208,30 @@ $(document).ready(function () {
                     function (data, status) {
                         var errcode = data.errcode;
                         if (errcode == 1) {
-                            $("#signup_remind").empty().html("注册失败");
+                            $("#signup-remind").empty().html("注册失败");
                         } else if (errcode == 0) {
                             // Jump to private page
                             //window.location.href = "web/after signin.html";
-                            $("#signup_remind").empty().html("注册成功,请登陆");
+                            $("#signup-remind").empty().html("注册成功,请登陆");
                         }
                     },
                     "json");
 
                     jqxhr.fail(function () {
-                        $("#signup_remind").empty().html("注册失败");
-                        console.log("index.js - Register ajax problem.");
+                        $("#signup-remind").empty().html("注册失败");
+                        console.log("Register ajax problem.");
                     });
                 }
             },
             "json");
         checkUsername.fail(function () {
-            console.log("index.js - Hasuser ajax problem.");
+            console.log("Hasuser ajax problem.");
         });
     });
 
     // Handle logout event
     //
-    $("#personal .p_nav_last").click(function () {
+    $("#navigition .personal-nav-last").click(function () {
        var jqxhr =  $.post("/user/logout",
             function (data, status) {
                 var errcode = data.errcode;
@@ -240,9 +245,8 @@ $(document).ready(function () {
             "json");
 
        jqxhr.fail(function () {
-           console.log("index.js - Logout failed");
+           console.log("Logout failed");
        });
     });
-
 
 });
