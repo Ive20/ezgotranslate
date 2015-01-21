@@ -1,4 +1,4 @@
-﻿fWeb Develop About
+﻿Web Develop About
 ===
 
 ## 修改日志
@@ -122,9 +122,9 @@ css 文档很杂很多的问题，这是必须要整理的。
 
 **function.js** Include many useful function, mainly to test.
 
-----
 
-### 附录一
+
+## Appendix
 **（2015.1.20修改详情）**
 
 > Tips: **除了以下特别标注的，均把 ‘_’ 换成了 ‘-’ **
