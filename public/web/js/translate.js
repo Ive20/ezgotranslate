@@ -78,10 +78,10 @@ function addOperateEvent(target) {
     detail.html(toTranslateContent);
   })
   .fail(function() {
-    console.log("tarnslate.js - Gettranslate(update) error");
+    console.log("Gettranslate(update) ajax problem.");
   })
   .always(function() {
-    console.log("translate.js - Gettranslate(update) complete");
+    console.log("Gettranslate(update) ajax complete");
   })
 
   // First, this info_line was clicked
@@ -110,10 +110,10 @@ function addOperateEvent(target) {
         console.log("Insert tranlate status: " + data);
       })
       .fail(function() {
-        console.log("translate.js - Inserttranslate error.");
+        console.log("Insert translate ajax problem.");
       })
       .always(function() {
-        console.log("translate.js - Inserttranslate complete.");
+        console.log("Insert translate ajax complete.");
       });
     }
   });
@@ -184,19 +184,19 @@ $(document).ready(function() {
           theTranslated.html(result);
         })
         .fail(function() {
-          console.log("translate.js - Gettranslate error.");
+          console.log("Gettranslate ajax problem.");
         })
         .always(function() {
-          console.log("translate.js - Gettranslate complete.");
+          console.log("Gettranslate ajax complete.");
         });
       }
     }
   })
   .fail(function() {
-    console.log("translate.js - Getinfo error.");
+    console.log("Getinfo ajax problem.");
   })
   .always(function() {
-    console.log("translate.js - Getinfo complete.");
+    console.log("Getinfo ajax complete.");
   });
 
   // Forbid submit without choosing nothing
