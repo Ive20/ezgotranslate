@@ -4,6 +4,100 @@
 //  1, gettranslate {info_id} return related_translated_info
 //
 
+// class InfoLine
+//
+function InfoLine(objectToDisplay) {
+  this.infoID       = objectToDisplay.info_id;
+  this.infoContent  = objectToDisplay.info_content;
+  this.infoLanguage = objectToDisplay.info_language;
+  this.updatedAt    = objectToDisplay.updated_at;
+  this.createdAt    = objectToDisplay.created_at;
+}
+
+InfoLine.prototype = {
+  constructor: InfoLine,
+
+  generateSnippet: function(elementValue,
+                            classValue,
+                            idValue,
+                            eventValue,
+                            eventHandler) {
+    if (elementValue === null) return false;
+    else {
+      var propertys = null;
+
+      if (idValue !== null) {
+        var theId = 'id="' + idValue + '" ';
+        // If has class, use +=
+        (propertys === null) ? propertys =  theId
+                             : propertys += theId;
+      }
+
+      if (classValue !== null) {
+        var theClass = 'class="' + classValue +'" ';
+        (propertys === null) ? propertys =  theClass
+                             : propertys += theClass;
+      }
+
+      if (eventValue !== null) {
+        var theEvent = eventValue + '=' + '"' +
+                       eventHandler + '" ';
+
+        (propertys === null) ? propertys = theEvent
+                             : propertys += theEvent;
+      }
+
+      var theSnippet = undefined;
+      if (propertys === null) {
+        theSnippet = '<'  + elementValue + '>' +
+                     '</' + elementValue + '>';
+      } else {
+        theSnippet = '<' + elementValue + ' ' + propertys + '>' +
+                     '</' + elementValue + '>';
+      }
+
+      return theSnippet;
+    }
+  },
+
+  appendToInfoBlock: function() {
+    // Get target
+    var infoBlock = $(".translate-block .info-block");
+
+    var theInfoLine = this.generateSnippet('div',
+                                           'info-line',
+                                           this.infoID,
+                                           'onclick',
+                                           'addOperateEvent(this)');
+    infoBlock.append(theInfoLine);
+
+    var infoIDForjQuerySelector = this.infoID.replace(/\./g, '\\.');
+    var theInfoLineToWrite = $('#' + infoIDForjQuerySelector);
+
+    var lineTranslate = this.generateSnippet('div',
+                                             'line-translate',
+                                             null, null, null);
+    theInfoLineToWrite.append(lineTranslate);
+
+    var translated = this.generateSnippet('div',
+                                          'translated',
+                                          null, null, null);
+    theInfoLineToWrite.append(translated);
+
+    var ifTranslated = this.generateSnippet('div',
+                                            'if-translated',
+                                            null, null, null);
+    theInfoLineToWrite.append(ifTranslated);
+
+    var ifVerify = this.generateSnippet('div',
+                                        'if-verify',
+                                        null, null, null);
+    theInfoLineToWrite.append(ifVerify);
+    // TODO
+    // TODO
+  }
+}
+
 // Create a block for one sentence with its ID
 function createInfoLine(objectToDisplay) {
     var infoID = objectToDisplay.info_id;
@@ -11,36 +105,42 @@ function createInfoLine(objectToDisplay) {
     var infoLanguage = objectToDisplay.info_language;
     var updatedAt = objectToDisplay.updated_at;
     var createdAt = objectToDisplay.created_at;
-    // Get the tag <div class="info_block"> to insert new info line
-    var theInfoBlock = $(".info_block");
 
-    var infoLine = '<div id="' + infoID +
-                   '" class="info_line" onclick=\"addOperateEvent(this)\"></div>';
+    // Get the tag <div class="info_block">
+    // to insert new info line
+    var theInfoBlock = $(".translate-block .info-block");
+
+    var infoLine = '<div id="' +
+                   infoID +
+                   '" class="info-line" ' +
+                   'onclick=\"addOperateEvent(this)\">' +
+                   '</div>';
     theInfoBlock.append(infoLine);
 
     var infoIDForjQuerySelector = infoID.replace(/\./g, '\\.');
     var theInfoLineToWrite = $("#" + infoIDForjQuerySelector);
 
-    var lineTranslated = '<div class="line_translate">' + infoContent + '</div>';
+    var lineTranslated = '<div class="line-translate">' +
+                         infoContent +
+                         '</div>';
     theInfoLineToWrite.append(lineTranslated);
 
     var translated = '<div class="translated"></div>';
     theInfoLineToWrite.append(translated);
 
-    var ifTranslated = '<div class="if_translated"></div>';
+    var ifTranslated = '<div class="if-translated"></div>';
     theInfoLineToWrite.append(ifTranslated);
 
-    var ifVerify = '<div class="if_verify"></div>';
+    var ifVerify = '<div class="if-verify"></div>';
     theInfoLineToWrite.append(ifVerify);
-
 }
 
 // Add event listener for each sentence
 function addOperateEvent(target) {
   // Get
-  var detail = $(".operate_block .untranslateCharacter .detail");
-  var operating = $(".operate_block .operating textarea");
-  var remark = $(".operate_block .addExplain textarea");
+  var detail = $(".operate-block .untranslate-character .detail");
+  var operating = $(".operate-block .operating textarea");
+  var remark = $(".operate-block .add-explain textarea");
   // Clear history first
   detail.empty();
   operating.empty();
@@ -50,7 +150,7 @@ function addOperateEvent(target) {
   // - Update untranslate content block
   var infoID = target.id;
   var theTargetID = "#" + infoID.replace(/\./g, '\\.')
-                        + " .line_translate";
+                        + " .line-translate";
   // Why .text() work here?
   var toTranslateContent = $(theTargetID).text();
   $.ajax({
@@ -86,7 +186,7 @@ function addOperateEvent(target) {
 
   // First, this info_line was clicked
   // Then, hook the buttonSave event to this object
-  var buttonSave = $(".operate_block .operating .save");
+  var buttonSave = $(".operate-block .operating .save");
   // Remove all event,
   // actually, just click event
   buttonSave.off();
@@ -124,7 +224,7 @@ function addOperateEvent(target) {
 // $start here
 $(document).ready(function() {
   // Delete demo
-  $(".info_block").empty();
+  $(".info-block").empty();
 
   // Display
   $.ajax({
@@ -200,9 +300,9 @@ $(document).ready(function() {
   });
 
   // Forbid submit without choosing nothing
-  var operating = $(".operate_block .operating textarea");
-  var buttonSave = $(".operate_block .operating .save");
-  var buttonSaveAll = $(".operate_block .operating .saveAll");
+  var operating = $(".operate-block .operating textarea");
+  var buttonSave = $(".operate-block .operating .save");
+  var buttonSaveAll = $(".operate-block .operating .saveAll");
   buttonSave.click(function() {
     alert ("Must choose one sentence first.");
   });
