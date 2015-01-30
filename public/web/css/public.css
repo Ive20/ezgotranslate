@@ -1109,7 +1109,7 @@ content #public-personal-nav {
 }
 
 #translating input:focus,
-#translating textarea:focus {
+#translating .input-block:focus {
     outline: none; 
 }
 
@@ -1241,13 +1241,14 @@ content #public-personal-nav {
     border-bottom: 1px solid #d4d4d4;
 }
 
-#translating .operate-block .operating textarea {
+#translating .operate-block .operating .input-block {
     width: 350px;
     height: 120px;
     margin: 13px 20px;
     font: normal 15px 'Microsoft Yahei';
     border: none;
-    resize: none;
+    
+    overflow: auto;
 }
 
 #translating .operate-block .operating input {
@@ -1277,13 +1278,14 @@ content #public-personal-nav {
     font: normal 16px 'Microsoft Yahei';
 }
 
-#translating .operate-block .add-explain textarea {
+#translating .operate-block .add-explain .input-block {
     width: 350px;
     height: 40px;
     margin: 0 20px 13px 20px;
     font: normal 15px 'Microsoft Yahei';
     border: none;
-    resize: none;
+    
+    overflow: auto;
 }
 
 #translating .add-explain input {

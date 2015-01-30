@@ -3,6 +3,14 @@
 
 ## 修改日志
 
+**2015.1.31**
+
+translating.html
+
+将`<textarea></textarea>`改为`<div class="input-block" contenteditable="true"></div>`
+
+@Boby
+
 **2015.1.20**
 
 0. 添加 **public.css**， 将所有的css塞这里面。
@@ -14,6 +22,7 @@
     </body>
 ```
 （修改详情，见附录一）
+
 @Boby
 
 **2015.1.20**
