@@ -135,31 +135,45 @@ function createInfoLine(objectToDisplay) {
     theInfoLineToWrite.append(ifVerify);
 }
 
+// Compare function
+// Compare info via update time
+function cmpInfoViaUpdateTime(info1, info2) {
+  if (info1.updated_at < info2.updated_at) {
+    return 1;
+  } else if (info1.updated_at > info2.updated_at) {
+    return -1;
+  } else {
+    return 0;
+  }
+}
+
 // Add event listener for each sentence
 function addOperateEvent(target) {
-  // Get
+  // Get operate target
   var detail = $(".operate-block .untranslate-character .detail");
   var operating = $(".operate-block .operating textarea");
-  var remark = $(".operate-block .add-explain textarea");
+  var comment = $(".operate-block .add-explain textarea");
   // Clear history first
   detail.empty();
   operating.empty();
-  remark.empty();
+  comment.empty();
 
   // Update operate block
   // - Update untranslate content block
   var infoID = target.id;
-  var theTargetID = "#" + infoID.replace(/\./g, '\\.')
-                        + " .line-translate";
+  var targetInfoLineID = "#" + infoID.replace(/\./g, '\\.');
+  var theTargetID = targetInfoLineID + " .line-translate";
   // Why .text() work here?
   var toTranslateContent = $(theTargetID).text();
+  var translatedContents = [];
   $.ajax({
     url: '/translate/gettranslate',
     type: 'POST',
   })
   .done(function(contents) {
     var content = undefined;
-    var count = 0;
+    // Get translated content from back-end
+    // Now, back-end return all translated content
     for (content = 0; content < contents.length; ++content) {
       var theContent = contents[content];
       ////////////////////////
@@ -169,13 +183,26 @@ function addOperateEvent(target) {
       }
       ///////////////////////
       else {
-        if (infoID === theContent.info_id) {
-          ++count;
+        // Filter via info_id
+        if (theContent.info_id === infoID) {
+          translatedContents.push(theContent);
         }
       }
     }
-    toTranslateContent += "[" + count + " record existed]";
+    // Display toTranslate content
     detail.html(toTranslateContent);
+
+    // Display hasTranslate content
+    var count = translatedContents.length;
+    console.log(infoID + " has " + count + " history.");
+    // IF history > 1, display the latest one
+    if (count >= 1) {
+      // Sort via update_at time
+      translatedContents.sort(cmpInfoViaUpdateTime);
+      var contentToShow = translatedContents[0].translate_result;
+      operating.html(contentToShow);
+      console.log(contentToShow);
+    }
   })
   .fail(function() {
     console.log("Gettranslate(update) ajax problem.");
@@ -184,18 +211,19 @@ function addOperateEvent(target) {
     console.log("Gettranslate(update) ajax complete");
   })
 
-  // First, this info_line was clicked
+  // First, this info-line was clicked
   // Then, hook the buttonSave event to this object
   var buttonSave = $(".operate-block .operating .save");
-  // Remove all event,
-  // actually, just click event
+  // Remove all event bound to save-button before
+  // Actually, just click event
   buttonSave.off();
   buttonSave.click(function() {
     var submitContent = operating.val();
     if (submitContent === "") {
       // IF empty, return false
-      alert ("NULL. INPUT FIRST.");
+      alert ("Nothing to save.");
     } else {
+      // Submit new or update translate
       $.ajax({
         url: '/translate/inserttranslate',
         type: 'POST',
@@ -207,9 +235,23 @@ function addOperateEvent(target) {
         },
       })
       .done(function(data) {
-        console.log("Insert tranlate status: " + data);
+        var errcode = data.errcode;
+
+        if (errcode === 1) {
+          alert ("Save failed.");
+          //////////////////////////////////////////////////
+          ///DEBUG
+          console.log("Insert translate interface problem.");
+          //////////////////////////////////////////////////
+        } else {
+          // Update info-line
+          var targetInfoLine = $(targetInfoLineID + " .translated");
+
+          targetInfoLine.html(submitContent);
+        }
       })
       .fail(function() {
+        alert ("Save failed.");
         console.log("Insert translate ajax problem.");
       })
       .always(function() {
@@ -217,14 +259,35 @@ function addOperateEvent(target) {
       });
     }
   });
-  // Hook buttonRemark to this boject
-  // But no interface.
+
+  // Hook the buttonSubmit event to this object
+  var buttonSubmit = $(".operate-block .add-explain .commit");
+  // Remove all event bound to submit-button before
+  // Actually, just click event
+  buttonSubmit.off();
+  buttonSubmit.click(function(){
+    // Prepare
+    var submitComment = comment.val();
+
+    if (submitComment === "") {
+      // IF no comment, return false
+      alert ("Please leave a comment first.");
+    } else {
+      // ajax
+      // But no interface now
+    }
+  });
 }
 
 // $start here
 $(document).ready(function() {
   // Delete demo
   $(".info-block").empty();
+
+  // Get second block target
+  var numberOfSentence = $(".second-block .number-of-sentences .numbers");
+  var untranslate = $(".second-block .untranslate .numbers");
+  var unreview = (".second-block .unreview .numbers");
 
   // Display
   $.ajax({
@@ -235,6 +298,8 @@ $(document).ready(function() {
     var info = undefined;
     for (info = 0; info < infos.length; ++info) {
       var theInfo = infos[info];
+      // Update numbers of sentences
+      numberOfSentence.html(infos.length);
       ////////////////////
       //DEBUG
       if (typeof theInfo != "object") {
@@ -243,7 +308,8 @@ $(document).ready(function() {
       ////////////////////
       else {
         createInfoLine(theInfo);
-        // Get tranlated content
+        // Get tranlated content\
+        /*
         $.ajax({
           url: '/translate/gettranslate',
           type: 'POST',
@@ -289,6 +355,7 @@ $(document).ready(function() {
         .always(function() {
           console.log("Gettranslate ajax complete.");
         });
+      */
       }
     }
   })
@@ -300,11 +367,22 @@ $(document).ready(function() {
   });
 
   // Forbid submit without choosing nothing
-  var operating = $(".operate-block .operating textarea");
   var buttonSave = $(".operate-block .operating .save");
-  var buttonSaveAll = $(".operate-block .operating .saveAll");
   buttonSave.click(function() {
     alert ("Must choose one sentence first.");
+  });
+
+  var buttonSubmit = $(".operate-block .add-explain .commit");
+  buttonSubmit.click(function(){
+    alert("Must choose one sentence first.");
+  });
+
+  // Handle buttonSaveAll
+  // on_buttonSaveAll_click = save all translate
+  var buttonSaveAll = $(".operate-block .operating .save-all");
+  buttonSaveAll.click(function(){
+    //TODO
+    alert("[DOING]This part has't been done.");
   });
 });
 // $end start
