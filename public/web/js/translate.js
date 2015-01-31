@@ -151,8 +151,8 @@ function cmpInfoViaUpdateTime(info1, info2) {
 function addOperateEvent(target) {
   // Get operate target
   var detail = $(".operate-block .untranslate-character .detail");
-  var operating = $(".operate-block .operating textarea");
-  var comment = $(".operate-block .add-explain textarea");
+  var operating = $(".operate-block .operating .input-block");
+  var comment = $(".operate-block .add-explain .input-block");
   // Clear history first
   detail.empty();
   operating.empty();
@@ -163,7 +163,8 @@ function addOperateEvent(target) {
   var infoID = target.id;
   var targetInfoLineID = "#" + infoID.replace(/\./g, '\\.');
   var theTargetID = targetInfoLineID + " .line-translate";
-  // Why .text() work here?
+
+  // div with .text() to get value
   var toTranslateContent = $(theTargetID).text();
   var translatedContents = [];
   $.ajax({
@@ -218,7 +219,7 @@ function addOperateEvent(target) {
   // Actually, just click event
   buttonSave.off();
   buttonSave.click(function() {
-    var submitContent = operating.val();
+    var submitContent = operating.text();
     if (submitContent === "") {
       // IF empty, return false
       alert ("Nothing to save.");
@@ -267,7 +268,7 @@ function addOperateEvent(target) {
   buttonSubmit.off();
   buttonSubmit.click(function(){
     // Prepare
-    var submitComment = comment.val();
+    var submitComment = comment.text();
 
     if (submitComment === "") {
       // IF no comment, return false
@@ -275,6 +276,10 @@ function addOperateEvent(target) {
     } else {
       // ajax
       // But no interface now
+      ///////////////////////////
+      ///DEBUG
+      console.log("comment: " + submitComment);
+      ///////////////////////////
     }
   });
 }
