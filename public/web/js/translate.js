@@ -147,6 +147,21 @@ function cmpInfoViaUpdateTime(info1, info2) {
   }
 }
 
+// Search object in array
+function objectArrayIndexOf(objectArray,
+                            searchItem,
+                            objectProperty) {
+  var i = undefined;
+  for (i = 0; i < objectArray.length; ++i) {
+    var theObject = objectArray[i];
+    if (theObject.objectProperty === searchItem) {
+      return i;
+    } else {
+      return -1;
+    }
+  }
+}
+
 // Add event listener for each sentence
 function addOperateEvent(target) {
   // Get operate target
@@ -167,6 +182,9 @@ function addOperateEvent(target) {
   // div with .text() to get value
   var toTranslateContent = $(theTargetID).text();
   var translatedContents = [];
+  // To save the latest translate
+  var contentToShow = undefined;
+  // Update contentToShow
   $.ajax({
     url: '/translate/gettranslate',
     type: 'POST',
@@ -200,65 +218,109 @@ function addOperateEvent(target) {
     if (count >= 1) {
       // Sort via update_at time
       translatedContents.sort(cmpInfoViaUpdateTime);
-      var contentToShow = translatedContents[0].translate_result;
+      contentToShow = translatedContents[0].translate_result;
       operating.html(contentToShow);
+      ///////////////////////////
+      ///DEBUG
       console.log(contentToShow);
+      ///////////////////////////
     }
   })
   .fail(function() {
     console.log("Gettranslate(update) ajax problem.");
   })
   .always(function() {
-    console.log("Gettranslate(update) ajax complete");
-  })
+    // When contentToShow update ajax finished
+    // Hook buttonSave event to this object
+    var buttonSave = $(".operate-block .operating .save");
+    // Remove all event bound to save-button before
+    // Actually, just click event
+    buttonSave.off();
+    buttonSave.click(function() {
+      var submitContent = operating.text();
+      if (submitContent === "") {
+        // IF empty, return false
+        alert("Nothing to save.");
+      } else if (submitContent === contentToShow) {
+        // No modify, refuse save
+        alert("Nothing changed.")
+      } else if (objectArrayIndexOf(translatedContents,
+                                    submitContent,
+                                    'translate_result')) {
+        // IMPROVED - should be finished in backend
+        // Check whether translate exist
+        alert("This translate has existed.");
+      } else {
+        // Submit new or update translate
+        $.ajax({
+          url: '/translate/inserttranslate',
+          type: 'POST',
+          dataType: 'JSON',
+          data: {
+            infoid: infoID,
+            result: submitContent,
+            lanuage: "cns"    // Default: zh_CN
+          },
+        })
+        .done(function(data) {
+          var errcode = data.errcode;
 
-  // First, this info-line was clicked
-  // Then, hook the buttonSave event to this object
+          if (errcode === 1) {
+            alert("Save failed.");
+            //////////////////////////////////////////////////
+            ///DEBUG
+            console.log("Insert translate interface problem.");
+            //////////////////////////////////////////////////
+          } else {
+            // Update info-line
+            var targetInfoLine = $(targetInfoLineID + " .translated");
+
+            targetInfoLine.html(submitContent);
+          }
+        })
+        .fail(function() {
+          alert("Save failed.");
+          console.log("Insert translate ajax problem.");
+        })
+        .always(function() {
+          console.log("Insert translate ajax complete.");
+        });
+      }
+    });
+
+    // Hook the buttonSubmit event to this object
+    var buttonSubmit = $(".operate-block .add-explain .commit");
+    // Remove all event bound to submit-button before
+    // Actually, just click event
+    buttonSubmit.off();
+    buttonSubmit.click(function(){
+      // Prepare
+      var submitComment = comment.text();
+
+      if (submitComment === '') {
+        // IF no comment, return false
+        alert("Please leave a comment first.");
+      } else {
+        // ajax
+        // But no interface now
+        ///////////////////////////
+        ///DEBUG
+        console.log("comment: " + submitComment);
+        ///////////////////////////
+      }
+    });
+  // $end contentToShow update ajax
+  console.log("Gettranslate(update) ajax complete");
+  });
+
+  // $start handle contentToShow update ajax not done
+  // IF ajax not finish, bind busy-remind event
   var buttonSave = $(".operate-block .operating .save");
   // Remove all event bound to save-button before
   // Actually, just click event
   buttonSave.off();
   buttonSave.click(function() {
-    var submitContent = operating.text();
-    if (submitContent === "") {
-      // IF empty, return false
-      alert ("Nothing to save.");
-    } else {
-      // Submit new or update translate
-      $.ajax({
-        url: '/translate/inserttranslate',
-        type: 'POST',
-        dataType: 'JSON',
-        data: {
-          infoid: infoID,
-          result: submitContent,
-          lanuage: "cns"    // Default: zh_CN
-        },
-      })
-      .done(function(data) {
-        var errcode = data.errcode;
-
-        if (errcode === 1) {
-          alert ("Save failed.");
-          //////////////////////////////////////////////////
-          ///DEBUG
-          console.log("Insert translate interface problem.");
-          //////////////////////////////////////////////////
-        } else {
-          // Update info-line
-          var targetInfoLine = $(targetInfoLineID + " .translated");
-
-          targetInfoLine.html(submitContent);
-        }
-      })
-      .fail(function() {
-        alert ("Save failed.");
-        console.log("Insert translate ajax problem.");
-      })
-      .always(function() {
-        console.log("Insert translate ajax complete.");
-      });
-    }
+    alert("Busy. Try again later.");
   });
 
   // Hook the buttonSubmit event to this object
@@ -267,21 +329,9 @@ function addOperateEvent(target) {
   // Actually, just click event
   buttonSubmit.off();
   buttonSubmit.click(function(){
-    // Prepare
-    var submitComment = comment.text();
-
-    if (submitComment === "") {
-      // IF no comment, return false
-      alert ("Please leave a comment first.");
-    } else {
-      // ajax
-      // But no interface now
-      ///////////////////////////
-      ///DEBUG
-      console.log("comment: " + submitComment);
-      ///////////////////////////
-    }
+    alert("Busy. Try again later.");
   });
+  // $end handle contentToShow update ajax not done
 }
 
 // $start here
@@ -292,9 +342,13 @@ $(document).ready(function() {
   // Get second block target
   var numberOfSentence = $(".second-block .number-of-sentences .numbers");
   var untranslate = $(".second-block .untranslate .numbers");
-  var unreview = (".second-block .unreview .numbers");
+  var unreview = $(".second-block .unreview .numbers");
+  // Reset
+  numberOfSentence.html(0);
+  untranslate.html(0);
+  unreview.html(0);
 
-  // Display
+  // List tranlate info in translate-block info-block
   $.ajax({
     url: '/info/getinfo',
     type: 'POST',
@@ -312,6 +366,8 @@ $(document).ready(function() {
       }
       ////////////////////
       else {
+        // Now, using createInfoLine
+        // Later, I prefer new InfoLine()
         createInfoLine(theInfo);
         // Get tranlated content\
         /*
@@ -371,10 +427,10 @@ $(document).ready(function() {
     console.log("Getinfo ajax complete.");
   });
 
-  // Forbid submit without choosing nothing
+  // Forbid submit when choosing nothing
   var buttonSave = $(".operate-block .operating .save");
   buttonSave.click(function() {
-    alert ("Must choose one sentence first.");
+    alert("Must choose one sentence first.");
   });
 
   var buttonSubmit = $(".operate-block .add-explain .commit");
