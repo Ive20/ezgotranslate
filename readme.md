@@ -221,4 +221,28 @@ username：用户名
         errcode: 0
     }
     
-    
+###searchtranslate
+   根据翻译id查询翻译信息
+请求地址：/translate/searchtranslate
+请求参数：
+
+    必选参数：
+	    translateid：翻译id
+		
+返回值：
+
+成功则返回：
+    {
+		"translate_id":"1413287394543d0de2f14222.06357417",
+		"info_id":"141068563354155ac1a9da31.91101597",
+		"translate_language":"cns",
+		"translate_result":"\u55e8",
+		"updated_at":"2014-10-14 11:49:54",
+		"created_at":"2014-10-14 11:49:54",
+		"deleted_at":null
+	}
+错误则返回：
+	{
+		"errcode":1,
+		"errmsg":"not found"
+	}
