@@ -834,59 +834,59 @@ content #public-personal-nav {
 **********************************************/
 
 #translate-page #public-personal-nav .translate {
-    padding:18px 29px;
-    left:-6px;
-    background-color:#3f87eb;
-    color:#ffffff !important;
+    padding: 18px 29px;
+    left: -6px;
+    background-color: #3f87eb;
+    color: #ffffff !important;
 }
 
 #translate-page #main {
-    position:relative;
-    display:block;
-    top:0;
-    right:0;
-    width:782px;
-    height:auto;
-    min-height:500px;
-    margin:0 0 60px auto;
-    border-radius:5px;
+    position: relative;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 782px;
+    height: auto;
+    min-height: 500px;
+    margin: 0 0 60px auto;
+    border-radius: 5px;
 }
 
 #translate-page #main .lump {
-    width:780px;
-    height:auto;
-    float:right;
-    border:1px solid #d4d4d4;
-    border-radius:5px;
+    width: 780px;
+    height: auto;
+    float: right;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
 }
 
 #translate-page .lump h1 {
-    position:relative;
-    display:block;
-    width:100%;
-    height:46px;
-    line-height:46px;
-    margin:0;
-    font-size:20px;
-    border-bottom:1px solid #d4d4d4;
-    background-color:rgba(235, 235, 235, 0.35);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 1px solid #d4d4d4;
+    background-color: rgba(235, 235, 235, 0.35);
 }
 
 #translate-page .lump .icon {
-    display:block;
-    float:left;
-    height:12px;
-    width:8px;
-    background-color:#3f87eb;
-    border:1px solid #3f87eb;
-    border-radius:4px;
-    margin:17px 0 16px 20px;
+    display: block;
+    float: left;
+    height: 12px;
+    width: 8px;
+    background-color: #3f87eb;
+    border: 1px solid #3f87eb;
+    border-radius: 4px;
+    margin: 17px 0 16px 20px;
 }
 
 #translate-page #AsTranslater .container {
-    width:720px;
-    height:auto;
-    margin:30px 30px;
+    width: 720px;
+    height: auto;
+    margin: 30px 30px;
 }
 
 
@@ -1302,4 +1302,157 @@ content #public-personal-nav {
     margin-right: 20px;
     float: right;
     display: block;
+}
+
+/************************************************
+
+************************************************/
+
+#manage #public-personal-nav .manage {
+    padding: 18px 29px;
+    left: -6px;
+    background-color: #3f87eb;
+    color: #ffffff !important;
+}
+
+#manage #main {
+    position: relative;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 782px;
+    height: auto;
+    min-height: 500px;
+    margin: 0 0 60px auto;
+    border-radius: 5px;
+
+    font-family: 'Microsoft YaHei UI';
+}
+
+#manage #main .lump {
+    width: 780px;
+    height: auto;
+    float: right;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+}
+
+#manage .lump h1 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 1px solid #d4d4d4;
+    background-color: rgba(235, 235, 235, 0.35);
+    font-weight: normal;
+}
+
+#manage .lump .icon {
+    display: block;
+    float: left;
+    height: 12px;
+    width: 8px;
+    background-color: #3f87eb;
+    border: 1px solid #3f87eb;
+    border-radius: 4px;
+    margin: 17px 0 16px 20px;
+}
+
+#manage .lump h2 {
+    position: relative;
+    display: block;
+    width: auto;
+    height: 40px;
+    padding: 0 50px;
+    line-height: 40px;
+    margin: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #d4d4d4;
+    font-weight: normal;
+}
+
+#manage .upload-container {
+    position: relative;
+    width: auto;
+    height: 300px;
+    padding: 20px 50px;
+}
+
+#manage .upload-container .one-block {
+    width: 100%;
+    margin-bottom: 28px;
+    font-size: 16px;
+}
+
+#manage .upload-container .one-block .s-ico{
+    display: block;
+    width: 7px;
+    height: 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 3px;
+    background-color: #3f87eb;
+    float: left;
+}
+
+#manage .upload-container .one-block label {
+    display: block;
+    margin-bottom: 17px;
+}
+
+#manage .upload-container .one-block .file-detail {
+    width: 500px;
+    height: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    overflow: auto;
+}
+
+#manage .upload-container .one-block span {
+    float: left;
+}
+
+#manage .upload-container .one-block input {
+    position: relative;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 20px;
+    font-size: 14px;
+    /*float:left;*/
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#manage .upload-container .one-block #fake-input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 20px;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(133, 133, 133, 0.83);
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#manage .upload-container .upload {
+    margin: 0 auto;
+    width: 90px;
+    height: 36px;
+    background-color: #3f87eb;
+    font-size: 18px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 4px
 }
