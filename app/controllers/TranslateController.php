@@ -93,11 +93,11 @@ class TranslateController extends BaseController {
 			return array(
 				"errcode"=>1,
 				"errmsg"=>"not found"
-			)
+			);
 		}
 		else
 		{
-			return Translate::all();
+			return $translate;
 		}
 	}
 }
