@@ -81,5 +81,23 @@ class TranslateController extends BaseController {
 				"errcode"=>0
 		);
 	}
-
+	public function postSearchtranslate()
+	{
+		if(Input::has('translateid'))
+		{
+			$translateid=Input::get('translateid');
+		}
+		$translate=Translate::find($translateid);
+		if($translate==null)
+		{
+			return array(
+				"errcode"=>1,
+				"errmsg"=>"not found"
+			)
+		}
+		else
+		{
+			return Translate::all();
+		}
+	}
 }

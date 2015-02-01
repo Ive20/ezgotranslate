@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'ezgotranslate',
 			'username'  => 'root',
-			'password'  => 'sacada123',
+			'password'  => 'a',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
