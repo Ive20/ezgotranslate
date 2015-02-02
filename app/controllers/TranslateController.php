@@ -100,4 +100,23 @@ class TranslateController extends BaseController {
 			return $translate;
 		}
 	}
+	public function postUploadtranslate()
+	{
+		if (Input::hasFile('translate'))
+		{
+			$file = Input::file('translate');
+			$path = $file->getRealPath();
+			$size = $file->getSize();
+ 			$path = $file -> move(app_path().'/storage/',uniqid(time(),true));
+ 			return array(
+ 					"errcode"=>0,
+ 					"errmsg"=>""
+ 			);
+		}
+		return array(
+				"errcode"=>1,
+				"errmsg"=>"not found"
+		);
+		
+	}
 }
