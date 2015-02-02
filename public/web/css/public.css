@@ -1377,7 +1377,7 @@ content #public-personal-nav {
 #manage .upload-container {
     position: relative;
     width: auto;
-    height: 300px;
+    height: auto;
     padding: 20px 50px;
 }
 
@@ -1441,6 +1441,21 @@ content #public-personal-nav {
     border-radius: 2px;
     z-index: 1;
     cursor: pointer;
+}
+
+#manage #file-name, #manage #file-size,
+#manage #file-type, #manage #upload-status {
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.65);
+} 
+
+#manage .one-block .upload-inf {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 #manage .upload-container .upload {
