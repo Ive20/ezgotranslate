@@ -27,7 +27,6 @@ abstract class MorphOneOrMany extends HasOneOrMany {
 	 * @param  string  $type
 	 * @param  string  $id
 	 * @param  string  $localKey
-	 * @param  string  $morphClass
 	 * @return void
 	 */
 	public function __construct(Builder $query, Model $parent, $type, $id, $localKey)
@@ -55,7 +54,7 @@ abstract class MorphOneOrMany extends HasOneOrMany {
 	}
 
 	/**
-	 * Add the constraints for a relationship count query.
+	 * Get the relationship count query.
 	 *
 	 * @param  \Illuminate\Database\Eloquent\Builder  $query
 	 * @param  \Illuminate\Database\Eloquent\Builder  $parent
@@ -102,14 +101,12 @@ abstract class MorphOneOrMany extends HasOneOrMany {
 	 */
 	public function create(array $attributes)
 	{
-		$foreign = $this->getForeignAttributesForCreate();
+		$instance = $this->related->newInstance($attributes);
 
 		// When saving a polymorphic relationship, we need to set not only the foreign
 		// key, but also the foreign key type, which is typically the class name of
 		// the parent model. This makes the polymorphic item unique in the table.
-		$attributes = array_merge($attributes, $foreign);
-
-		$instance = $this->related->newInstance($attributes);
+		$this->setForeignAttributesForCreate($instance);
 
 		$instance->save();
 
@@ -117,17 +114,16 @@ abstract class MorphOneOrMany extends HasOneOrMany {
 	}
 
 	/**
-	 * Get the foreign ID and type for creating a related model.
+	 * Set the foreign ID and type for creating a related model.
 	 *
-	 * @return array
+	 * @param  \Illuminate\Database\Eloquent\Model  $model
+	 * @return void
 	 */
-	protected function getForeignAttributesForCreate()
+	protected function setForeignAttributesForCreate(Model $model)
 	{
-		$foreign = array($this->getPlainForeignKey() => $this->getParentKey());
+		$model->{$this->getPlainForeignKey()} = $this->getParentKey();
 
-		$foreign[last(explode('.', $this->morphType))] = $this->morphClass;
-
-		return $foreign;
+		$model->{last(explode('.', $this->morphType))} = $this->morphClass;
 	}
 
 	/**

@@ -1,5 +1,6 @@
 <?php namespace Illuminate\Http;
 
+use SplFileInfo;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
@@ -22,7 +23,7 @@ class Request extends SymfonyRequest {
 	/**
 	 * Return the Request instance.
 	 *
-	 * @return \Illuminate\Http\Request
+	 * @return $this
 	 */
 	public function instance()
 	{
@@ -120,7 +121,7 @@ class Request extends SymfonyRequest {
 	/**
 	 * Determine if the current request URI matches a pattern.
 	 *
-	 * @param  dynamic  string
+	 * @param  mixed  string
 	 * @return bool
 	 */
 	public function is()
@@ -154,6 +155,26 @@ class Request extends SymfonyRequest {
 	public function secure()
 	{
 		return $this->isSecure();
+	}
+
+	/**
+	 * Returns the client IP address.
+	 *
+	 * @return string
+	 */
+	public function ip()
+	{
+		return $this->getClientIp();
+	}
+
+	/**
+	 * Returns the client IP addresses.
+	 *
+	 * @return array
+	 */
+	public function ips()
+	{
+		return $this->getClientIps();
 	}
 
 	/**
@@ -214,7 +235,7 @@ class Request extends SymfonyRequest {
 	 */
 	public function all()
 	{
-		return array_merge_recursive($this->input(), $this->files->all());
+		return array_replace_recursive($this->input(), $this->files->all());
 	}
 
 	/**
@@ -247,7 +268,7 @@ class Request extends SymfonyRequest {
 
 		foreach ($keys as $key)
 		{
-			array_set($results, $key, array_get($input, $key, null));
+			array_set($results, $key, array_get($input, $key));
 		}
 
 		return $results;
@@ -325,9 +346,25 @@ class Request extends SymfonyRequest {
 	 */
 	public function hasFile($key)
 	{
-		if (is_array($file = $this->file($key))) $file = head($file);
+		if ( ! is_array($files = $this->file($key))) $files = array($files);
 
-		return $file instanceof \SplFileInfo && $file->getPath() != '';
+		foreach ($files as $file)
+		{
+			if ($this->isValidFile($file)) return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Check that the given file is a valid file instance.
+	 *
+	 * @param  mixed  $file
+	 * @return bool
+	 */
+	protected function isValidFile($file)
+	{
+		return $file instanceof SplFileInfo && $file->getPath() != '';
 	}
 
 	/**
@@ -369,8 +406,8 @@ class Request extends SymfonyRequest {
 	/**
 	 * Flash the input for the current request to the session.
 	 *
-	 * @param  string $filter
-	 * @param  array  $keys
+	 * @param  string  $filter
+	 * @param  array   $keys
 	 * @return void
 	 */
 	public function flash($filter = null, $keys = array())
@@ -383,7 +420,7 @@ class Request extends SymfonyRequest {
 	/**
 	 * Flash only some of the input to the session.
 	 *
-	 * @param  dynamic  string
+	 * @param  mixed  string
 	 * @return void
 	 */
 	public function flashOnly($keys)
@@ -396,7 +433,7 @@ class Request extends SymfonyRequest {
 	/**
 	 * Flash only some of the input to the session.
 	 *
-	 * @param  dynamic  string
+	 * @param  mixed  string
 	 * @return void
 	 */
 	public function flashExcept($keys)
@@ -430,10 +467,8 @@ class Request extends SymfonyRequest {
 		{
 			return $this->$source->all();
 		}
-		else
-		{
-			return $this->$source->get($key, $default, true);
-		}
+
+		return $this->$source->get($key, $default, true);
 	}
 
 	/**
@@ -514,6 +549,7 @@ class Request extends SymfonyRequest {
 	/**
 	 * Get the data format expected in the response.
 	 *
+	 * @param  string  $default
 	 * @return string
 	 */
 	public function format($default = 'html')
@@ -536,7 +572,7 @@ class Request extends SymfonyRequest {
 	{
 		if ($request instanceof static) return $request;
 
-		return with(new static)->duplicate(
+		return (new static)->duplicate(
 
 			$request->query->all(), $request->request->all(), $request->attributes->all(),
 

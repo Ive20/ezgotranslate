@@ -28,7 +28,7 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 	 * @param  string  $key
 	 * @param  string  $value
 	 * @param  bool  $replace
-	 * @return \Illuminate\Http\RedirectResponse
+	 * @return $this
 	 */
 	public function header($key, $value, $replace = true)
 	{
@@ -46,13 +46,11 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 	 */
 	public function with($key, $value = null)
 	{
-		if (is_array($key))
+		$key = is_array($key) ? $key : [$key => $value];
+
+		foreach ($key as $k => $v)
 		{
-			foreach ($key as $k => $v) $this->with($k, $v);
-		}
-		else
-		{
-			$this->session->flash($key, $value);
+			$this->session->flash($k, $v);
 		}
 
 		return $this;
@@ -62,7 +60,7 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 	 * Add a cookie to the response.
 	 *
 	 * @param  \Symfony\Component\HttpFoundation\Cookie  $cookie
-	 * @return \Illuminate\Http\RedirectResponse
+	 * @return $this
 	 */
 	public function withCookie(Cookie $cookie)
 	{
@@ -75,7 +73,7 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 	 * Flash an array of input to the session.
 	 *
 	 * @param  array  $input
-	 * @return \Illuminate\Http\RedirectResponse
+	 * @return $this
 	 */
 	public function withInput(array $input = null)
 	{
@@ -89,8 +87,8 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 	/**
 	 * Flash an array of input to the session.
 	 *
-	 * @param  dynamic  string
-	 * @return \Illuminate\Http\RedirectResponse
+	 * @param  mixed  string
+	 * @return $this
 	 */
 	public function onlyInput()
 	{
@@ -100,7 +98,7 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 	/**
 	 * Flash an array of input to the session.
 	 *
-	 * @param  dynamic  string
+	 * @param  mixed  string
 	 * @return \Illuminate\Http\RedirectResponse
 	 */
 	public function exceptInput()
@@ -113,7 +111,7 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 	 *
 	 * @param  \Illuminate\Support\Contracts\MessageProviderInterface|array  $provider
 	 * @param  string  $key
-	 * @return \Illuminate\Http\RedirectResponse
+	 * @return $this
 	 */
 	public function withErrors($provider, $key = 'default')
 	{
@@ -138,10 +136,8 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 		{
 			return $provider->getMessageBag();
 		}
-		else
-		{
-			return new MessageBag((array) $provider);
-		}
+
+		return new MessageBag((array) $provider);
 	}
 
 	/**
@@ -178,7 +174,7 @@ class RedirectResponse extends \Symfony\Component\HttpFoundation\RedirectRespons
 	/**
 	 * Set the session store implementation.
 	 *
-	 * @param  \Illuminate\Session\Store  $store
+	 * @param  \Illuminate\Session\Store  $session
 	 * @return void
 	 */
 	public function setSession(SessionStore $session)

@@ -1,6 +1,7 @@
 <?php namespace Illuminate\Mail\Transport;
 
 use Swift_Transport;
+use GuzzleHttp\Client;
 use Swift_Mime_Message;
 use GuzzleHttp\Post\PostFile;
 use Swift_Events_EventListener;
@@ -38,8 +39,7 @@ class MailgunTransport implements Swift_Transport {
 	public function __construct($key, $domain)
 	{
 		$this->key = $key;
-		$this->domain = $domain;
-		$this->url = 'https://api.mailgun.net/v2/'.$this->domain.'/messages.mime';
+		$this->setDomain($domain);
 	}
 
 	/**
@@ -75,10 +75,10 @@ class MailgunTransport implements Swift_Transport {
 
 		$client->post($this->url, ['auth' => ['api', $this->key],
 			'body' => [
-	    		'to' => $this->getTo($message),
-	    		'message' => new PostFile('message', (string) $message),
-	    	],
-    	]);
+				'to' => $this->getTo($message),
+				'message' => new PostFile('message', (string) $message),
+			],
+		]);
 	}
 
 	/**
@@ -118,7 +118,7 @@ class MailgunTransport implements Swift_Transport {
 	 */
 	protected function getHttpClient()
 	{
-		return new \GuzzleHttp\Client;
+		return new Client;
 	}
 
 	/**
@@ -160,6 +160,8 @@ class MailgunTransport implements Swift_Transport {
 	 */
 	public function setDomain($domain)
 	{
+		$this->url = 'https://api.mailgun.net/v2/'.$domain.'/messages.mime';
+
 		return $this->domain = $domain;
 	}
 

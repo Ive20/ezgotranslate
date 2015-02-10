@@ -5,7 +5,6 @@ use Illuminate\Queue\Jobs\Job;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Output\OutputInterface;
 
 class WorkCommand extends Command {
 
@@ -24,9 +23,9 @@ class WorkCommand extends Command {
 	protected $description = 'Process the next job on a queue';
 
 	/**
-	 * The queue listener instance.
+	 * The queue worker instance.
 	 *
-	 * @var \Illuminate\Queue\Listener
+	 * @var \Illuminate\Queue\Worker
 	 */
 	protected $worker;
 
@@ -99,13 +98,11 @@ class WorkCommand extends Command {
 				$this->option('sleep'), $this->option('tries')
 			);
 		}
-		else
-		{
-			return $this->worker->pop(
-				$connection, $queue, $delay,
-				$this->option('sleep'), $this->option('tries')
-			);
-		}
+
+		return $this->worker->pop(
+			$connection, $queue, $delay,
+			$this->option('sleep'), $this->option('tries')
+		);
 	}
 
 	/**

@@ -114,10 +114,25 @@ class SigchildEnabledProcessTest extends AbstractProcessTest
 
     public function testStartAfterATimeout()
     {
-        if (defined('PHP_WINDOWS_VERSION_BUILD')) {
+        if ('\\' === DIRECTORY_SEPARATOR) {
             $this->markTestSkipped('Restarting a timed-out process on Windows is not supported in sigchild environment');
         }
         parent::testStartAfterATimeout();
+    }
+
+    public function testStopWithTimeoutIsActuallyWorking()
+    {
+        $this->markTestSkipped('Stopping with signal is not supported in sigchild environment');
+    }
+
+    public function testRunProcessWithTimeout()
+    {
+        $this->markTestSkipped('Signal (required for timeout) is not supported in sigchild environment');
+    }
+
+    public function testCheckTimeoutOnStartedProcess()
+    {
+        $this->markTestSkipped('Signal (required for timeout) is not supported in sigchild environment');
     }
 
     /**

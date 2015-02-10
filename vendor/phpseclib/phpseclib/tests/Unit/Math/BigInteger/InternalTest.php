@@ -1,11 +1,11 @@
 <?php
 /**
  * @author    Andreas Fischer <bantu@phpbb.com>
- * @copyright MMXIII Andreas Fischer
+ * @copyright 2013 Andreas Fischer
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  */
 
-class Math_BigInteger_InternalTest extends Unit_Math_BigInteger_TestCase
+class Unit_Math_BigInteger_InternalTest extends Unit_Math_BigInteger_TestCase
 {
     static public function setUpBeforeClass()
     {

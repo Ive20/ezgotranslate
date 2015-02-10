@@ -1,6 +1,8 @@
 <?php namespace Illuminate\Cache;
 
 use Closure;
+use DateTime;
+use Carbon\Carbon;
 
 class TaggedCache implements StoreInterface {
 
@@ -59,16 +61,19 @@ class TaggedCache implements StoreInterface {
 	/**
 	 * Store an item in the cache for a given number of minutes.
 	 *
-	 * @param  string        $key
-	 * @param  mixed         $value
-	 * @param  \DateTime|int $minutes
+	 * @param  string  $key
+	 * @param  mixed   $value
+	 * @param  \DateTime|int  $minutes
 	 * @return void
 	 */
 	public function put($key, $value, $minutes)
 	{
 		$minutes = $this->getMinutes($minutes);
 
-		return $this->store->put($this->taggedItemKey($key), $value, $minutes);
+		if ( ! is_null($minutes))
+		{
+			$this->store->put($this->taggedItemKey($key), $value, $minutes);
+		}
 	}
 
 	/**
@@ -129,11 +134,11 @@ class TaggedCache implements StoreInterface {
 	 * Remove an item from the cache.
 	 *
 	 * @param  string  $key
-	 * @return void
+	 * @return bool
 	 */
 	public function forget($key)
 	{
-		$this->store->forget($this->taggedItemKey($key));
+		return $this->store->forget($this->taggedItemKey($key));
 	}
 
 	/**
@@ -149,9 +154,9 @@ class TaggedCache implements StoreInterface {
 	/**
 	 * Get an item from the cache, or store the default value.
 	 *
-	 * @param  string        $key
-	 * @param  \DateTime|int $minutes
-	 * @param  Closure       $callback
+	 * @param  string  $key
+	 * @param  \DateTime|int  $minutes
+	 * @param  \Closure  $callback
 	 * @return mixed
 	 */
 	public function remember($key, $minutes, Closure $callback)
@@ -169,8 +174,8 @@ class TaggedCache implements StoreInterface {
 	/**
 	 * Get an item from the cache, or store the default value forever.
 	 *
-	 * @param  string   $key
-	 * @param  Closure  $callback
+	 * @param  string    $key
+	 * @param  \Closure  $callback
 	 * @return mixed
 	 */
 	public function sear($key, Closure $callback)
@@ -181,8 +186,8 @@ class TaggedCache implements StoreInterface {
 	/**
 	 * Get an item from the cache, or store the default value forever.
 	 *
-	 * @param  string   $key
-	 * @param  Closure  $callback
+	 * @param  string    $key
+	 * @param  \Closure  $callback
 	 * @return mixed
 	 */
 	public function rememberForever($key, Closure $callback)
@@ -205,7 +210,7 @@ class TaggedCache implements StoreInterface {
 	 */
 	public function taggedItemKey($key)
 	{
-		return $this->getPrefix().sha1($this->tags->getNamespace()).':'.$key;
+		return sha1($this->tags->getNamespace()).':'.$key;
 	}
 
 	/**
@@ -222,16 +227,18 @@ class TaggedCache implements StoreInterface {
 	 * Calculate the number of minutes with the given duration.
 	 *
 	 * @param  \DateTime|int  $duration
-	 * @return int
+	 * @return int|null
 	 */
 	protected function getMinutes($duration)
 	{
 		if ($duration instanceof DateTime)
 		{
-			return max(0, Carbon::instance($duration)->diffInMinutes());
+			$fromNow = Carbon::instance($duration)->diffInMinutes();
+
+			return $fromNow > 0 ? $fromNow : null;
 		}
 
-		return is_string($duration) ? intval($duration) : $duration;
+		return is_string($duration) ? (int) $duration : $duration;
 	}
 
 }

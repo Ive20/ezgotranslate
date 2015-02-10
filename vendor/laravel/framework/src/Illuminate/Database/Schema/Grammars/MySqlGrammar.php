@@ -11,7 +11,7 @@ class MySqlGrammar extends Grammar {
 	 *
 	 * @var array
 	 */
-	protected $modifiers = array('Unsigned', 'Nullable', 'Default', 'Increment', 'After', 'Comment');
+	protected $modifiers = array('Unsigned', 'Nullable', 'Default', 'Increment', 'Comment', 'After');
 
 	/**
 	 * The possible column serials
@@ -33,7 +33,6 @@ class MySqlGrammar extends Grammar {
 	/**
 	 * Compile the query to determine the list of columns.
 	 *
-	 * @param  string  $table
 	 * @return string
 	 */
 	public function compileColumnExists()
@@ -402,10 +401,8 @@ class MySqlGrammar extends Grammar {
 		{
 			return "double({$column->total}, {$column->places})";
 		}
-		else
-		{
-			return 'double';
-		}
+
+		return 'double';
 	}
 
 	/**
