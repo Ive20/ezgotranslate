@@ -1,6 +1,11 @@
 
 
 $(document).ready(function () {
+    ///////////////////////////
+    // When this set to true, some operation will change
+    // like U can go to translating.html without log in
+    var DEBUG = true;
+    ///////////////////////////
 
     //
     // This part for sign in or sign up
@@ -101,7 +106,12 @@ $(document).ready(function () {
     var getLoginCookie = SubCookieUtil.get("login", "state");
     if (getLoginCookie == null || getLoginCookie == "false") {
         console.log("Illegal login.");
-        // window.location.href = "../index.html";
+        if (!DEBUG) {
+            var pathname = window.location.pathname;
+            if (pathname != "/" && pathname != "/index.html") {
+                window.location.href = "/";
+            }
+        }
     }
 
     //
@@ -159,7 +169,7 @@ $(document).ready(function () {
                 }
                 SubCookieUtil.setAll("login", user, null, "/");
                 // Jump to private page
-                window.location.href = "web/after-signin.html";
+                window.location.href = "/web/after-signin.html";
             }
         })
         .fail(function() {
@@ -179,9 +189,15 @@ $(document).ready(function () {
         //checkForm(){}
         var username = register[0].value;
         var email = register[1].value;
-        var name = register[2].value;
-        var password = register[3].value;
-        var confirmPas = register[4].value;    // Need confirm
+        //var name = register[2].value;
+        var password = register[2].value;
+        var confirmPas = register[3].value;    // Need confirm
+
+        // Password confirm
+        if (password !== confirmPas) {
+            $("#signup-remind").empty().html("密码不一致");
+            return false;
+        }
 
         // Check whether hasuser
         $.ajax({
@@ -190,7 +206,7 @@ $(document).ready(function () {
             dataType: 'json',
             data: {
                 username: username
-            },
+            }
         })
         .done(function(data) {
             var errcode = data.errcode;
@@ -211,7 +227,7 @@ $(document).ready(function () {
                         username: username,
                         password: password,
                         email: email
-                    },
+                    }
                 })
                 .done(function(data) {
                     var errcode = data.errcode;
@@ -219,8 +235,6 @@ $(document).ready(function () {
                     if (errcode == 1) {
                         $("#signup-remind").empty().html("注册失败");
                     } else if (errcode == 0) {
-                        // Jump to private page
-                        window.location.href = "web/after-signin.html";
                         $("#signup-remind").empty().html("注册成功,请登陆");
                     }
                 })
@@ -256,7 +270,7 @@ $(document).ready(function () {
                 alert("登出失败");
             } else {
                 SubCookieUtil.unsetAll("Login", "/");
-                window.location.href = "../index.html";
+                window.location.href = "/";
             }
         })
         .fail(function() {
