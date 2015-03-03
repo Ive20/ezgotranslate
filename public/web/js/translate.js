@@ -154,12 +154,11 @@ function objectArrayIndexOf(objectArray,
     var i = undefined;
     for (i = 0; i < objectArray.length; ++i) {
         var theObject = objectArray[i];
-        if (theObject.objectProperty === searchItem) {
+        if (theObject[objectProperty] === searchItem) {
             return i;
-        } else {
-            return -1;
         }
     }
+    return -1;
 }
 
 // Add event listener for each sentence
