@@ -74,6 +74,7 @@ class TranslateController extends BaseController {
 			return array(
 				"errcode"=>1,
 				"errmsg"=>"delete fail"
+				
 			);
 		}
 		$translate->delete();
@@ -83,12 +84,12 @@ class TranslateController extends BaseController {
 	}
 	public function postSearchtranslate()
 	{
-		if(Input::has('translateid'))
+		if(Input::has('infoid'))
 		{
-			$translateid=Input::get('translateid');
+			$infoid=Input::get('infoid');
 		}
-		$translate=Translate::find($translateid);
-		if($translate==null)
+		$info=Translate::find($infoid);
+		if($info==null)
 		{
 			return array(
 				"errcode"=>1,
@@ -112,11 +113,40 @@ class TranslateController extends BaseController {
  					"errcode"=>0,
  					"errmsg"=>""
  			);
+			$myfile = fopen($file,"r") or die ("Unable to open file.");
+			while(!feof($myfile))
+			{
+				$line = fgets($myfile);
+				{
+					if(strrpos($line,"msgid")===0)
+					{
+						$arr1 = explode('"',$line);
+						$infoid = uniqid(time(),true);
+						$info = new Info;
+						$info->info_id = $infoid;
+						$info->info_content = $arr1[1];
+						$info->info_language = Input::get('language');
+						$info->save();
+					}
+					if(strrpos($line,"msgstr") === 0)
+					{
+						$arr2 = explode('"',$line);
+						$info = new Translate;
+						$info->translate_id = uniqid(time(),true);
+						$info->translate_result = $arr2[1];
+						$info->translate_language = Input::get('language'); 
+						$info->info_id = $infoid;
+						$info->save();
+					}
+				}
+				
+			}
+			fclose($myfile);
 		}
 		return array(
 				"errcode"=>1,
 				"errmsg"=>"not found"
 		);
-		
 	}
 }
+
