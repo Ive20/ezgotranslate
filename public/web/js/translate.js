@@ -273,9 +273,9 @@ function addOperateEvent(target) {
                         //////////////////////////////////////////////////
                     } else {
                         // Update info-line
-                        var targetInfoLine = $(targetInfoLineID + " .translated");
+                        var targetTranslate = $(targetInfoLineID + " .translated");
 
-                        targetInfoLine.html(submitContent);
+                        targetTranslate.html(submitContent);
                     }
                 })
                 .fail(function() {

@@ -4,7 +4,7 @@ $(document).ready(function () {
     ///////////////////////////
     // When this set to true, some operation will change
     // like U can go to translating.html without log in
-    var DEBUG = true;
+    var DEBUG = false;
     ///////////////////////////
 
     //
@@ -169,7 +169,7 @@ $(document).ready(function () {
                 }
                 SubCookieUtil.setAll("login", user, null, "/");
                 // Jump to private page
-                window.location.href = "/web/after-signin.html";
+                window.location.href = "/web/translating.html";
             }
         })
         .fail(function() {
