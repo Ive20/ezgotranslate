@@ -1,0 +1,4202 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-05 23:27+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.9.0\n"
+
+#: DlgAbout#1
+msgctxt "DlgAbout#1"
+msgid "About"
+msgstr ""
+
+#: DlgAbout#2
+msgid "Licence"
+msgstr ""
+
+#: DlgAbout#3
+msgid "This software is licensed under the GPL version 2 :"
+msgstr ""
+
+#: DlgAbout#4
+msgid "Credits"
+msgstr ""
+
+#: DlgAbout#6
+msgid "WEB site & licence :"
+msgstr ""
+
+#: DlgAbout#7
+msgid "Many icons are from the Crystal Project"
+msgstr ""
+
+#: DlgAbout#8
+msgid "Sound engine for preview is based on SDL - Simple DirectMedia Layer"
+msgstr ""
+
+#: DlgAbout#9
+msgid "Copyright (C) 2011-2012 Dominique Levray"
+msgstr ""
+
+#: DlgAbout#11
+msgid "Image exif decoding is based on Exiv2 - Image metadata library and tools"
+msgstr ""
+
+#: DlgAbout#12
+msgid "Other images and graphical material are using Creative Common Licence  2"
+msgstr ""
+
+#: DlgAbout#13
+msgid "C.C. WEB site :"
+msgstr ""
+
+#: DlgAbout#14
+msgid "Image effects are based on fmt_filters"
+msgstr ""
+
+#: DlgAbout#15
+msgid "TAG managment based on TAGLib"
+msgstr ""
+
+#: DlgAbout#17
+msgctxt "DlgAbout#17"
+msgid "&Ok"
+msgstr ""
+
+#: DlgApplicationSettings#1
+msgid "Application settings"
+msgstr ""
+
+#: DlgApplicationSettings#2
+msgid "Application options"
+msgstr ""
+
+#: DlgApplicationSettings#3
+msgid "Remember Windows size and positions"
+msgstr ""
+
+#: DlgApplicationSettings#4
+msgid "Remember last used folders"
+msgstr ""
+
+#: DlgApplicationSettings#5
+msgid "TransitionButtons"
+msgstr ""
+
+#: DlgApplicationSettings#6
+msgid "Editor options (when adding objects)"
+msgstr ""
+
+#: DlgApplicationSettings#7
+msgid "fps (Reduce this value for slow computer)"
+msgstr ""
+
+#: DlgApplicationSettings#8
+msgid "Application Options"
+msgstr ""
+
+#: DlgApplicationSettings#9
+msgid "If this box is checked, the sizes and the positions of all the windows and dialogue box of ffDiaporama will be saved to be reused the next time which you will use ffDiaporama."
+msgstr ""
+
+#: DlgApplicationSettings#10
+msgid "If this box is checked, the directories that you use for the images, the videos, the projects, the musics and the generations of movie will be saved to be reused the next time which you will use ffDiaporama."
+msgstr ""
+
+#: DlgApplicationSettings#11
+msgid "Defined the number of images by seconds which will be generated to show the preview."
+msgstr ""
+
+#: DlgApplicationSettings#12
+msgid "Image transformation :"
+msgstr ""
+
+#: DlgApplicationSettings#13
+msgid "If this box is checked, The effects of transformations will be applied to the images of videos during the preview."
+msgstr ""
+
+#: DlgApplicationSettings#14
+msgid "Apply to video during preview"
+msgstr ""
+
+#: DlgApplicationSettings#15
+msgid "Define the position which occupy the new objects in the timeline during the insertions"
+msgstr ""
+
+#: DlgApplicationSettings#16
+msgid "Multiple file insertion :"
+msgstr ""
+
+#: DlgApplicationSettings#17
+msgid "Adjust the way will be sorted out files when you select several files in Add file."
+msgstr ""
+
+#: DlgApplicationSettings#18
+msgid "Sort file by last number"
+msgstr ""
+
+#: DlgApplicationSettings#19
+msgid "Define the transition duration"
+msgstr ""
+
+#: DlgApplicationSettings#20
+msgid "If this box is checked, a confirmation will display every time you remove an object"
+msgstr ""
+
+#: DlgApplicationSettings#21
+msgid "Ask user confirmation to remove slide, object or shot"
+msgstr ""
+
+#: DlgApplicationSettings#22
+msgid "Object deletion :"
+msgstr ""
+
+#: DlgApplicationSettings#23
+msgid "Coordinates unit :"
+msgstr ""
+
+#: DlgApplicationSettings#24
+msgid "Select the unit of the coordinates which will be used in properties dialog box"
+msgstr ""
+
+#: DlgApplicationSettings#25
+msgid "Percent"
+msgstr ""
+
+#: DlgApplicationSettings#26
+msgid "Pixel"
+msgstr ""
+
+#: DlgApplicationSettings#27
+msgid "Enable \"raster\" Graphics System (Need application restart)"
+msgstr ""
+
+#: DlgApplicationSettings#28
+msgid "Automatically crop 1920x1088 video to 1920x1080"
+msgstr ""
+
+#: DlgApplicationSettings#29
+msgid "SDL Audio use old mode"
+msgstr ""
+
+#: DlgApplicationSettings#30
+msgid "256 Mb"
+msgstr ""
+
+#: DlgApplicationSettings#31
+msgid "512 Mb"
+msgstr ""
+
+#: DlgApplicationSettings#32
+msgid "1 Gb"
+msgstr ""
+
+#: DlgApplicationSettings#33
+msgid "2 Gb"
+msgstr ""
+
+#: DlgApplicationSettings#34
+msgid "Memory profil :"
+msgstr ""
+
+#: DlgApplicationSettings#35
+msgid "Image smoothing :"
+msgstr ""
+
+#: DlgApplicationSettings#36
+msgid "Smooth image during preview"
+msgstr ""
+
+#: DlgApplicationSettings#37
+msgid "Use quick resampler during preview"
+msgstr ""
+
+#: DlgApplicationSettings#38
+msgid "Audio resampling :"
+msgstr ""
+
+#: DlgApplicationSettings#39
+msgid "Project Options"
+msgstr ""
+
+#: DlgApplicationSettings#40
+msgid "Project options (default values)"
+msgstr ""
+
+#: DlgApplicationSettings#41
+msgid "Project geometry:"
+msgstr ""
+
+#: DlgApplicationSettings#42
+msgid "Transformed image :"
+msgstr ""
+
+#: DlgApplicationSettings#43
+msgid "Create cache file (with _ffd suffix) for transformed images"
+msgstr ""
+
+#: DlgApplicationSettings#44
+msgid "Video :"
+msgstr ""
+
+#: DlgApplicationSettings#45
+msgid "Project properties (default values)"
+msgstr ""
+
+#: DlgApplicationSettings#46
+msgid "Select the geometry of image to be used for the creation of the projects."
+msgstr ""
+
+#: DlgApplicationSettings#47
+msgid "1st shot duration:"
+msgstr ""
+
+#: DlgApplicationSettings#48
+msgid "Defined the default duration of the first shot of slides during their creation."
+msgstr ""
+
+#: DlgApplicationSettings#49
+msgid "Next shot duration:"
+msgstr ""
+
+#: DlgApplicationSettings#50
+msgid "Defined the default duration of next shots."
+msgstr ""
+
+#: DlgApplicationSettings#51
+msgid "Speed wave:"
+msgstr ""
+
+#: DlgApplicationSettings#52
+msgid "Defined the curve of speed to be used for the transitions and the animations."
+msgstr ""
+
+#: DlgApplicationSettings#53
+msgid "Default transition:"
+msgstr ""
+
+#: DlgApplicationSettings#54
+msgid "Default options for new text block"
+msgstr ""
+
+#: DlgApplicationSettings#55
+msgctxt "DlgApplicationSettings#55"
+msgid "Text"
+msgstr ""
+
+#: DlgApplicationSettings#57
+msgid "Default options for new image or video block (when adding block in slide dialog)"
+msgstr ""
+
+#: DlgApplicationSettings#58
+msgid "For 4:3 project:"
+msgstr ""
+
+#: DlgApplicationSettings#59
+msgid "For 16:9 project:"
+msgstr ""
+
+#: DlgApplicationSettings#60
+msgid "For cinema project:"
+msgstr ""
+
+#: DlgApplicationSettings#61
+msgid "Coordinates"
+msgstr ""
+
+#: DlgApplicationSettings#62
+msgid "Default options for new image or video block (when creating slide)"
+msgstr ""
+
+#: DlgApplicationSettings#63
+msgid "Text style"
+msgstr ""
+
+#: DlgApplicationSettings#64
+msgid "Shape"
+msgstr ""
+
+#: DlgApplicationSettings#65
+msgid "Coordinates\nfor 3:2\nimage in \nlandscape\nmode"
+msgstr ""
+
+#: DlgApplicationSettings#66
+msgid "Coordinates\nfor 3:2\nimage in \nportrait\nmode"
+msgstr ""
+
+#: DlgApplicationSettings#67
+msgid "Coordinates\nfor 4:3\nimage in \nlandscape\nmode"
+msgstr ""
+
+#: DlgApplicationSettings#68
+msgid "Coordinates\nfor 4:3\nimage in \nportrait\nmode"
+msgstr ""
+
+#: DlgApplicationSettings#69
+msgid "Coordinates\nfor 16:9\nimage in \nlandscape\nmode"
+msgstr ""
+
+#: DlgApplicationSettings#70
+msgid "Coordinates\nfor 16:9\nimage in \nportrait\nmode"
+msgstr ""
+
+#: DlgApplicationSettings#71
+msgid "Coordinates\nfor cinema\nimage in \nlandscape\nmode"
+msgstr ""
+
+#: DlgApplicationSettings#72
+msgid "Coordinates\nfor cinema\nimage in \nportrait\nmode"
+msgstr ""
+
+#: DlgApplicationSettings#73
+msgid "Coordinates\nfor \nnonstandard\nimage"
+msgstr ""
+
+#: DlgApplicationSettings#74
+msgctxt "DlgApplicationSettings#74"
+msgid "Title :"
+msgstr ""
+
+#: DlgApplicationSettings#75
+msgctxt "DlgApplicationSettings#75"
+msgid "Author :"
+msgstr ""
+
+#: DlgApplicationSettings#76
+msgid "No automatic filling"
+msgstr ""
+
+#: DlgApplicationSettings#77
+msgid "Fill with project name when project save (if not yet defined)"
+msgstr ""
+
+#: DlgApplicationSettings#78
+msgid "Fill with project folder name when project save (if not yet defined)"
+msgstr ""
+
+#: DlgApplicationSettings#79
+msgid "Default language :"
+msgstr ""
+
+#: DlgApplicationSettings#80
+msgctxt "DlgApplicationSettings#80"
+msgid "und"
+msgstr ""
+
+#: DlgApplicationSettings#81
+msgctxt "DlgApplicationSettings#81"
+msgid "(ISO 639 language code)"
+msgstr ""
+
+#: DlgApplicationSettings#82
+msgid "Rendering Options"
+msgstr ""
+
+#: DlgApplicationSettings#83
+msgid "Default advanced rendering options"
+msgstr ""
+
+#: DlgApplicationSettings#84
+msgid "Select the default image format to use for the rendering among the proposed list. "
+msgstr ""
+
+#: DlgApplicationSettings#85
+msgid "Select the default video standard to use, PAL or NTSC."
+msgstr ""
+
+#: DlgApplicationSettings#86
+msgid "Select the default bit rate to use for video during the rendering among the proposed list. "
+msgstr ""
+
+#: DlgApplicationSettings#87
+msgid "Select the default video codec to use for the rendering among the proposed list. "
+msgstr ""
+
+#: DlgApplicationSettings#88
+msgid "Select the default audio codec to use for the rendering among the proposed list. "
+msgstr ""
+
+#: DlgApplicationSettings#89
+msgid "Select the default bit rate to use for audio during the rendering among the proposed list. "
+msgstr ""
+
+#: DlgApplicationSettings#90
+msgid "Default device mode rendering options"
+msgstr ""
+
+#: DlgApplicationSettings#91
+msgid "Smartphone :"
+msgstr ""
+
+#: DlgApplicationSettings#92
+msgid "Multimedia system :"
+msgstr ""
+
+#: DlgApplicationSettings#93
+msgid "For the WEB :"
+msgstr ""
+
+#: DlgApplicationSettings#94
+msgid "Select the type of equipment which will be proposed by default when you will click the \"Player and Smartphone\" button of the \"Render movie\" menu"
+msgstr ""
+
+#: DlgApplicationSettings#95
+msgid "Select the type of equipment which will be proposed by default when you will click the \"For the WEB\" button of the \"Render movie\" menu"
+msgstr ""
+
+#: DlgApplicationSettings#96
+msgid "Select the type of equipment which will be proposed by default when you will click the \"Multimedia system\" button of the \"Render movie\" menu"
+msgstr ""
+
+#: DlgApplicationSettings#97
+msgid "Select the default file type to use for the rendering among the proposed list."
+msgstr ""
+
+#: DlgApplicationSettings#98
+msgid "Select the model of equipment which will be proposed by default when you will click the \"Player and Smartphone\" button of the \"Render movie\" menu"
+msgstr ""
+
+#: DlgApplicationSettings#99
+msgid "Select the model of equipment which will be proposed by default when you will click the \"Multimedia system\" button of the \"Render movie\" menu"
+msgstr ""
+
+#: DlgApplicationSettings#100
+msgid "Select the model of equipment which will be proposed by default when you will click the \"For the WEB\" button of the \"Render movie\" menu"
+msgstr ""
+
+#: DlgApplicationSettings#101
+msgid "Default video name :"
+msgstr ""
+
+#: DlgApplicationSettings#102
+msgid "Use project name as video name"
+msgstr ""
+
+#: DlgApplicationSettings#103
+msgid "Use project folder's name as video name"
+msgstr ""
+
+#: DlgApplicationSettings#104
+msgid "Lossless :"
+msgstr ""
+
+#: DlgApplicationSettings#105
+msgid "Check Configuration"
+msgstr ""
+
+#: DlgApplicationSettings#106
+msgctxt "DlgApplicationSettings#106"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgApplicationSettings#107
+msgctxt "DlgApplicationSettings#107"
+msgid "Cancel modification and exit dialog box"
+msgstr ""
+
+#: DlgApplicationSettings#108
+msgctxt "DlgApplicationSettings#108"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgApplicationSettings#109
+msgctxt "DlgApplicationSettings#109"
+msgid "&Help"
+msgstr ""
+
+#: DlgApplicationSettings#110
+msgctxt "DlgApplicationSettings#110"
+msgid "F1"
+msgstr ""
+
+#: DlgApplicationSettings#111
+msgid "Object position :"
+msgstr ""
+
+#: DlgApplicationSettings#112
+msgid "Insert after current object"
+msgstr ""
+
+#: DlgApplicationSettings#113
+msgid "Append at project end"
+msgstr ""
+
+#: DlgApplicationSettings#114
+msgid "(Only for new project)"
+msgstr ""
+
+#: DlgApplicationSettings#115
+msgid "Preview options"
+msgstr ""
+
+#: DlgApplicationSettings#116
+msgid "Frame rate :"
+msgstr ""
+
+#: DlgApplicationSettings#117
+msgctxt "DlgApplicationSettings#117"
+msgid "Old TV (4:3)"
+msgstr ""
+
+#: DlgApplicationSettings#118
+msgctxt "DlgApplicationSettings#118"
+msgid "TV Wide (16:9)"
+msgstr ""
+
+#: DlgApplicationSettings#119
+msgctxt "DlgApplicationSettings#119"
+msgid "Cinema (2.35:1)"
+msgstr ""
+
+#: DlgApplicationSettings#120
+msgid "sec"
+msgstr ""
+
+#: DlgApplicationSettings#121
+msgid "Defined the transition to be inserted between slides during the insertions:\nChosen randomly a transition in the library"
+msgstr ""
+
+#: DlgApplicationSettings#122
+msgid "Defined the transition to be inserted between slides during the insertions:\nNo transition"
+msgstr ""
+
+#: DlgApplicationSettings#123
+msgid "Defined the transition to be inserted between slides during the insertions:\nCrossfade transition"
+msgstr ""
+
+#: DlgApplicationSettings#124
+msgid "Linear"
+msgstr ""
+
+#: DlgApplicationSettings#125
+msgid "Quarter sine"
+msgstr ""
+
+#: DlgApplicationSettings#126
+msgctxt "DlgApplicationSettings#126"
+msgid "PAL"
+msgstr ""
+
+#: DlgApplicationSettings#127
+msgctxt "DlgApplicationSettings#127"
+msgid "NTSC"
+msgstr ""
+
+#: DlgApplicationSettings#128
+msgctxt "DlgApplicationSettings#128"
+msgid "Video standard :"
+msgstr ""
+
+#: DlgApplicationSettings#129
+msgctxt "DlgApplicationSettings#129"
+msgid "Bit rate :"
+msgstr ""
+
+#: DlgApplicationSettings#130
+msgctxt "DlgApplicationSettings#130"
+msgid "Video codec :"
+msgstr ""
+
+#: DlgApplicationSettings#131
+msgid "Format :"
+msgstr ""
+
+#: DlgApplicationSettings#132
+msgctxt "DlgApplicationSettings#132"
+msgid "Audio codec :"
+msgstr ""
+
+#: DlgApplicationSettings#133
+msgctxt "DlgApplicationSettings#133"
+msgid "File format :"
+msgstr ""
+
+#: DlgApplicationSettings#134
+msgid "Use title project as video name"
+msgstr ""
+
+#: DlgApplicationSettings#135
+msgctxt "DlgApplicationSettings#135"
+msgid "Manage Devices"
+msgstr ""
+
+#: DlgApplicationSettings#136
+msgctxt "DlgApplicationSettings#136"
+msgid "&Ok"
+msgstr ""
+
+#: DlgApplicationSettings#137
+msgctxt "DlgApplicationSettings#137"
+msgid "&Cancel"
+msgstr ""
+
+#: DlgApplicationSettings#138
+msgctxt "DlgApplicationSettings#138"
+msgid "Lock to image geometry"
+msgstr ""
+
+#: DlgApplicationSettings#139
+msgid "Lock to project geometry-to full image"
+msgstr ""
+
+#: DlgApplicationSettings#140
+msgid "Lock to project geometry-to width"
+msgstr ""
+
+#: DlgApplicationSettings#141
+msgid "Lock to project geometry-to height"
+msgstr ""
+
+#: DlgApplicationSettings#142
+msgctxt "DlgApplicationSettings#142"
+msgid "Language selection"
+msgstr ""
+
+#: DlgApplicationSettings#143
+msgctxt "DlgApplicationSettings#143"
+msgid "Language must be empty or an ISO 639 language code (3 characters)\nSee help for more details!"
+msgstr ""
+
+#: DlgBackgroundProperties#1
+msgid "Background properties"
+msgstr ""
+
+#: DlgBackgroundProperties#2
+msgid "Same background as precedent object"
+msgstr ""
+
+#: DlgBackgroundProperties#3
+msgid "Select a new background"
+msgstr ""
+
+#: DlgBackgroundProperties#4
+msgid "Keep aspect ratio"
+msgstr ""
+
+#: DlgBackgroundProperties#5
+msgid "Full filling (deform image)"
+msgstr ""
+
+#: DlgBackgroundProperties#6
+msgctxt "DlgBackgroundProperties#6"
+msgid "&Ok"
+msgstr ""
+
+#: DlgBackgroundProperties#17
+msgid "Image from disk"
+msgstr ""
+
+#: DlgCheckConfig#1
+msgid "Check configuration"
+msgstr ""
+
+#: DlgCheckConfig#2
+msgid "Check configuration at startup"
+msgstr ""
+
+#: DlgCheckConfig#3
+msgctxt "DlgCheckConfig#3"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgCheckConfig#4
+msgctxt "DlgCheckConfig#4"
+msgid "&Ok"
+msgstr ""
+
+#: DlgCheckConfig#5
+msgctxt "DlgCheckConfig#5"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgCheckConfig#6
+msgctxt "DlgCheckConfig#6"
+msgid "&Help"
+msgstr ""
+
+#: DlgCheckConfig#7
+msgctxt "DlgCheckConfig#7"
+msgid "F1"
+msgstr ""
+
+#: DlgCheckConfig#8
+msgid "available"
+msgstr ""
+
+#: DlgCheckConfig#11
+msgid "LibExiv2 version:"
+msgstr ""
+
+#: DlgCheckConfig#12
+msgid "LibExiv2/Exiv2 binary version"
+msgstr ""
+
+#: DlgCheckConfig#13
+msgid "not available"
+msgstr ""
+
+#: DlgCheckConfig#14
+msgid "LibExiv2 support for preview image"
+msgstr ""
+
+#: DlgCheckConfig#15
+msgid "TAGLib version:"
+msgstr ""
+
+#: DlgCheckConfig#16
+msgid "TAGLib support for FLAC"
+msgstr ""
+
+#: DlgCheckConfig#17
+msgid "TAGLib support for ASF/WMA"
+msgstr ""
+
+#: DlgCheckConfig#18
+msgid "TAGLib support for M4A/MP4"
+msgstr ""
+
+#: DlgCheckConfig#24
+msgid "LIBAVCODEC version:"
+msgstr ""
+
+#: DlgCheckConfig#25
+msgid "LIBAVFORMAT version:"
+msgstr ""
+
+#: DlgCheckConfig#26
+msgid "LIBSWSCALE version:"
+msgstr ""
+
+#: DlgCheckConfig#28
+msgid "Lossless rendering"
+msgstr ""
+
+#: DlgImageCorrection#1
+msgid "Image framing and correction"
+msgstr ""
+
+#: DlgImageCorrection#2
+msgid "Properties for this shot"
+msgstr ""
+
+#: DlgImageCorrection#3
+msgid "Define the horizontal position from the left (X)."
+msgstr ""
+
+#: DlgImageCorrection#4
+msgid "Define the vertical position from the top of the image ( Y )."
+msgstr ""
+
+#: DlgImageCorrection#5
+msgid "Apply a filter to the photo or the images of the video"
+msgstr ""
+
+#: DlgImageCorrection#6
+msgid "Define a blur/sharpen filter to the photo"
+msgstr ""
+
+#: DlgImageCorrection#7
+msgid "Reset to 5"
+msgstr ""
+
+#: DlgImageCorrection#9
+msgid "Define automatically the framing to the width of the image."
+msgstr ""
+
+#: DlgImageCorrection#10
+msgid "Define automatically the framing to the height of the image."
+msgstr ""
+
+#: DlgImageCorrection#11
+msgid "Define automatically the framing to the diagonal of the image."
+msgstr ""
+
+#: DlgImageCorrection#12
+msgid "Define the width"
+msgstr ""
+
+#: DlgImageCorrection#13
+msgid "Define the height"
+msgstr ""
+
+#: DlgImageCorrection#14
+msgid "Turn the image to the left (on the multiple fellow man of 90°)."
+msgstr ""
+
+#: DlgImageCorrection#15
+msgid "Define the rotation angle for z axis."
+msgstr ""
+
+#: DlgImageCorrection#16
+msgid "Turn the image to the right (on the multiple fellow man of 90°)."
+msgstr ""
+
+#: DlgImageCorrection#17
+msgid "Adjust luminosity"
+msgstr ""
+
+#: DlgImageCorrection#18
+msgid "Adjust contrast"
+msgstr ""
+
+#: DlgImageCorrection#19
+msgid "Adjust gamma"
+msgstr ""
+
+#: DlgImageCorrection#20
+msgid "Adjust red chanel"
+msgstr ""
+
+#: DlgImageCorrection#21
+msgid "Adjust green chanel"
+msgstr ""
+
+#: DlgImageCorrection#22
+msgid "Adjust blue chanel"
+msgstr ""
+
+#: DlgImageCorrection#23
+msgid "Reset to zero"
+msgstr ""
+
+#: DlgImageCorrection#28
+msgid "Name of image/video file"
+msgstr ""
+
+#: DlgImageCorrection#29
+msgid "Framing :"
+msgstr ""
+
+#: DlgImageCorrection#30
+msgid "Image correction :"
+msgstr ""
+
+#: DlgImageCorrection#40
+msgid "Unlock"
+msgstr ""
+
+#: DlgImageCorrection#41
+msgid "Lock to this geometry"
+msgstr ""
+
+#: DlgImageCorrection#42
+msgid "Lock to project geometry"
+msgstr ""
+
+#: DlgImageCorrection#44
+msgid "Creating cached filtered file ..."
+msgstr ""
+
+#: DlgInfoFile#1
+msgid "File information"
+msgstr ""
+
+#: DlgInfoFile#2
+msgid "File name :"
+msgstr ""
+
+#: DlgInfoFile#3
+msgid "File type :"
+msgstr ""
+
+#: DlgInfoFile#4
+msgid "File size :"
+msgstr ""
+
+#: DlgInfoFile#5
+msgid "File created :"
+msgstr ""
+
+#: DlgInfoFile#6
+msgid "File modify :"
+msgstr ""
+
+#: DlgInfoFile#7
+msgid "Video track information"
+msgstr ""
+
+#: DlgInfoFile#8
+msgid "Chapter information"
+msgstr ""
+
+#: DlgInfoFile#9
+msgid "Audio track information"
+msgstr ""
+
+#: DlgInfoFile#10
+msgid "Additional information"
+msgstr ""
+
+#: DlgInfoFile#11
+msgctxt "DlgInfoFile#11"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgInfoFile#12
+msgctxt "DlgInfoFile#12"
+msgid "&Ok"
+msgstr ""
+
+#: DlgInfoFile#13
+msgctxt "DlgInfoFile#13"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgInfoFile#14
+msgctxt "DlgInfoFile#14"
+msgid "&Help"
+msgstr ""
+
+#: DlgInfoFile#15
+msgctxt "DlgInfoFile#15"
+msgid "F1"
+msgstr ""
+
+#: DlgManageDevices#1
+msgctxt "DlgManageDevices#1"
+msgid "Manage Devices"
+msgstr ""
+
+#: DlgManageDevices#2
+msgctxt "DlgManageDevices#2"
+msgid "Device type :"
+msgstr ""
+
+#: DlgManageDevices#3
+msgid "Select the type of equipment to be shown in the list."
+msgstr ""
+
+#: DlgManageDevices#4
+msgid "Subtype"
+msgstr ""
+
+#: DlgManageDevices#5
+msgid "Model"
+msgstr ""
+
+#: DlgManageDevices#6
+msgid "Create a new equipment which comes to be added in the database."
+msgstr ""
+
+#: DlgManageDevices#7
+msgid "Add Device"
+msgstr ""
+
+#: DlgManageDevices#8
+msgid "Delete current equipment."
+msgstr ""
+
+#: DlgManageDevices#9
+msgid "Remove Device"
+msgstr ""
+
+#: DlgManageDevices#10
+msgid "Cancel the modifications that you made on an equipment defined in the default ffDiaporama database"
+msgstr ""
+
+#: DlgManageDevices#11
+msgid "Reset Device to Default"
+msgstr ""
+
+#: DlgManageDevices#12
+msgid "Device subtype :"
+msgstr ""
+
+#: DlgManageDevices#13
+msgid "Select the category in which is classified the equipment."
+msgstr ""
+
+#: DlgManageDevices#14
+msgctxt "DlgManageDevices#14"
+msgid "Device model :"
+msgstr ""
+
+#: DlgManageDevices#15
+msgctxt "DlgManageDevices#15"
+msgid "File format :"
+msgstr ""
+
+#: DlgManageDevices#16
+msgid "Enter here the name of the equipment (free text field)."
+msgstr ""
+
+#: DlgManageDevices#17
+msgctxt "DlgManageDevices#17"
+msgid "Select the file type to use for the rendering."
+msgstr ""
+
+#: DlgManageDevices#18
+msgctxt "DlgManageDevices#18"
+msgid "Video standard :"
+msgstr ""
+
+#: DlgManageDevices#19
+msgctxt "DlgManageDevices#19"
+msgid "Select the video standard to use, PAL or NTSC."
+msgstr ""
+
+#: DlgManageDevices#20
+msgctxt "DlgManageDevices#20"
+msgid "PAL"
+msgstr ""
+
+#: DlgManageDevices#21
+msgctxt "DlgManageDevices#21"
+msgid "NTSC"
+msgstr ""
+
+#: DlgManageDevices#22
+msgctxt "DlgManageDevices#22"
+msgid "Image format :"
+msgstr ""
+
+#: DlgManageDevices#23
+msgctxt "DlgManageDevices#23"
+msgid "Select the image resolution to use for the rendering."
+msgstr ""
+
+#: DlgManageDevices#24
+msgctxt "DlgManageDevices#24"
+msgid "Video codec :"
+msgstr ""
+
+#: DlgManageDevices#25
+msgctxt "DlgManageDevices#25"
+msgid "Select the video codec to use for the rendering."
+msgstr ""
+
+#: DlgManageDevices#26
+msgctxt "DlgManageDevices#26"
+msgid "Bit rate :"
+msgstr ""
+
+#: DlgManageDevices#27
+msgctxt "DlgManageDevices#27"
+msgid "Select the bit rate to use for video during the rendering."
+msgstr ""
+
+#: DlgManageDevices#28
+msgctxt "DlgManageDevices#28"
+msgid "Audio codec :"
+msgstr ""
+
+#: DlgManageDevices#29
+msgctxt "DlgManageDevices#29"
+msgid "Select the audio codec to use for the rendering."
+msgstr ""
+
+#: DlgManageDevices#30
+msgctxt "DlgManageDevices#30"
+msgid "Select the bit rate to use for audio during the rendering."
+msgstr ""
+
+#: DlgManageDevices#31
+msgid "Apply"
+msgstr ""
+
+#: DlgManageDevices#32
+msgctxt "DlgManageDevices#32"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgManageDevices#33
+msgctxt "DlgManageDevices#33"
+msgid "&Ok"
+msgstr ""
+
+#: DlgManageDevices#34
+msgctxt "DlgManageDevices#34"
+msgid "Cancel modification and exit dialog box"
+msgstr ""
+
+#: DlgManageDevices#35
+msgctxt "DlgManageDevices#35"
+msgid "&Cancel"
+msgstr ""
+
+#: DlgManageDevices#36
+msgctxt "DlgManageDevices#36"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgManageDevices#37
+msgctxt "DlgManageDevices#37"
+msgid "&Help"
+msgstr ""
+
+#: DlgManageDevices#38
+msgctxt "DlgManageDevices#38"
+msgid "F1"
+msgstr ""
+
+#: DlgManageDevices#39
+msgid "Apply modification"
+msgstr ""
+
+#: DlgManageDevices#40
+msgid "Do you whant to apply modification for this device?"
+msgstr ""
+
+#: DlgManageDevices#41
+msgid "<new device>"
+msgstr ""
+
+#: DlgManageStyle#1
+msgid "Rename style"
+msgstr ""
+
+#: DlgManageStyle#2
+msgid "Remove style"
+msgstr ""
+
+#: DlgManageStyle#3
+msgid "Manage style"
+msgstr ""
+
+#: DlgManageStyle#4
+msgid "Rename"
+msgstr ""
+
+#: DlgManageStyle#5
+msgctxt "DlgManageStyle#5"
+msgid "Remove"
+msgstr ""
+
+#: DlgManageStyle#6
+msgid "Cancel the modifications that you made on a standard style"
+msgstr ""
+
+#: DlgManageStyle#7
+msgid "Reset to default"
+msgstr ""
+
+#: DlgManageStyle#8
+msgctxt "DlgManageStyle#8"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgManageStyle#9
+msgctxt "DlgManageStyle#9"
+msgid "&Ok"
+msgstr ""
+
+#: DlgManageStyle#10
+msgctxt "DlgManageStyle#10"
+msgid "Cancel modification and exit dialog box"
+msgstr ""
+
+#: DlgManageStyle#11
+msgctxt "DlgManageStyle#11"
+msgid "&Cancel"
+msgstr ""
+
+#: DlgManageStyle#12
+msgctxt "DlgManageStyle#12"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgManageStyle#13
+msgctxt "DlgManageStyle#13"
+msgid "&Help"
+msgstr ""
+
+#: DlgManageStyle#14
+msgctxt "DlgManageStyle#14"
+msgid "F1"
+msgstr ""
+
+#: DlgManageStyle#15
+msgid "Custom style"
+msgstr ""
+
+#: DlgManageStyle#16
+msgid "Big black text with white outlines"
+msgstr ""
+
+#: DlgManageStyle#17
+msgid "Big light yellow text with dark brown shadow"
+msgstr ""
+
+#: DlgManageStyle#18
+msgid "Medium black text with white outlines"
+msgstr ""
+
+#: DlgManageStyle#19
+msgid "Medium light yellow text with dark brown shadow"
+msgstr ""
+
+#: DlgManageStyle#20
+msgid "Small white text with black outlines"
+msgstr ""
+
+#: DlgManageStyle#21
+msgid "Centered Blue Gradient"
+msgstr ""
+
+#: DlgManageStyle#22
+msgid "Centered Brown Gradient"
+msgstr ""
+
+#: DlgManageStyle#23
+msgid "Centered Dark-Gray Gradient"
+msgstr ""
+
+#: DlgManageStyle#24
+msgid "Centered Green Gradient"
+msgstr ""
+
+#: DlgManageStyle#25
+msgid "Centered Light-Gray Gradient"
+msgstr ""
+
+#: DlgManageStyle#26
+msgid "Centered Red Gradient"
+msgstr ""
+
+#: DlgManageStyle#27
+msgid "Transparent block (no brush)"
+msgstr ""
+
+#: DlgManageStyle#28
+msgid "Rounded rectangle with small brown border"
+msgstr ""
+
+#: DlgManageStyle#29
+msgid "Rectangle with no effect"
+msgstr ""
+
+#: DlgManageStyle#30
+msgid "Image geometry-Full image"
+msgstr ""
+
+#: DlgManageStyle#31
+msgid "Project geometry-Adjust on the width-Bottom"
+msgstr ""
+
+#: DlgManageStyle#32
+msgid "Project geometry-Adjust on the width-Middle"
+msgstr ""
+
+#: DlgManageStyle#33
+msgid "Project geometry-Adjust on the width-Top"
+msgstr ""
+
+#: DlgManageStyle#34
+msgid "Project geometry-Adjust on the height-Left"
+msgstr ""
+
+#: DlgManageStyle#35
+msgid "Project geometry-Adjust on the height-Center"
+msgstr ""
+
+#: DlgManageStyle#36
+msgid "Project geometry-Adjust on the height-Right"
+msgstr ""
+
+#: DlgManageStyle#37
+msgid "Full screen"
+msgstr ""
+
+#: DlgManageStyle#38
+msgid "TV margins size"
+msgstr ""
+
+#: DlgManageStyle#39
+msgid "Maximum size for image geometry mode"
+msgstr ""
+
+#: DlgManageStyle#40
+msgid "TV margins maximum size for image geometry mode"
+msgstr ""
+
+#: DlgManageStyle#41
+msgid "High half of the screen"
+msgstr ""
+
+#: DlgManageStyle#42
+msgid "Left half of the screen"
+msgstr ""
+
+#: DlgManageStyle#43
+msgid "Left high quarter of the screen"
+msgstr ""
+
+#: DlgManageStyle#44
+msgid "Left low quarter of the screen"
+msgstr ""
+
+#: DlgManageStyle#45
+msgid "Low half of the screen"
+msgstr ""
+
+#: DlgManageStyle#46
+msgid "Right half of the screen"
+msgstr ""
+
+#: DlgManageStyle#47
+msgid "Right high quarter of the screen"
+msgstr ""
+
+#: DlgManageStyle#48
+msgid "Right low quarter of the screen"
+msgstr ""
+
+#: DlgManageStyle#49
+msgctxt "DlgManageStyle#49"
+msgid "TV margins"
+msgstr ""
+
+#: DlgManageStyle#50
+msgid "50% screen size-Centered"
+msgstr ""
+
+#: DlgManageStyle#51
+msgid "Create new style"
+msgstr ""
+
+#: DlgManageStyle#52
+msgid "Manage existing style"
+msgstr ""
+
+#: DlgManageStyle#53
+msgid "Update existing style"
+msgstr ""
+
+#: DlgManageStyle#54
+msgid "Update style"
+msgstr ""
+
+#: DlgManageStyle#55
+msgid "Style name:"
+msgstr ""
+
+#: DlgManageStyle#56
+msgid "A style with this name already exist.\nDo you want to overwrite-it ?"
+msgstr ""
+
+#: DlgManageStyle#57
+msgid "New style name:"
+msgstr ""
+
+#: DlgManageStyle#58
+msgid "A style with this name already exist.\nPlease select another name!"
+msgstr ""
+
+#: DlgManageStyle#59
+msgid "Adjust to image width"
+msgstr ""
+
+#: DlgManageStyle#60
+msgid "Adjust to image height"
+msgstr ""
+
+#: DlgManageStyle#61
+msgid "Adjust to full image"
+msgstr ""
+
+#: DlgManageStyle#62
+msgid "Custom"
+msgstr ""
+
+#: DlgMusicProperties#1
+msgid "Music properties"
+msgstr ""
+
+#: DlgMusicProperties#3
+msgid "buttonGroup"
+msgstr ""
+
+#: DlgMusicProperties#5
+msgid "Change volume level to :"
+msgstr ""
+
+#: DlgMusicProperties#6
+msgid "buttonGroup_2"
+msgstr ""
+
+#: DlgMusicProperties#7
+msgid "Normal"
+msgstr ""
+
+#: DlgMusicProperties#8
+msgid "Continue current playlist (defined in a previous slide)"
+msgstr ""
+
+#: DlgMusicProperties#9
+msgid "Define the sound volume for this slide"
+msgstr ""
+
+#: DlgMusicProperties#10
+msgid "Set music to pause during this slide"
+msgstr ""
+
+#: DlgMusicProperties#11
+msgid "Set to pause"
+msgstr ""
+
+#: DlgMusicProperties#12
+msgid "No specific settings"
+msgstr ""
+
+#: DlgMusicProperties#14
+msgid "Start a new playlist from this slide"
+msgstr ""
+
+#: DlgMusicProperties#15
+msgid "Add a file to the playlist"
+msgstr ""
+
+#: DlgMusicProperties#16
+msgid "Remove the current selected file"
+msgstr ""
+
+#: DlgMusicProperties#17
+msgid "Change the order in which will be played the music files:\nMove the current selected file of a notch upward."
+msgstr ""
+
+#: DlgMusicProperties#18
+msgid "Change the order in which will be played the music files:\nMove the current selected file of a notch downward."
+msgstr ""
+
+#: DlgMusicProperties#19
+msgid "Total playlist duration : "
+msgstr ""
+
+#: DlgMusicProperties#20
+msgctxt "DlgMusicProperties#20"
+msgid "File"
+msgstr ""
+
+#: DlgMusicProperties#21
+msgid "Duration"
+msgstr ""
+
+#: DlgMusicProperties#22
+msgid "Volume"
+msgstr ""
+
+#: DlgMusicProperties#23
+msgid "Source folder"
+msgstr ""
+
+#: DlgMusicProperties#24
+msgctxt "DlgMusicProperties#24"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgMusicProperties#25
+msgctxt "DlgMusicProperties#25"
+msgid "&Ok"
+msgstr ""
+
+#: DlgMusicProperties#26
+msgctxt "DlgMusicProperties#26"
+msgid "Cancel modification and exit dialog box"
+msgstr ""
+
+#: DlgMusicProperties#27
+msgctxt "DlgMusicProperties#27"
+msgid "&Cancel"
+msgstr ""
+
+#: DlgMusicProperties#28
+msgctxt "DlgMusicProperties#28"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgMusicProperties#29
+msgctxt "DlgMusicProperties#29"
+msgid "&Help"
+msgstr ""
+
+#: DlgMusicProperties#30
+msgctxt "DlgMusicProperties#30"
+msgid "F1"
+msgstr ""
+
+#: DlgMusicProperties#31
+msgid "Add music files"
+msgstr ""
+
+#: DlgMusicProperties#32
+msgctxt "DlgMusicProperties#32"
+msgid "Error"
+msgstr ""
+
+#: DlgMusicProperties#33
+msgctxt "DlgMusicProperties#33"
+msgid "Format not supported"
+msgstr ""
+
+#: DlgRenderVideo#1
+msgctxt "DlgRenderVideo#1"
+msgid "Render video"
+msgstr ""
+
+#: DlgRenderVideo#2
+msgid "Destination file :"
+msgstr ""
+
+#: DlgRenderVideo#3
+msgctxt "DlgRenderVideo#3"
+msgid "Video codec :"
+msgstr ""
+
+#: DlgRenderVideo#4
+msgctxt "DlgRenderVideo#4"
+msgid "Image format :"
+msgstr ""
+
+#: DlgRenderVideo#5
+msgid "Destination file path"
+msgstr ""
+
+#: DlgRenderVideo#6
+msgid "Select the destination file path"
+msgstr ""
+
+#: DlgRenderVideo#7
+msgctxt "DlgRenderVideo#7"
+msgid "Select the video standard to use, PAL or NTSC."
+msgstr ""
+
+#: DlgRenderVideo#8
+msgctxt "DlgRenderVideo#8"
+msgid "Select the image resolution to use for the rendering."
+msgstr ""
+
+#: DlgRenderVideo#9
+msgctxt "DlgRenderVideo#9"
+msgid "Select the video codec to use for the rendering."
+msgstr ""
+
+#: DlgRenderVideo#10
+msgctxt "DlgRenderVideo#10"
+msgid "Bit rate :"
+msgstr ""
+
+#: DlgRenderVideo#11
+msgctxt "DlgRenderVideo#11"
+msgid "Select the bit rate to use for video during the rendering."
+msgstr ""
+
+#: DlgRenderVideo#12
+msgctxt "DlgRenderVideo#12"
+msgid "Select the audio codec to use for the rendering."
+msgstr ""
+
+#: DlgRenderVideo#13
+msgctxt "DlgRenderVideo#13"
+msgid "Select the bit rate to use for audio during the rendering."
+msgstr ""
+
+#: DlgRenderVideo#14
+msgctxt "DlgRenderVideo#14"
+msgid "Select the file type to use for the rendering."
+msgstr ""
+
+#: DlgRenderVideo#15
+msgctxt "DlgRenderVideo#15"
+msgid "Audio codec :"
+msgstr ""
+
+#: DlgRenderVideo#16
+msgid "Select the model of equipment"
+msgstr ""
+
+#: DlgRenderVideo#17
+msgctxt "DlgRenderVideo#17"
+msgid "Device model :"
+msgstr ""
+
+#: DlgRenderVideo#18
+msgctxt "DlgRenderVideo#18"
+msgid "Device type :"
+msgstr ""
+
+#: DlgRenderVideo#19
+msgid "Select the type of equipment."
+msgstr ""
+
+#: DlgRenderVideo#20
+msgid "All slides"
+msgstr ""
+
+#: DlgRenderVideo#21
+msgid "From"
+msgstr ""
+
+#: DlgRenderVideo#22
+msgid "To"
+msgstr ""
+
+#: DlgRenderVideo#23
+msgid "To render :"
+msgstr ""
+
+#: DlgRenderVideo#24
+msgid "Sound :"
+msgstr ""
+
+#: DlgRenderVideo#25
+msgid "Include sound in the video"
+msgstr ""
+
+#: DlgRenderVideo#26
+msgid "Rendering to :"
+msgstr ""
+
+#: DlgRenderVideo#27
+msgid "Video format :"
+msgstr ""
+
+#: DlgRenderVideo#28
+msgid "Audio format :"
+msgstr ""
+
+#: DlgRenderVideo#29
+msgid "Audio track - Total progression"
+msgstr ""
+
+#: DlgRenderVideo#30
+msgid "Video track - Current slide progression"
+msgstr ""
+
+#: DlgRenderVideo#31
+msgid "Video track - Total progression"
+msgstr ""
+
+#: DlgRenderVideo#32
+msgid "fps"
+msgstr ""
+
+#: DlgRenderVideo#33
+msgid "Accept modification and start rendering process"
+msgstr ""
+
+#: DlgRenderVideo#34
+msgid "&Properties"
+msgstr ""
+
+#: DlgRenderVideo#35
+msgid "Cancel modification or rendering process and exit dialog box"
+msgstr ""
+
+#: DlgRenderVideo#36
+msgctxt "DlgRenderVideo#36"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgRenderVideo#37
+msgctxt "DlgRenderVideo#37"
+msgid "&Help"
+msgstr ""
+
+#: DlgRenderVideo#38
+msgctxt "DlgRenderVideo#38"
+msgid "F1"
+msgstr ""
+
+#: DlgRenderVideo#39
+msgctxt "DlgRenderVideo#39"
+msgid "Old TV (4:3)"
+msgstr ""
+
+#: DlgRenderVideo#40
+msgctxt "DlgRenderVideo#40"
+msgid "TV Wide (16:9)"
+msgstr ""
+
+#: DlgRenderVideo#41
+msgctxt "DlgRenderVideo#41"
+msgid "Cinema (2.35:1)"
+msgstr ""
+
+#: DlgRenderVideo#42
+msgctxt "DlgRenderVideo#42"
+msgid "PAL"
+msgstr ""
+
+#: DlgRenderVideo#43
+msgctxt "DlgRenderVideo#43"
+msgid "NTSC"
+msgstr ""
+
+#: DlgRenderVideo#44
+msgctxt "DlgRenderVideo#44"
+msgid "Video standard :"
+msgstr ""
+
+#: DlgRenderVideo#45
+msgid "Geometry :"
+msgstr ""
+
+#: DlgRenderVideo#46
+msgctxt "DlgRenderVideo#46"
+msgid "File format :"
+msgstr ""
+
+#: DlgRenderVideo#47
+msgctxt "DlgRenderVideo#47"
+msgid "und"
+msgstr ""
+
+#: DlgRenderVideo#48
+msgctxt "DlgRenderVideo#48"
+msgid "(ISO 639 language code)"
+msgstr ""
+
+#: DlgRenderVideo#49
+msgctxt "DlgRenderVideo#49"
+msgid "Language :"
+msgstr ""
+
+#: DlgRenderVideo#50
+msgid "Elapsed time :"
+msgstr ""
+
+#: DlgRenderVideo#51
+msgid "Average render speed :"
+msgstr ""
+
+#: DlgRenderVideo#52
+msgctxt "DlgRenderVideo#52"
+msgid "&Ok"
+msgstr ""
+
+#: DlgRenderVideo#53
+msgctxt "DlgRenderVideo#53"
+msgid "&Cancel"
+msgstr ""
+
+#: DlgRenderVideo#54
+msgid "Advanced render video"
+msgstr ""
+
+#: DlgRenderVideo#55
+msgid "Render video for mobil player and smartphone"
+msgstr ""
+
+#: DlgRenderVideo#56
+msgid "Render video for multimedia system"
+msgstr ""
+
+#: DlgRenderVideo#57
+msgid "Render video for the WEB"
+msgstr ""
+
+#: DlgRenderVideo#58
+msgid "movie"
+msgstr ""
+
+#: DlgRenderVideo#60
+msgid "Stop rendering"
+msgstr ""
+
+#: DlgRenderVideo#61
+msgid "Range selection"
+msgstr ""
+
+#: DlgRenderVideo#62
+msgid "Slide range is defined to incorrect values"
+msgstr ""
+
+#: DlgRenderVideo#63
+msgctxt "DlgRenderVideo#63"
+msgid "Language selection"
+msgstr ""
+
+#: DlgRenderVideo#64
+msgctxt "DlgRenderVideo#64"
+msgid "Language must be empty or an ISO 639 language code (3 characters)\nSee help for more details!"
+msgstr ""
+
+#: DlgRenderVideo#65
+msgid "Overwrite file ?"
+msgstr ""
+
+#: DlgRenderVideo#66
+msgid "The file you selected already exist.\nDo you want to overwrite it ?"
+msgstr ""
+
+#: DlgRenderVideo#67
+msgid "Device model selection"
+msgstr ""
+
+#: DlgRenderVideo#68
+msgid "A device model is require!"
+msgstr ""
+
+#: DlgRenderVideo#69
+msgid "Encoding sound"
+msgstr ""
+
+#: DlgRenderVideo#76
+msgid " - Estimated time left : "
+msgstr ""
+
+#: DlgRenderVideo#77
+msgid "Error sending image to ffmpeg"
+msgstr ""
+
+#: DlgRenderVideo#78
+msgid "Closing encoder"
+msgstr ""
+
+#: DlgSlideProperties#1
+msgid "Slide properties"
+msgstr ""
+
+#: DlgSlideProperties#2
+msgid "Shot duration :"
+msgstr ""
+
+#: DlgSlideProperties#3
+msgid "Indicate a name for the slide. It is this name which will appear on the thumbnail in the main window timeline."
+msgstr ""
+
+#: DlgSlideProperties#4
+msgid "Ctrl+Ins"
+msgstr ""
+
+#: DlgSlideProperties#5
+msgid "Add a new block of type image or video."
+msgstr ""
+
+#: DlgSlideProperties#8
+msgid "Copy the current block to the ffDiaporama clipboard."
+msgstr ""
+
+#: DlgSlideProperties#16
+msgid "Copy the current block to the ffDiaporama clipboard and remove it from the slide"
+msgstr ""
+
+#: DlgSlideProperties#19
+msgid "Paste block from the ffDiaporama clipboard and insert it."
+msgstr ""
+
+#: DlgSlideProperties#21
+msgid "Give the sound, during this shot, to the current video block"
+msgstr ""
+
+#: DlgSlideProperties#22
+msgid "Define the properties of the text block"
+msgstr ""
+
+#: DlgSlideProperties#23
+msgid "Define framing and do correction of image or movie"
+msgstr ""
+
+#: DlgSlideProperties#24
+msgid "Cut the video"
+msgstr ""
+
+#: DlgSlideProperties#27
+msgid "Select a shape for current block"
+msgstr ""
+
+#: DlgSlideProperties#28
+msgid "Defined the opaqueness of the block."
+msgstr ""
+
+#: DlgSlideProperties#29
+msgid "Defined the thickness of the border"
+msgstr ""
+
+#: DlgSlideProperties#30
+msgid "Defined the color of the line to be used to draw the border"
+msgstr ""
+
+#: DlgSlideProperties#31
+msgid "Defined the type of line (solid, dotted line, etc.)"
+msgstr ""
+
+#: DlgSlideProperties#32
+msgid "Define rotation according to the X axis (defined in degree)."
+msgstr ""
+
+#: DlgSlideProperties#33
+msgid "Define rotation according to the Y axis (defined in degree)."
+msgstr ""
+
+#: DlgSlideProperties#34
+msgid "Define rotation according to the Z axis (defined in degree)."
+msgstr ""
+
+#: DlgSlideProperties#35
+msgid "Defined the distance between the block and its shadow"
+msgstr ""
+
+#: DlgSlideProperties#36
+msgid "Defined the color of the shadow"
+msgstr ""
+
+#: DlgSlideProperties#37
+msgid "Accept modification and go to previous slide"
+msgstr ""
+
+#: DlgSlideProperties#38
+msgid "Previous"
+msgstr ""
+
+#: DlgSlideProperties#39
+msgid "Accept modification and go to next slide"
+msgstr ""
+
+#: DlgSlideProperties#40
+msgid "Next"
+msgstr ""
+
+#: DlgSlideProperties#42
+msgid "Opacity :"
+msgstr ""
+
+#: DlgSlideProperties#43
+msgid "Shadow :"
+msgstr ""
+
+#: DlgSlideProperties#44
+msgid "Append a shot to end of the timeline"
+msgstr ""
+
+#: DlgSlideProperties#46
+msgid "Add shot"
+msgstr ""
+
+#: DlgSlideProperties#47
+msgid "Remove current selected shot"
+msgstr ""
+
+#: DlgSlideProperties#49
+msgid "Change the order of the shot by moving the current selected shot, of a notch towards the left"
+msgstr ""
+
+#: DlgSlideProperties#50
+msgid "Move left"
+msgstr ""
+
+#: DlgSlideProperties#51
+msgid "Change the order of the shot by moving the current selected shot, of a notch towards the right"
+msgstr ""
+
+#: DlgSlideProperties#52
+msgid "Move right"
+msgstr ""
+
+#: DlgSlideProperties#53
+msgid "Indicate the duration for the current selected shot."
+msgstr ""
+
+#: DlgSlideProperties#54
+msgid "HH:mm:ss.zzz"
+msgstr ""
+
+#: DlgSlideProperties#55
+msgid "Defined in which corner the shadow will be positioned (or no shadow)"
+msgstr ""
+
+#: DlgSlideProperties#56
+msgid "Border :"
+msgstr ""
+
+#: DlgSlideProperties#57
+msgid "Shape :"
+msgstr ""
+
+#: DlgSlideProperties#58
+msgid "Define width of current block"
+msgstr ""
+
+#: DlgSlideProperties#59
+msgid "Define height of current block"
+msgstr ""
+
+#: DlgSlideProperties#60
+msgid "Define X position of current block"
+msgstr ""
+
+#: DlgSlideProperties#74
+msgid "Define Y position of current block"
+msgstr ""
+
+#: DlgSlideProperties#75
+msgid "Block shape :"
+msgstr ""
+
+#: DlgSlideProperties#132
+msgid "None"
+msgstr ""
+
+#: DlgSlideProperties#142
+msgid "Lengthened to %1 sec"
+msgstr ""
+
+#: DlgImageCorrection#45
+msgid "No style for nonstandard geometry image"
+msgstr ""
+
+#: DlgSlideProperties#146
+msgid "Remove shot"
+msgstr ""
+
+#: DlgSlideProperties#147
+msgid "Are you sure to want to delete this shot?"
+msgstr ""
+
+#: DlgTextEdit#2
+msgid "Select font family"
+msgstr ""
+
+#: DlgTextEdit#3
+msgid "Select font size"
+msgstr ""
+
+#: DlgTextEdit#4
+msgid "Select font color"
+msgstr ""
+
+#: DlgTextEdit#5
+msgid "Select font effect (outerline, shadow)"
+msgstr ""
+
+#: DlgTextEdit#6
+msgid "Select outerline/shadow color"
+msgstr ""
+
+#: DlgTextEdit#7
+msgid "Set text to Bold"
+msgstr ""
+
+#: DlgTextEdit#8
+msgid "Set text to Italic"
+msgstr ""
+
+#: DlgTextEdit#9
+msgid "Set text to Underline"
+msgstr ""
+
+#: DlgTextEdit#12
+msgid "Align justify"
+msgstr ""
+
+#: DlgTextEdit#22
+msgid "Align in the middle"
+msgstr ""
+
+#: DlgTextEdit#26
+msgid "Define the background brush type for the shape"
+msgstr ""
+
+#: DlgTextEdit#27
+msgid "Define the color (or first color for a gradient brush)"
+msgstr ""
+
+#: DlgTextEdit#28
+msgid "Define the second gradient brush color "
+msgstr ""
+
+#: DlgTextEdit#29
+msgid "Define the third gradient brush color "
+msgstr ""
+
+#: DlgTextEdit#30
+msgid "Select the pattern"
+msgstr ""
+
+#: DlgTextEdit#31
+msgid "Define orientation of the gradient brush"
+msgstr ""
+
+#: DlgTextEdit#32
+msgid "Define position of the second color in the gradient brush"
+msgstr ""
+
+#: DlgTextEdit#33
+msgid "Select an image among that present in the library"
+msgstr ""
+
+#: DlgTextEdit#44
+msgid "No effect"
+msgstr ""
+
+#: DlgTextEdit#45
+msgid "Outerline"
+msgstr ""
+
+#: DlgTextEdit#50
+msgid "No brush"
+msgstr ""
+
+#: DlgTextEdit#52
+msgid "Pattern brush"
+msgstr ""
+
+#: DlgTransitionProperties#1
+msgid "Transition properties"
+msgstr ""
+
+#: DlgTransitionProperties#2
+msgid "Transition type :"
+msgstr ""
+
+#: DlgTransitionProperties#3
+msgid "Select a transition family"
+msgstr ""
+
+#: DlgTransitionProperties#4
+msgid "None and basic"
+msgstr ""
+
+#: DlgTransitionProperties#5
+msgid "Zoom"
+msgstr ""
+
+#: DlgTransitionProperties#6
+msgctxt "DlgTransitionProperties#6"
+msgid "Slide"
+msgstr ""
+
+#: DlgTransitionProperties#7
+msgid "Push"
+msgstr ""
+
+#: DlgTransitionProperties#8
+msgid "Deform"
+msgstr ""
+
+#: DlgTransitionProperties#9
+msgid "Luma-Bar"
+msgstr ""
+
+#: DlgTransitionProperties#10
+msgid "Luma-Box"
+msgstr ""
+
+#: DlgTransitionProperties#11
+msgid "Luma-Center"
+msgstr ""
+
+#: DlgTransitionProperties#12
+msgid "Luma-Checker"
+msgstr ""
+
+#: DlgTransitionProperties#13
+msgid "Luma-Clock"
+msgstr ""
+
+#: DlgTransitionProperties#14
+msgid "Luma-Snake"
+msgstr ""
+
+#: DlgTransitionProperties#15
+msgctxt "DlgTransitionProperties#15"
+msgid "Duration :"
+msgstr ""
+
+#: DlgTransitionProperties#16
+msgid "Define the animation duration"
+msgstr ""
+
+#: DlgTransitionProperties#17
+msgid "seconde(s)"
+msgstr ""
+
+#: DlgTransitionProperties#18
+msgctxt "DlgTransitionProperties#18"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgTransitionProperties#19
+msgctxt "DlgTransitionProperties#19"
+msgid "&Ok"
+msgstr ""
+
+#: DlgTransitionProperties#20
+msgctxt "DlgTransitionProperties#20"
+msgid "Cancel modification and exit dialog box"
+msgstr ""
+
+#: DlgTransitionProperties#21
+msgctxt "DlgTransitionProperties#21"
+msgid "&Cancel"
+msgstr ""
+
+#: DlgTransitionProperties#22
+msgctxt "DlgTransitionProperties#22"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgTransitionProperties#23
+msgctxt "DlgTransitionProperties#23"
+msgid "&Help"
+msgstr ""
+
+#: DlgTransitionProperties#24
+msgctxt "DlgTransitionProperties#24"
+msgid "F1"
+msgstr ""
+
+#: DlgVideoEdit#1
+msgid "Cut video"
+msgstr ""
+
+#: DlgVideoEdit#2
+msgctxt "DlgVideoEdit#2"
+msgid "Properties for all shots"
+msgstr ""
+
+#: DlgVideoEdit#3
+msgid "Start :"
+msgstr ""
+
+#: DlgVideoEdit#4
+msgid "Move to start position"
+msgstr ""
+
+#: DlgVideoEdit#5
+msgid "Use current position as start position"
+msgstr ""
+
+#: DlgVideoEdit#6
+msgid "Define the start position to use for"
+msgstr ""
+
+#: DlgVideoEdit#7
+msgid "End :"
+msgstr ""
+
+#: DlgVideoEdit#8
+msgid "Define the end position to use for"
+msgstr ""
+
+#: DlgVideoEdit#9
+msgid "Use current position as end position"
+msgstr ""
+
+#: DlgVideoEdit#10
+msgid "Move to end position"
+msgstr ""
+
+#: DlgVideoEdit#11
+msgctxt "DlgVideoEdit#11"
+msgid "Duration :"
+msgstr ""
+
+#: DlgVideoEdit#12
+msgid "Volume :"
+msgstr ""
+
+#: DlgVideoEdit#13
+msgid "Define the \" Master Volume \" for the movie"
+msgstr ""
+
+#: DlgVideoEdit#14
+msgctxt "DlgVideoEdit#14"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgVideoEdit#15
+msgctxt "DlgVideoEdit#15"
+msgid "&Ok"
+msgstr ""
+
+#: DlgffDPjrProperties#1
+msgid "Project properties"
+msgstr ""
+
+#: DlgffDPjrProperties#2
+msgctxt "DlgffDPjrProperties#2"
+msgid "Title :"
+msgstr ""
+
+#: DlgffDPjrProperties#3
+msgctxt "DlgffDPjrProperties#3"
+msgid "Author :"
+msgstr ""
+
+#: DlgffDPjrProperties#4
+msgid "Album :"
+msgstr ""
+
+#: DlgffDPjrProperties#5
+msgid "Year :"
+msgstr ""
+
+#: DlgffDPjrProperties#6
+msgctxt "DlgffDPjrProperties#6"
+msgid "Language :"
+msgstr ""
+
+#: DlgffDPjrProperties#7
+msgctxt "DlgffDPjrProperties#7"
+msgid "und"
+msgstr ""
+
+#: DlgffDPjrProperties#8
+msgctxt "DlgffDPjrProperties#8"
+msgid "(ISO 639 language code)"
+msgstr ""
+
+#: DlgffDPjrProperties#9
+msgid "Comment :"
+msgstr ""
+
+#: DlgffDPjrProperties#10
+msgid "Chapters :"
+msgstr ""
+
+#: DlgffDPjrProperties#11
+msgctxt "DlgffDPjrProperties#11"
+msgid "Accept modification and exit dialog box"
+msgstr ""
+
+#: DlgffDPjrProperties#12
+msgctxt "DlgffDPjrProperties#12"
+msgid "&Ok"
+msgstr ""
+
+#: DlgffDPjrProperties#13
+msgctxt "DlgffDPjrProperties#13"
+msgid "Cancel modification and exit dialog box"
+msgstr ""
+
+#: DlgffDPjrProperties#14
+msgctxt "DlgffDPjrProperties#14"
+msgid "&Cancel"
+msgstr ""
+
+#: DlgffDPjrProperties#15
+msgctxt "DlgffDPjrProperties#15"
+msgid "Open help page describing this dialog box"
+msgstr ""
+
+#: DlgffDPjrProperties#16
+msgctxt "DlgffDPjrProperties#16"
+msgid "&Help"
+msgstr ""
+
+#: DlgffDPjrProperties#17
+msgctxt "DlgffDPjrProperties#17"
+msgid "F1"
+msgstr ""
+
+#: DlgffDPjrProperties#18
+msgid "#;Slide;Title;Start;End;Duration"
+msgstr ""
+
+#: MainWindow#1
+msgid "Ctrl+N"
+msgstr ""
+
+#: MainWindow#2
+msgid "Ctrl+O"
+msgstr ""
+
+#: MainWindow#3
+msgid "Ctrl+S"
+msgstr ""
+
+#: MainWindow#4
+msgid "Ctrl+W"
+msgstr ""
+
+#: MainWindow#5
+msgctxt "MainWindow#5"
+msgid "Ins"
+msgstr ""
+
+#: MainWindow#6
+msgctxt "MainWindow#6"
+msgid "Remove"
+msgstr ""
+
+#: MainWindow#7
+msgctxt "MainWindow#7"
+msgid "Del"
+msgstr ""
+
+#: MainWindow#8
+msgctxt "MainWindow#8"
+msgid "File"
+msgstr ""
+
+#: MainWindow#9
+msgid "Create a new empty project (Ctrl+N)"
+msgstr ""
+
+#: MainWindow#10
+msgid "New\nproject"
+msgstr ""
+
+#: MainWindow#11
+msgid "Open a previously saved project (Ctrl+O)"
+msgstr ""
+
+#: MainWindow#12
+msgid "Open\nproject"
+msgstr ""
+
+#: MainWindow#13
+msgid "Open a recently used project file"
+msgstr ""
+
+#: MainWindow#14
+msgid "Open\nrecent"
+msgstr ""
+
+#: MainWindow#15
+msgid "Save current project (Ctrl+S)"
+msgstr ""
+
+#: MainWindow#16
+msgid "Save\nproject"
+msgstr ""
+
+#: MainWindow#17
+msgid "Save current project to a new project file"
+msgstr ""
+
+#: MainWindow#18
+msgid "Save\nproject as"
+msgstr ""
+
+#: MainWindow#19
+msgid "Define project properties"
+msgstr ""
+
+#: MainWindow#20
+msgid "Project\nproperties"
+msgstr ""
+
+#: MainWindow#21
+msgid "Change application and project settings"
+msgstr ""
+
+#: MainWindow#22
+msgid "Exit application (Ctrl+W)"
+msgstr ""
+
+#: MainWindow#23
+msgid "Exit"
+msgstr ""
+
+#: MainWindow#24
+msgid "Project"
+msgstr ""
+
+#: MainWindow#25
+msgid "Add an empty slide"
+msgstr ""
+
+#: MainWindow#26
+msgid "Add\ntitle"
+msgstr ""
+
+#: MainWindow#27
+msgid "Add image or video as slide (INS)"
+msgstr ""
+
+#: MainWindow#28
+msgid "Add\nfiles"
+msgstr ""
+
+#: MainWindow#29
+msgid "Add\nproject"
+msgstr ""
+
+#: MainWindow#30
+msgid "Copy current slide to clipboard and remove it (Ctrl+X)"
+msgstr ""
+
+#: MainWindow#31
+msgid "Copy current slide to clipboard (Ctrl+C)"
+msgstr ""
+
+#: MainWindow#32
+msgid "Paste current slide from clipboard (Ctrl+V)"
+msgstr ""
+
+#: MainWindow#33
+msgid "Edit"
+msgstr ""
+
+#: MainWindow#34
+msgid "Remove current slide (DEL)"
+msgstr ""
+
+#: MainWindow#35
+msgid "Player and\nsmartphone"
+msgstr ""
+
+#: MainWindow#36
+msgid "Multimedia\nsystem"
+msgstr ""
+
+#: MainWindow#37
+msgid "For the\nWEB"
+msgstr ""
+
+#: MainWindow#38
+msgctxt "MainWindow#38"
+msgid "Lossless"
+msgstr ""
+
+#: MainWindow#39
+msgid "Render project as a video"
+msgstr ""
+
+#: MainWindow#42
+msgid "Slide : xx/xxx"
+msgstr ""
+
+#: MainWindow#43
+msgid "Edit the background image for the slide"
+msgstr ""
+
+#: MainWindow#45
+msgid "Edit slide"
+msgstr ""
+
+#: MainWindow#46
+msgid "Edit the slide"
+msgstr ""
+
+#: MainWindow#49
+msgid "F8"
+msgstr ""
+
+#: MainWindow#52
+msgid "Help"
+msgstr ""
+
+#: MainWindow#54
+msgid "Call ffDiaporama WIKI"
+msgstr ""
+
+#: MainWindow#55
+msgid "Support\nand help"
+msgstr ""
+
+#: MainWindow#56
+msgid "Display blog/news page from internet WEB site"
+msgstr ""
+
+#: MainWindow#57
+msgid "Switch display to sheet mode"
+msgstr ""
+
+#: MainWindow#58
+msgid "..."
+msgstr ""
+
+#: MainWindow#59
+msgid "Switch display to preview mode"
+msgstr ""
+
+#: MainWindow#60
+msgid "Reduce thumbnails"
+msgstr ""
+
+#: MainWindow#61
+msgid "Enlarge thumbnails"
+msgstr ""
+
+#: MainWindow#62
+msgid "Edit background"
+msgstr ""
+
+#: MainWindow#63
+msgid "Edit music"
+msgstr ""
+
+#: MainWindow#64
+msgid "Edit the slide musical playlist"
+msgstr ""
+
+#: MainWindow#65
+msgid "Edit object transition"
+msgstr ""
+
+#: MainWindow#66
+msgid "Edit entering transition for the slide"
+msgstr ""
+
+#: MainWindow#67
+msgid "Cut"
+msgstr ""
+
+#: MainWindow#68
+msgid "Settings"
+msgstr ""
+
+#: MainWindow#69
+msgctxt "MainWindow#69"
+msgid "Ctrl+X"
+msgstr ""
+
+#: MainWindow#70
+msgid "Copy"
+msgstr ""
+
+#: MainWindow#71
+msgctxt "MainWindow#71"
+msgid "Ctrl+C"
+msgstr ""
+
+#: MainWindow#72
+msgid "Paste"
+msgstr ""
+
+#: MainWindow#73
+msgctxt "MainWindow#73"
+msgid "Ctrl+V"
+msgstr ""
+
+#: MainWindow#74
+msgctxt "MainWindow#74"
+msgid "Advanced"
+msgstr ""
+
+#: MainWindow#75
+msgid "What's new"
+msgstr ""
+
+#: MainWindow#76
+msgid "Add a previously saved project at the end of this project"
+msgstr ""
+
+#: MainWindow#77
+msgctxt "MainWindow#77"
+msgid "Render video"
+msgstr ""
+
+#: MainWindow#78
+msgid "Search Raster mode in configuration file"
+msgstr ""
+
+#: MainWindow#79
+msgid "All suported file ("
+msgstr ""
+
+#: MainWindow#80
+msgid "Image file ("
+msgstr ""
+
+#: MainWindow#81
+msgid "Video file ("
+msgstr ""
+
+#: MainWindow#82
+msgid "Music file ("
+msgstr ""
+
+#: MainWindow#83
+msgid "Read configuration file"
+msgstr ""
+
+#: MainWindow#84
+msgid "This application support only audio track with unsigned 8 bits or signed 16 bits sample format"
+msgstr ""
+
+#: MainWindow#85
+msgid "This application support only mono or stereo audio track"
+msgstr ""
+
+#: MainWindow#86
+msgctxt "MainWindow#86"
+msgid "Error"
+msgstr ""
+
+#: MainWindow#87
+msgid "Error reading configuration file"
+msgstr ""
+
+#: MainWindow#88
+msgid "Error reading content of configuration file"
+msgstr ""
+
+#: MainWindow#89
+msgid "The file is not a valid configuration file"
+msgstr ""
+
+#: MainWindow#90
+msgid "Error creating configuration file"
+msgstr ""
+
+#: MainWindow#92
+msgid "Saving project file ..."
+msgstr ""
+
+#: MainWindow#93
+msgid "Error creating data file"
+msgstr ""
+
+#: MainWindow#94
+msgid "Open project file"
+msgstr ""
+
+#: MainWindow#95
+msgid "Impossible to open project file %1"
+msgstr ""
+
+#: MainWindow#96
+msgid "Error reading project file"
+msgstr ""
+
+#: MainWindow#97
+msgid "Error reading content of project file"
+msgstr ""
+
+#: MainWindow#98
+msgid "The file is not a valid project file"
+msgstr ""
+
+#: MainWindow#99
+msgid "Impossible to import this file :\nImage geometry in this file is not the same than the current project"
+msgstr ""
+
+#: MainWindow#100
+msgid "Starting SDL..."
+msgstr ""
+
+#: MainWindow#101
+msgid "Library :"
+msgstr ""
+
+#: MainWindow#102
+msgid "Loading background library..."
+msgstr ""
+
+#: MainWindow#103
+msgid " images loaded into the background-library from "
+msgstr ""
+
+#: MainWindow#104
+msgid "Loading no-luma transitions..."
+msgstr ""
+
+#: MainWindow#105
+msgid " no-luma transitions loaded into the transition-library"
+msgstr ""
+
+#: MainWindow#106
+msgid "Loading luma transitions..."
+msgstr ""
+
+#: MainWindow#107
+msgid " luma transitions loaded into the transition-library from "
+msgstr ""
+
+#: MainWindow#108
+msgid "  Total:"
+msgstr ""
+
+#: MainWindow#109
+msgid " transitions loaded into the transition-library"
+msgstr ""
+
+#: MainWindow#110
+msgid "Slide : "
+msgstr ""
+
+#: MainWindow#111
+msgid "Want to save the project before closing?"
+msgstr ""
+
+#: MainWindow#112
+msgid "Configuration not correct!"
+msgstr ""
+
+#: MainWindow#113
+msgid "<html><body>Visit the ffDiaporama Web site to use the forum,<br>consult tutorials and learn the lastest news:<br><a href=\"http://ffdiaporama.tuxfamily.org\">http://ffdiaporama.tuxfamily.org</a></body></html>"
+msgstr ""
+
+#: MainWindow#114
+msgid "Saving configuration file and applying new configuration ..."
+msgstr ""
+
+#: MainWindow#115
+msgid "Open file :"
+msgstr ""
+
+#: MainWindow#116
+msgid "This project was created with a newer version of ffDiaporama.\nIf you continue, you take the risk of losing data!\nDo you want to open it nevertheless?"
+msgstr ""
+
+#: MainWindow#117
+msgid "This video files contains more than one chapter.\nDo you want to create one slide for each chapters ?"
+msgstr ""
+
+#: MainWindow#118
+msgid "Add project file :"
+msgstr ""
+
+#: MainWindow#120
+msgid "Remove slide"
+msgstr ""
+
+#: MainWindow#121
+msgid "Are you sure to want to delete this slide?"
+msgstr ""
+
+#: MainWindow#122
+msgid "Current project has been modified.\nDo you want to save-it ?"
+msgstr ""
+
+#: MainWindow#123
+msgid "Loading system icons..."
+msgstr ""
+
+#: MainWindow#125
+msgid "Close application"
+msgstr ""
+
+#: MainWindow#126
+msgid "A new ffDiaporama release is available from WEB site. Please update from http://ffdiaporama.tuxfamily.org !"
+msgstr ""
+
+#: MainWindow#127
+msgid "<new project>"
+msgstr ""
+
+#: MainWindow#128
+msgid "<html><body>Select a project to open or to create a new project<br>To discover ffDiaporama:<br><a href=\"%1\">Consult the WIKI</a></body></html>"
+msgstr ""
+
+#: MainWindow#129
+msgid "<html><body>Add empty slides or slides based on photos or videos<br>To discover how to build your slide show and to animate slides:<br><a href=\"%1\">Discover the principles of functioning of ffDiaporama</a></body></html>"
+msgstr ""
+
+#: MainWindow#130
+msgid "<html><body>Select the equipment type that you plan to use for your video<br>To discover how to render videos:<br><a href=\"%1\">Consult the rendering videos WIKI page</a></body></html>"
+msgstr ""
+
+#: MainWindow#131
+msgid "New project"
+msgstr ""
+
+#: MainWindow#132
+msgid "Open project"
+msgstr ""
+
+#: MainWindow#133
+msgid "Save project as"
+msgstr ""
+
+#: MainWindow#136
+msgid "Add a sub project"
+msgstr ""
+
+#: MainWindow#140
+msgid "Loading cached filtered file :"
+msgstr ""
+
+#: MainWindow#141
+msgid "Rescal image to 8MPix"
+msgstr ""
+
+#: MainWindow#142
+msgid "Error allocating memory for cached filtered file"
+msgstr ""
+
+#: MainWindow#143
+msgid "Error loading cached filtered file :"
+msgstr ""
+
+#: MainWindow#144
+msgid "Loading file :"
+msgstr ""
+
+#: MainWindow#145
+msgid "Error allocating memory for render image"
+msgstr ""
+
+#: MainWindow#146
+msgid "Error loading file :"
+msgstr ""
+
+#: MainWindow#147
+msgid "Add file to project :"
+msgstr ""
+
+#: MainWindow#148
+msgid "Applying Despeckle filter"
+msgstr ""
+
+#: MainWindow#149
+msgid "Applying Equalize filter"
+msgstr ""
+
+#: MainWindow#150
+msgid "Applying Gray filter"
+msgstr ""
+
+#: MainWindow#151
+msgid "Applying blur filter"
+msgstr ""
+
+#: MainWindow#152
+msgid "Applying sharpen filter"
+msgstr ""
+
+#: QCustomFolderTree#1
+msgid "Kb"
+msgstr ""
+
+#: QCustomFolderTree#2
+msgid "Mb"
+msgstr ""
+
+#: QCustomFolderTree#3
+msgid "Gb"
+msgstr ""
+
+#: QCustomFolderTree#4
+msgid "Tb"
+msgstr ""
+
+#: cBaseMediaFile#1
+msgctxt "cBaseMediaFile#1"
+msgid "Impossible to open file "
+msgstr ""
+
+#: cBaseMediaFile#2
+msgctxt "cBaseMediaFile#2"
+msgid "Do you want to select another file ?"
+msgstr ""
+
+#: cBaseMediaFile#3
+msgctxt "cBaseMediaFile#3"
+msgid "Select another file for "
+msgstr ""
+
+#: cBaseMediaFile#4
+msgid "Impossible to open file %1"
+msgstr ""
+
+#: cBaseMediaFile#5
+msgid "MPix"
+msgstr ""
+
+#: cBaseMediaFile#6
+msgid "Unmanaged"
+msgstr ""
+
+#: cBaseMediaFile#7
+msgid "Slides"
+msgstr ""
+
+#: cBaseMediaFile#8
+msgid "Chapters"
+msgstr ""
+
+#: cBaseMediaFile#10
+msgid "Thumbnail"
+msgstr ""
+
+#: cBaseMediaFile#11
+msgid "Image don't have EXIF metadata %1"
+msgstr ""
+
+#: cBaseMediaFile#13
+msgid "Music"
+msgstr ""
+
+#: cBaseMediaFile#14
+msgid "Mono"
+msgstr ""
+
+#: cBaseMediaFile#15
+msgid "Open file"
+msgstr ""
+
+#: cBaseMediaFile#16
+msgid "Error overwritting %1"
+msgstr ""
+
+#: cBaseMediaFile#17
+msgid "Slide number"
+msgstr ""
+
+#: cBaseMediaFile#18
+msgid "ffDiaporama"
+msgstr ""
+
+#: cBaseMediaFile#22
+msgid "Stereo"
+msgstr ""
+
+#: cBaseMediaFile#23
+msgid "Folder"
+msgstr ""
+
+#: cBaseMediaFile#24
+msgid "Add video file"
+msgstr ""
+
+#: cDeviceModelList#1
+msgctxt "cDeviceModelList#1"
+msgid "Advanced"
+msgstr ""
+
+#: cDeviceModelList#2
+msgid "Smartphone"
+msgstr ""
+
+#: cDeviceModelList#3
+msgid "Multimedia system"
+msgstr ""
+
+#: cDeviceModelList#4
+msgid "For the WEB"
+msgstr ""
+
+#: cDeviceModelList#5
+msgctxt "cDeviceModelList#5"
+msgid "Lossless"
+msgstr ""
+
+#: cDeviceModelList#6
+msgid "Portable Player"
+msgstr ""
+
+#: cDeviceModelList#7
+msgid "Netbook/NetPC"
+msgstr ""
+
+#: cDeviceModelList#8
+msgid "Handheld game console"
+msgstr ""
+
+#: cDeviceModelList#9
+msgid "Tablet computer"
+msgstr ""
+
+#: cDeviceModelList#10
+msgid "Multimedia hard drive and gateway"
+msgstr ""
+
+#: cDeviceModelList#11
+msgid "Player"
+msgstr ""
+
+#: cDeviceModelList#12
+msgid "ADSL Box"
+msgstr ""
+
+#: cDeviceModelList#13
+msgid "Game console"
+msgstr ""
+
+#: cDeviceModelList#14
+msgid "SWF Flash Player"
+msgstr ""
+
+#: cDeviceModelList#15
+msgid "Video-sharing and social WebSite"
+msgstr ""
+
+#: cDeviceModelList#16
+msgid "HTML 5"
+msgstr ""
+
+#: wgt_QImageFilterTransform#1
+msgid "Gray"
+msgstr ""
+
+#: wgt_QImageFilterTransform#2
+msgid "Equalize"
+msgstr ""
+
+#: wgt_QImageFilterTransform#3
+msgid "Despeckle"
+msgstr ""
+
+#: wgt_QImageFilterTransform#4
+msgid "No transformation"
+msgstr ""
+
+#: wgt_QVideoPlayer#1
+msgid "Click to start play, click again to pause the movie"
+msgstr ""
+
+#: DlgAbout#5
+msgid "This application was developed using Open Source version of Qt 4.8 SDK"
+msgstr ""
+"Cette application a été developpé en utilisant la version Open Source du SDK "
+"Qt 4.8"
+
+#: DlgAbout#10
+msgid "Video decoding and encoding engines are based on libav"
+msgstr "Le décodage et l'encodage des vidéos sont basés sur LIBAV"
+
+#: DlgAbout#16
+msgid "System information"
+msgstr ""
+
+#: DlgApplicationSettings#56
+msgctxt "DlgApplicationSettings#56"
+msgid "Background"
+msgstr ""
+
+#: DlgBackgroundProperties#7
+msgctxt "DlgBackgroundProperties#7"
+msgid "Undo last action (CTRL+Z)"
+msgstr "Défaire la dernière action (CTRL+Z)"
+
+#: DlgBackgroundProperties#8
+msgctxt "DlgBackgroundProperties#8"
+msgid "Undo"
+msgstr ""
+
+#: DlgBackgroundProperties#9
+msgctxt "DlgBackgroundProperties#9"
+msgid "Ctrl+Z"
+msgstr "Ctrl+Z"
+
+#: DlgBackgroundProperties#10
+msgctxt "DlgBackgroundProperties#10"
+msgid "&Cancel"
+msgstr "&Annuler"
+
+#: DlgBackgroundProperties#11
+msgctxt "DlgBackgroundProperties#11"
+msgid "&Help"
+msgstr "&Aide"
+
+#: DlgBackgroundProperties#12
+msgctxt "DlgBackgroundProperties#12"
+msgid "F1"
+msgstr "F1"
+
+#: DlgBackgroundProperties#13
+msgctxt "DlgBackgroundProperties#13"
+msgid "Solid brush"
+msgstr "Brosse unie"
+
+#: DlgBackgroundProperties#14
+msgctxt "DlgBackgroundProperties#14"
+msgid "Gradient 2 colors"
+msgstr "Dégradé à 2 couleurs"
+
+#: DlgBackgroundProperties#15
+msgctxt "DlgBackgroundProperties#15"
+msgid "Gradient 3 colors"
+msgstr "Dégradé à 3 couleurs"
+
+#: DlgBackgroundProperties#16
+msgctxt "DlgBackgroundProperties#16"
+msgid "Image from library"
+msgstr "Image de la librairie"
+
+#: DlgBackgroundProperties#18
+msgctxt "DlgBackgroundProperties#18"
+msgid "Select a file"
+msgstr ""
+
+#: DlgCheckConfig#9
+msgid "Unable to determine %1 version"
+msgstr "Impossible de déterminer la version de %1"
+
+#: DlgCheckConfig#10
+msgid "%1 not found - critical - application will stop !"
+msgstr "%1 introuvable - critique - l'application s'arrete !"
+
+#: DlgCheckConfig#19
+msgid "encoder version:"
+msgstr ""
+
+#: DlgCheckConfig#20
+msgid "LIBAV support for TAG and CHAPTERS"
+msgstr "Support par LIBAV des TAG et des chapitres"
+
+#: DlgCheckConfig#21
+msgid "libav Audio Codecs"
+msgstr "Codecs Audio de LIBAV"
+
+#: DlgCheckConfig#22
+msgid "libav Video Codecs"
+msgstr "Codecs Vidéo de LIBAV"
+
+#: DlgCheckConfig#23
+msgid "libav Container Formats"
+msgstr "Containers de LIBAV"
+
+#: DlgCheckConfig#27
+msgctxt "DlgCheckConfig#27DlgCheckConfig#27"
+msgid "Lossless"
+msgstr "Sans perte"
+
+#: DlgImageCorrection#8
+msgid "Select another file"
+msgstr ""
+
+#: DlgImageCorrection#24
+msgctxt "DlgImageCorrection#24"
+msgid "Undo last action (CTRL+Z)"
+msgstr "Défaire la dernière action (CTRL+Z)"
+
+#: DlgImageCorrection#25
+msgctxt "DlgImageCorrection#25"
+msgid "F1"
+msgstr "F1"
+
+#: DlgImageCorrection#26
+msgctxt "DlgImageCorrection#26"
+msgid "Accept modification and exit dialog box"
+msgstr "Valider les modifications et quitter la boite de dialogue"
+
+#: DlgImageCorrection#27
+msgctxt "DlgImageCorrection#27"
+msgid "Properties for all shots"
+msgstr "Propriétés pour tous les plans"
+
+#: DlgImageCorrection#31
+msgctxt "DlgImageCorrection#31"
+msgid "Enable or disable rulers corresponding to the margins of television sets."
+msgstr "Activer ou désactiver les guides."
+
+#: DlgImageCorrection#32
+msgctxt "DlgImageCorrection#32"
+msgid "Rullers"
+msgstr ""
+
+#: DlgImageCorrection#33
+msgctxt "DlgImageCorrection#33"
+msgid "Undo"
+msgstr "Défaire"
+
+#: DlgImageCorrection#34
+msgctxt "DlgImageCorrection#34"
+msgid "Ctrl+Z"
+msgstr "Ctrl+Z"
+
+#: DlgImageCorrection#35
+msgctxt "DlgImageCorrection#35"
+msgid "&Ok"
+msgstr "&Ok"
+
+#: DlgImageCorrection#36
+msgctxt "DlgImageCorrection#36"
+msgid "Cancel modification and exit dialog box"
+msgstr "Annuler les modifications et quitter la boite de dialogue"
+
+#: DlgImageCorrection#37
+msgctxt "DlgImageCorrection#37"
+msgid "&Cancel"
+msgstr "&Annuler"
+
+#: DlgImageCorrection#38
+msgctxt "DlgImageCorrection#38"
+msgid "Open help page describing this dialog box"
+msgstr "Ouvrir la page de documentation correspondant à cette boite de dialogue"
+
+#: DlgImageCorrection#39
+msgctxt "DlgImageCorrection#39"
+msgid "&Help"
+msgstr "&Aide"
+
+#: DlgImageCorrection#43
+msgctxt "DlgImageCorrection#43"
+msgid "Lock to image geometry"
+msgstr "Verrouiller sur la géométrie de l'image"
+
+#: DlgImageCorrection#46
+msgctxt "DlgImageCorrection#46"
+msgid "Select a file"
+msgstr "Sélectionner un fichier"
+
+#: DlgMusicProperties#2
+msgid "Allows one to continue to play the play list define by a previous slide"
+msgstr ""
+"Vous permet de continuer la lecture d'une \"play list\" définie dans une "
+"diapositive précédente"
+
+#: DlgMusicProperties#4
+msgid "Allows one to indicate that from now on, the sound volume is reduced."
+msgstr "Vous permet d'indiquer qu'à partir d'ici le volume sonore est réduit."
+
+#: DlgMusicProperties#13
+msgid "Allows one to start a new playlist."
+msgstr "Vous permet de commencer la lecture d'une nouvelle \"playlist\"."
+
+#: DlgRenderVideo#59
+msgctxt "DlgRenderVideo#59"
+msgid "Select destination file"
+msgstr "Selectionner un fichier de destination"
+
+#: DlgRenderVideo#70
+msgid "Start avconv encoder"
+msgstr "Démarre l'encoder avconv"
+
+#: DlgRenderVideo#71
+msgid "Error starting avconv"
+msgstr "Erreur lors du lancement d'avconv"
+
+#: DlgRenderVideo#72
+msgid "avconv error"
+msgstr "Erreur avconv"
+
+#: DlgRenderVideo#73
+msgid "Error during avconv process"
+msgstr "Erreur durant l'exécution d'avconv"
+
+#: DlgRenderVideo#74
+msgid "Error exiting avconv"
+msgstr "Erreur en quittant avconv"
+
+#: DlgRenderVideo#75
+msgctxt "DlgRenderVideo#75"
+msgid "Error"
+msgstr ""
+
+#: DlgRenderVideo#79
+msgid "Job completed successfully!"
+msgstr "Encodage terminé avec succès !"
+
+#: DlgRulerDef#1
+msgid "Ruler properties"
+msgstr "Propriétés des guides"
+
+#: DlgRulerDef#2
+msgid "Horizontal rulers"
+msgstr "Guides horizontaux"
+
+#: DlgRulerDef#3
+msgid "Vertical rulers"
+msgstr "Guides verticaux"
+
+#: DlgRulerDef#4
+msgid "screen borders"
+msgstr "Bord de l'écran"
+
+#: DlgRulerDef#5
+msgctxt "DlgRulerDef#5"
+msgid "TV margins"
+msgstr "Marges TV"
+
+#: DlgRulerDef#6
+msgid "Screen center"
+msgstr "Centre de l'écran"
+
+#: DlgRulerDef#7
+msgid "Unselected objects"
+msgstr "Objets non sélèctionnés"
+
+#: DlgRulerDef#8
+msgctxt "DlgRulerDef#8"
+msgid "Accept modification and exit dialog box"
+msgstr "Valider les modifications et quitter la boite de dialogue"
+
+#: DlgRulerDef#9
+msgctxt "DlgRulerDef#9"
+msgid "&Ok"
+msgstr "&Ok"
+
+#: DlgRulerDef#10
+msgctxt "DlgRulerDef#10"
+msgid "Cancel modification and exit dialog box"
+msgstr "Annuler les modifications et quitter la boite de dialogue"
+
+#: DlgRulerDef#11
+msgctxt "DlgRulerDef#11"
+msgid "&Cancel"
+msgstr "&Annuler"
+
+#: DlgRulerDef#12
+msgctxt "DlgRulerDef#12"
+msgid "Open help page describing this dialog box"
+msgstr "Ouvrir la page de documentation correspondant à cette boite de dialogue"
+
+#: DlgRulerDef#13
+msgctxt "DlgRulerDef#13"
+msgid "&Help"
+msgstr "&Aide"
+
+#: DlgRulerDef#14
+msgctxt "DlgRulerDef#14"
+msgid "F1"
+msgstr "F1"
+
+#: DlgSlideProperties#6
+msgctxt "DlgSlideProperties#6"
+msgid "Ins"
+msgstr "Ins"
+
+#: DlgSlideProperties#7
+msgctxt "DlgSlideProperties#7"
+msgid "Del"
+msgstr ""
+
+#: DlgSlideProperties#9
+msgid "Move to background"
+msgstr "Déplacer vers l'arrière-plan"
+
+#: DlgSlideProperties#10
+msgid "Change the order of blocks by moving the active block towards the background"
+msgstr "Change l'ordre des blocs en déplaçant le bloc actif vers l'arrière plan"
+
+#: DlgSlideProperties#11
+msgid "Change the order of blocks by moving the active block towards the foreground"
+msgstr "Change l'ordre des blocs en déplaçant le bloc actif vers le premier plan"
+
+#: DlgSlideProperties#12
+msgid "Visible"
+msgstr "Rendre visible"
+
+#: DlgSlideProperties#13
+msgid "Copy block"
+msgstr "Copier bloc(s)"
+
+#: DlgSlideProperties#14
+msgctxt "DlgSlideProperties#14"
+msgid "Ctrl+C"
+msgstr ""
+
+#: DlgSlideProperties#15
+msgid "Cut block"
+msgstr "Couper bloc(s)"
+
+#: DlgSlideProperties#17
+msgctxt "DlgSlideProperties#17"
+msgid "Ctrl+X"
+msgstr ""
+
+#: DlgSlideProperties#18
+msgid "Paste block"
+msgstr "Coller bloc(s)"
+
+#: DlgSlideProperties#20
+msgctxt "DlgSlideProperties#20"
+msgid "Ctrl+V"
+msgstr ""
+
+#: DlgSlideProperties#25
+msgid "Display detailled information on current block"
+msgstr "Afficher des informations détaillées sur le bloc en cours"
+
+#: DlgSlideProperties#26
+msgid "Reset to 0"
+msgstr "Remettre à 0"
+
+#: DlgSlideProperties#41
+msgctxt "DlgSlideProperties#41"
+msgid "F1"
+msgstr "F1"
+
+#: DlgSlideProperties#45
+msgid "Add file"
+msgstr ""
+
+#: DlgSlideProperties#48
+msgctxt "DlgSlideProperties#48"
+msgid "Remove"
+msgstr ""
+
+#: DlgSlideProperties#61
+msgctxt "DlgSlideProperties#61"
+msgid "Undo last action (CTRL+Z)"
+msgstr "Défaire la dernière action (CTRL+Z)"
+
+#: DlgSlideProperties#62
+msgctxt "DlgSlideProperties#62"
+msgid "Undo"
+msgstr "Défaire"
+
+#: DlgSlideProperties#63
+msgctxt "DlgSlideProperties#63"
+msgid "Ctrl+Z"
+msgstr "Ctrl+Z"
+
+#: DlgSlideProperties#64
+msgid "Add\nshot"
+msgstr ""
+"Ajouter\n"
+"plan"
+
+#: DlgSlideProperties#65
+msgid "Remove\nshot"
+msgstr ""
+"Supprimer\n"
+"plan"
+
+#: DlgSlideProperties#66
+msgid "Add a new text block"
+msgstr "Ajouter un nouveau bloc texte"
+
+#: DlgSlideProperties#67
+msgid "Add\ntext"
+msgstr ""
+"Ajouter\n"
+"texte"
+
+#: DlgSlideProperties#68
+msgid "Add\nfile"
+msgstr ""
+"Ajouter\n"
+"fichier"
+
+#: DlgSlideProperties#69
+msgid "Edit block"
+msgstr "Editer bloc"
+
+#: DlgSlideProperties#70
+msgid "Edit\nblock"
+msgstr ""
+"Editer\n"
+"bloc"
+
+#: DlgSlideProperties#71
+msgid "Arrange blocks"
+msgstr "Arranger les blocs"
+
+#: DlgSlideProperties#72
+msgid "Arrange\nblock"
+msgstr ""
+"Aranger\n"
+"bloc"
+
+#: DlgSlideProperties#73
+msgid "Block\ninformation"
+msgstr ""
+"Propriétés\n"
+"du bloc"
+
+#: DlgSlideProperties#76
+msgid "Text animation :"
+msgstr "Annimation de texte :"
+
+#: DlgSlideProperties#77
+msgid "Zoom :"
+msgstr "Zoom :"
+
+#: DlgSlideProperties#78
+msgid "Define a zoom value for the text"
+msgstr "Définir une valeur de zomm pour le texte"
+
+#: DlgSlideProperties#79
+msgid "Reset to 100%"
+msgstr "Remettre à 100%"
+
+#: DlgSlideProperties#80
+msgid "Scroll text from left to right"
+msgstr "Déplacer le texte de gauche à droite (Scrolling)"
+
+#: DlgSlideProperties#81
+msgid "Scroll text from bottom to up"
+msgstr "Déplacer le texte de bas en haut (Scrolling)"
+
+#: DlgSlideProperties#82
+msgid "Block animation :"
+msgstr "Animation de bloc :"
+
+#: DlgSlideProperties#83
+msgid "Define the number of turn to be made around the Z axis during this shot"
+msgstr ""
+"Définir un nombre de rotation à réaliser autour de l'axe des Z pendant ce "
+"plan"
+
+#: DlgSlideProperties#84
+msgid "Define the number of turn to be made around the X axis during this shot"
+msgstr ""
+"Définir un nombre de rotation à réaliser autour de l'axe des X pendant ce "
+"plan"
+
+#: DlgSlideProperties#85
+msgid "Define the number of turn to be made around the Y axis during this shot"
+msgstr ""
+"Définir un nombre de rotation à réaliser autour de l'axe des Y pendant ce "
+"plan"
+
+#: DlgSlideProperties#86
+msgid "Type :"
+msgstr "Type :"
+
+#: DlgSlideProperties#87
+msgid "Dissolve :"
+msgstr "Fondu :"
+
+#: DlgSlideProperties#88
+msgid "Block coordinates :"
+msgstr "Coordonnées du bloc :"
+
+#: DlgSlideProperties#89
+msgid "Start a new chapter from this slide"
+msgstr "Commencer un nouveau chapitre à partir de cette diapositive"
+
+#: DlgSlideProperties#90
+msgid "Total duration :"
+msgstr "Durée totale :"
+
+#: DlgSlideProperties#91
+msgctxt "DlgSlideProperties#91"
+msgid "Enable or disable rulers corresponding to the margins of television sets."
+msgstr "Activer ou désactiver les guides correspondant aux marges des téléviseurs."
+
+#: DlgSlideProperties#92
+msgctxt "DlgSlideProperties#92"
+msgid "Rullers"
+msgstr "Guides"
+
+#: DlgSlideProperties#93
+msgctxt "DlgSlideProperties#93"
+msgid "Accept modification and exit dialog box"
+msgstr "Valider les modifications et quitter la boite de dialogue"
+
+#: DlgSlideProperties#94
+msgctxt "DlgSlideProperties#94"
+msgid "&Ok"
+msgstr "&Ok"
+
+#: DlgSlideProperties#95
+msgctxt "DlgSlideProperties#95"
+msgid "Cancel modification and exit dialog box"
+msgstr "Annuler les modifications et quitter la boite de dialogue"
+
+#: DlgSlideProperties#96
+msgctxt "DlgSlideProperties#96"
+msgid "&Cancel"
+msgstr "&Annuler"
+
+#: DlgSlideProperties#97
+msgctxt "DlgSlideProperties#97"
+msgid "Open help page describing this dialog box"
+msgstr "Ouvrir la page de documentation correspondant à cette boite de dialogue"
+
+#: DlgSlideProperties#98
+msgctxt "DlgSlideProperties#98"
+msgid "&Help"
+msgstr "&Aide"
+
+#: DlgSlideProperties#99
+msgctxt "DlgSlideProperties#99"
+msgid "Edit text"
+msgstr "Editer le texte"
+
+#: DlgSlideProperties#100
+msgid "Do image correct or reframming"
+msgstr "Corriger ou récadrer l'image"
+
+#: DlgSlideProperties#101
+msgid "Move to foreground"
+msgstr "Déplacer vers le premier-plan"
+
+#: DlgSlideProperties#102
+msgid "Lock properties"
+msgstr "Verrouiler les propriétés"
+
+#: DlgSlideProperties#103
+msgid "Lock properties to the same values as define for the previous shot"
+msgstr "Verrouiler les propriétés sur celles définie dans le plan précédent"
+
+#: DlgSlideProperties#104
+msgid "Unlock properties from this shot"
+msgstr "Déverrouiller les propriétés"
+
+#: DlgSlideProperties#105
+msgid "Define properties from this shot"
+msgstr "Définir les propriétés pour ce plan"
+
+#: DlgSlideProperties#106
+msgid "Hide"
+msgstr "Cacher"
+
+#: DlgSlideProperties#107
+msgid "Make hide the active block"
+msgstr "Cache le bloc actif"
+
+#: DlgSlideProperties#108
+msgid "Make visible the active block"
+msgstr "Rendre le boc actif visible"
+
+#: DlgSlideProperties#109
+msgid "Slide :"
+msgstr "Diapositive :"
+
+#: DlgSlideProperties#110
+msgid "Start chapter from here"
+msgstr "Commencer un chapitre"
+
+#: DlgSlideProperties#111
+msgid "Take the sound"
+msgstr "Prendre le son"
+
+#: DlgSlideProperties#112
+msgid "Display information"
+msgstr "Afficher des informations"
+
+#: DlgSlideProperties#113
+msgid "Remove current block(s)"
+msgstr "Supprimer le(s) bloc(s)"
+
+#: DlgSlideProperties#114
+msgctxt "DlgSlideProperties#114"
+msgid "Align top"
+msgstr "Aligner en haut"
+
+#: DlgSlideProperties#115
+msgid "Align blocks to the top"
+msgstr "Aligner les blocs sur le haut de la sélection"
+
+#: DlgSlideProperties#116
+msgid "Align middle"
+msgstr "Aligner au milieu"
+
+#: DlgSlideProperties#117
+msgid "Align blocks to the middle"
+msgstr "Aligner les blocs sur le milieu de la sélection"
+
+#: DlgSlideProperties#118
+msgctxt "DlgSlideProperties#118"
+msgid "Align bottom"
+msgstr "Aligner en bas"
+
+#: DlgSlideProperties#119
+msgid "Align blocks to the bottom"
+msgstr "Aligner les blocs sur le bas de la sélection"
+
+#: DlgSlideProperties#120
+msgctxt "DlgSlideProperties#120"
+msgid "Align left"
+msgstr "Aligner à gauche"
+
+#: DlgSlideProperties#121
+msgid "Align blocks to the left"
+msgstr "Aligner les blocs sur la gauche de la sélection"
+
+#: DlgSlideProperties#122
+msgctxt "DlgSlideProperties#122"
+msgid "Align center"
+msgstr "Aligner au centre"
+
+#: DlgSlideProperties#123
+msgid "Align blocks to the center"
+msgstr "Aligner les blocs au centre de la sélection"
+
+#: DlgSlideProperties#124
+msgctxt "DlgSlideProperties#124"
+msgid "Align right"
+msgstr "Aligner à droite"
+
+#: DlgSlideProperties#125
+msgid "Align blocks to the right"
+msgstr "Aligner les blocs sur la droite de la sélection"
+
+#: DlgSlideProperties#126
+msgid "Add text block"
+msgstr "Ajouter un bloc texte"
+
+#: DlgSlideProperties#127
+msgid "Remove block"
+msgstr "Supprimer le bloc"
+
+#: DlgSlideProperties#128
+msgctxt "DlgSlideProperties#128"
+msgid "Shadow upper left"
+msgstr "Ombre en haut à gauche"
+
+#: DlgSlideProperties#129
+msgctxt "DlgSlideProperties#129"
+msgid "Shadow upper right"
+msgstr "Ombre en haut à droite"
+
+#: DlgSlideProperties#130
+msgctxt "DlgSlideProperties#130"
+msgid "Shadow bottom left"
+msgstr "Ombre en bas à gauche"
+
+#: DlgSlideProperties#131
+msgctxt "DlgSlideProperties#131"
+msgid "Shadow bottom right"
+msgstr "Ombre en bas à droite"
+
+#: DlgSlideProperties#133
+msgctxt "DlgSlideProperties#133"
+msgid "Slide"
+msgstr "Diapositive"
+
+#: DlgSlideProperties#134
+msgid "Multiple block turn"
+msgstr "Multiple rotations"
+
+#: DlgSlideProperties#135
+msgid "Dissolve"
+msgstr "Fondu"
+
+#: DlgSlideProperties#136
+msgid "Appear"
+msgstr "Apparaître"
+
+#: DlgSlideProperties#137
+msgid "Disappear"
+msgstr "Disparaître"
+
+#: DlgSlideProperties#138
+msgid "Blink at slow speed"
+msgstr "Clignoter à vitesse lente"
+
+#: DlgSlideProperties#139
+msgid "Blink at medium speed"
+msgstr "Clignoter à vitesse moyenne"
+
+#: DlgSlideProperties#140
+msgid "Blink at fast speed"
+msgstr "Clignoter à vitesse rapide"
+
+#: DlgSlideProperties#141
+msgid "Blink at very fast speed"
+msgstr "Clignoter à vitesse très rapide"
+
+#: DlgSlideProperties#143
+msgid "Are you sure to want to delete this block?"
+msgstr "Etes-vous sur de vouloir supprimer ce bloc ?"
+
+#: DlgSlideProperties#144
+msgid "Remove blocks"
+msgstr "Supprimer le(s) bloc(s)"
+
+#: DlgSlideProperties#145
+msgid "Are you sure to want to delete these blocks?"
+msgstr "Etes-vous sur de vouloir supprimer ces blocs ?"
+
+#: DlgSlideProperties#148
+msgctxt "DlgSlideProperties#148"
+msgid "Text"
+msgstr "Texte"
+
+#: DlgSlideProperties#149
+msgctxt "DlgSlideProperties#149"
+msgid "Add files"
+msgstr "Ajouter des fichiers"
+
+#: DlgSlideProperties#150
+msgid "Duration:"
+msgstr "Durée :"
+
+#: DlgTextEdit#1
+msgctxt "DlgTextEdit#1"
+msgid "Edit text"
+msgstr "Editer le texte"
+
+#: DlgTextEdit#10
+msgctxt "DlgTextEdit#10"
+msgid "Align left"
+msgstr "Aligner à gauche"
+
+#: DlgTextEdit#11
+msgctxt "DlgTextEdit#11"
+msgid "Align center"
+msgstr "Aligner au centre"
+
+#: DlgTextEdit#13
+msgctxt "DlgTextEdit#13"
+msgid "Text"
+msgstr "Texte"
+
+#: DlgTextEdit#14
+msgid "Bullet list"
+msgstr "Liste à puce"
+
+#: DlgTextEdit#15
+msgid "Numbered list"
+msgstr "Liste numérotée"
+
+#: DlgTextEdit#16
+msgctxt "DlgTextEdit#16"
+msgid "Align right"
+msgstr "Aligner à droite"
+
+#: DlgTextEdit#17
+msgid "Set text to superscript"
+msgstr "Mettre le texte en exposant"
+
+#: DlgTextEdit#18
+msgid "Set text to subscript"
+msgstr "Mettre le texte en indice"
+
+#: DlgTextEdit#19
+msgid "Increase indent"
+msgstr "Augmenter l'indentation"
+
+#: DlgTextEdit#20
+msgid "decrease indent"
+msgstr "Réduire l'indentation"
+
+#: DlgTextEdit#21
+msgctxt "DlgTextEdit#21"
+msgid "Align top"
+msgstr "Aligner en haut"
+
+#: DlgTextEdit#23
+msgctxt "DlgTextEdit#23"
+msgid "Align bottom"
+msgstr "Aligner en bas"
+
+#: DlgTextEdit#24
+msgctxt "DlgTextEdit#24"
+msgid "Background"
+msgstr "Fond du texte"
+
+#: DlgTextEdit#25
+msgid "Background properties :"
+msgstr "Propriétés du fond :"
+
+#: DlgTextEdit#34
+msgctxt "DlgTextEdit#34"
+msgid "Accept modification and exit dialog box"
+msgstr "Valider les modifications et quitter la boite de dialogue"
+
+#: DlgTextEdit#35
+msgctxt "DlgTextEdit#35"
+msgid "&Ok"
+msgstr "&Ok"
+
+#: DlgTextEdit#36
+msgctxt "DlgTextEdit#36"
+msgid "Undo last action (CTRL+Z)"
+msgstr "Défaire la dernière action (CTRL+Z)"
+
+#: DlgTextEdit#37
+msgctxt "DlgTextEdit#37"
+msgid "Undo"
+msgstr "Défaire"
+
+#: DlgTextEdit#38
+msgctxt "DlgTextEdit#38"
+msgid "Ctrl+Z"
+msgstr "Ctrl+Z"
+
+#: DlgTextEdit#39
+msgctxt "DlgTextEdit#39"
+msgid "Cancel modification and exit dialog box"
+msgstr "Annuler les modifications et quitter la boite de dialogue"
+
+#: DlgTextEdit#40
+msgctxt "DlgTextEdit#40"
+msgid "&Cancel"
+msgstr "&Annuler"
+
+#: DlgTextEdit#41
+msgctxt "DlgTextEdit#41"
+msgid "Open help page describing this dialog box"
+msgstr "Ouvrir la page de documentation correspondant à cette boite de dialogue"
+
+#: DlgTextEdit#42
+msgctxt "DlgTextEdit#42"
+msgid "&Help"
+msgstr "&Aide"
+
+#: DlgTextEdit#43
+msgctxt "DlgTextEdit#43"
+msgid "F1"
+msgstr "F1"
+
+#: DlgTextEdit#46
+msgctxt "DlgTextEdit#46"
+msgid "Shadow upper left"
+msgstr "Ombre en haut à gauche"
+
+#: DlgTextEdit#47
+msgctxt "DlgTextEdit#47"
+msgid "Shadow upper right"
+msgstr "Ombre en haut à droite"
+
+#: DlgTextEdit#48
+msgctxt "DlgTextEdit#48"
+msgid "Shadow bottom left"
+msgstr "Ombre en bas à gauche"
+
+#: DlgTextEdit#49
+msgctxt "DlgTextEdit#49"
+msgid "Shadow bottom right"
+msgstr "Ombre en bas à droite"
+
+#: DlgTextEdit#51
+msgctxt "DlgTextEdit#51"
+msgid "Solid brush"
+msgstr "Brosse unie"
+
+#: DlgTextEdit#53
+msgctxt "DlgTextEdit#53"
+msgid "Gradient 2 colors"
+msgstr "Dégradé à 2 couleurs"
+
+#: DlgTextEdit#54
+msgctxt "DlgTextEdit#54"
+msgid "Gradient 3 colors"
+msgstr "Dégradé à 3 couleurs"
+
+#: DlgTextEdit#55
+msgctxt "DlgTextEdit#55"
+msgid "Image from library"
+msgstr "Image de la librairie"
+
+#: DlgVideoEdit#16
+msgctxt "DlgVideoEdit#16"
+msgid "Undo last action (CTRL+Z)"
+msgstr "Défaire la dernière action (CTRL+Z)"
+
+#: DlgVideoEdit#17
+msgctxt "DlgVideoEdit#17"
+msgid "Undo"
+msgstr "Défaire"
+
+#: DlgVideoEdit#18
+msgctxt "DlgVideoEdit#18"
+msgid "Ctrl+Z"
+msgstr "Ctrl+Z"
+
+#: DlgVideoEdit#19
+msgctxt "DlgVideoEdit#19"
+msgid "Cancel modification and exit dialog box"
+msgstr "Annuler les modifications et quitter la boite de dialogue"
+
+#: DlgVideoEdit#20
+msgctxt "DlgVideoEdit#20"
+msgid "&Cancel"
+msgstr "&Annuler"
+
+#: DlgVideoEdit#21
+msgctxt "DlgVideoEdit#21"
+msgid "Open help page describing this dialog box"
+msgstr "Ouvrir la page de documentation correspondant à cette boite de dialogue"
+
+#: DlgVideoEdit#22
+msgctxt "DlgVideoEdit#22"
+msgid "&Help"
+msgstr "&Aide"
+
+#: DlgVideoEdit#23
+msgctxt "DlgVideoEdit#23"
+msgid "F1"
+msgstr "F1"
+
+#: MainWindow#40
+msgid "Display information about ffDiaporama"
+msgstr "Affiche des informations sur ffDiaporama"
+
+#: MainWindow#41
+msgctxt "MainWindow#41"
+msgid "F1"
+msgstr "F1"
+
+#: MainWindow#44
+msgid "F5"
+msgstr "F5"
+
+#: MainWindow#47
+msgid "F6"
+msgstr "F6"
+
+#: MainWindow#48
+msgid "F7"
+msgstr "F7"
+
+#: MainWindow#50
+msgid "Add title"
+msgstr ""
+
+#: MainWindow#51
+msgid "Add project"
+msgstr ""
+
+#: MainWindow#53
+msgctxt "MainWindow#53"
+msgid "About"
+msgstr ""
+
+#: MainWindow#91
+msgid "Title"
+msgstr ""
+
+#: MainWindow#119
+msgid "Capture the image "
+msgstr "Capturer une image en "
+
+#: MainWindow#124
+msgid "Starting libav..."
+msgstr "Démarrage de LIBAV ..."
+
+#: MainWindow#134
+msgctxt "MainWindow#134"
+msgid "Add files"
+msgstr ""
+
+#: MainWindow#135
+msgctxt "MainWindow#135"
+msgid "Format not supported"
+msgstr "Format non supporté"
+
+#: MainWindow#137
+msgctxt "MainWindow#137"
+msgid "Impossible to open file "
+msgstr ""
+
+#: MainWindow#138
+msgctxt "MainWindow#138"
+msgid "Do you want to select another file ?"
+msgstr "Voulez vous sélectionner un autre fichier ?"
+
+#: MainWindow#139
+msgctxt "MainWindow#139"
+msgid "Select another file for "
+msgstr "Sélectionner un fichier de remplacement pour "
+
+#: MainWindow#153
+msgid "Capture image"
+msgstr "Capturer une image"
+
+#: MainWindow#154
+msgctxt "MainWindow#154"
+msgid "Select destination file"
+msgstr ""
+
+#: MainWindow#155
+msgid "Error during startup"
+msgstr "Erreur au démarrage"
+
+#: MainWindow#156
+msgid "Error during initialisation of sound system. Check your configuration and try again"
+msgstr ""
+"Erreur d'initialisation du système sonore. Vérifiez votre configuration et "
+"ré-essayez"
+
+#: MainWindow#157
+msgid "ffDiaporama initialisation"
+msgstr "Initialisation de ffDiaporama"
+
+#: cBaseMediaFile#9
+msgid "Image"
+msgstr ""
+
+#: cBaseMediaFile#12
+msgid "Video"
+msgstr ""
+
+#: cBaseMediaFile#19
+msgid "Impossible to start exiv2 - no exif information will be decode for %1"
+msgstr ""
+"Impossible de démarrer exiv2 - aucune information exif ne sera décodée pour %"
+"1"
+
+#: cBaseMediaFile#20
+msgid "Error during exiv2 process - no exif information will be decode for %1"
+msgstr ""
+"Erreur durant le processus exiv2 - aucune information exif ne sera décodée "
+"pour %1"
+
+#: cBaseMediaFile#21
+msgid "exiv2 return error %1 - no exif information will be decode for %2"
+msgstr ""
+"exiv2 a retourné l'erreur %1 - aucune information exif ne sera décodée pour %"
+"2"
+
+#: wgt_QVideoPlayer#2
+msgid "Save this image of the movie"
+msgstr "Capturer cette image de la vidéo"
