@@ -103,19 +103,17 @@ class TranslateController extends BaseController {
 	}
 	public function postUploadtranslate()
 	{
+		
 		if (Input::hasFile('translate'))
 		{
 			$file = Input::file('translate');
 			$path = $file->getRealPath();
 			$size = $file->getSize();
  			$path = $file -> move(app_path().'/storage/',uniqid(time(),true));
- 			return array(
- 					"errcode"=>0,
- 					"errmsg"=>""
- 			);
-			$myfile = fopen($file,"r") or die ("Unable to open file.");
+			$myfile = fopen($path,"r") or die ("Unable to open file.");
 			while(!feof($myfile))
 			{
+				
 				$line = fgets($myfile);
 				{
 					if(strrpos($line,"msgid")===0)
@@ -142,6 +140,10 @@ class TranslateController extends BaseController {
 				
 			}
 			fclose($myfile);
+			return array(
+					"errcode"=>0,
+					"errmsg"=>""
+			);
 		}
 		return array(
 				"errcode"=>1,
