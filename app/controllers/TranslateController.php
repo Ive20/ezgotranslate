@@ -88,8 +88,8 @@ class TranslateController extends BaseController {
 		{
 			$infoid=Input::get('infoid');
 		}
-		$info=Translate::find($infoid);
-		if($info==null)
+		$translate=Translate::where('info_id',$infoid)->first();
+		if($translate==null)
 		{
 			return array(
 				"errcode"=>1,
