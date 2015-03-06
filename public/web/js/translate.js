@@ -369,23 +369,31 @@ $(document).ready(function() {
                 // Later, I prefer new InfoLine()
                 createInfoLine(theInfo);
                 // Get tranlated content
-                /*
                 $.ajax({
                     url: '/translate/searchtranslate',
-                    type: 'POST'
+                    type: 'POST',
+                    dataType: "json",
+                    data: {
+                        infoid: theInfo.info_id
+                    }
                 })
-                .done(function(contents) {
-                    var infoIDs = theInfo.info_id;
-                    var result = "No trans";
-                    var content = undefined;
+                .done(function(data) {
+                    // Tranlates not found
+                    if (data.hasOwnProperty("errcode"))
+                        return false;
+                    else {
+                        var translate = data;
+                        var infoIDs = translate.info_id;
+                        var result = translate.translate_result;
 
-                    var theTargetID = "#" + infoIDs.replace(/\./g, '\\.')
-                                    + " .translated";
-                    var theTranslated = $(theTargetID);
+                        var theTargetID = "#" + infoIDs.replace(/\./g, '\\.')
+                            + " .translated";
+                        var theTranslated = $(theTargetID);
 
-                    // Clear first when insert translated content
-                    theTranslated.empty();
-                    theTranslated.html(result);
+                        // Clear first when insert translated content
+                        theTranslated.empty();
+                        theTranslated.html(result);
+                    }
                 })
                 .fail(function() {
                     console.log("Gettranslate ajax problem.");
@@ -393,7 +401,6 @@ $(document).ready(function() {
                 .always(function() {
                     console.log("Gettranslate ajax complete.");
                 });
-                */
             }
         }
     })
