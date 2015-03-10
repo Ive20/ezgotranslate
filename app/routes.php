@@ -18,3 +18,4 @@ Route::get('/', function()
 Route::controller('user', 'UserController');
 Route::controller('info','InfoController');
 Route::controller('translate','TranslateController');
+Route::controller('android','AndroidController');
